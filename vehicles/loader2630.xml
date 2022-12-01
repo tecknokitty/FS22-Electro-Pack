@@ -198,7 +198,7 @@
             </motorConfiguration>
         </motorConfigurations>
 
-        <motorStartDuration>3200</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="SLIDER" valueType="motorTemperature" node="loadBarTemperature" minValueSlider="0" maxValueSlider="120" groups="MOTOR_ACTIVE"/>

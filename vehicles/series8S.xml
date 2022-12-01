@@ -1590,7 +1590,7 @@
             </motorConfiguration>
         </motorConfigurations>
 
-        <motorStartDuration>3200</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="MULTI_STATE" valueType="ignitionState" node="ignitionKey" doInterpolation="true" groups="MOTOR_ACTIVE">

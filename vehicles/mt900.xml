@@ -395,7 +395,7 @@
             </motorConfiguration>
         </motorConfigurations>
 
-        <motorStartDuration>3500</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <animationNodes>
             <animationNode node="motorFan" rotAxis="3" rotSpeed="1000" turnOnFadeTime="2" turnOffFadeTime="5"/>

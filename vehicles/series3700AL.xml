@@ -874,7 +874,7 @@
             </gearLever>
         </gearLevers>
 
-        <motorStartDuration>3200</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="ROT" valueType="rpm" node="needleRPM" minRot="-3.5" maxRot="-129" rotAxis="3" doInterpolation="true" interpolationSpeed="1.0" groups="MOTOR_ACTIVE"/>

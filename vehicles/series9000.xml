@@ -433,7 +433,7 @@
             </motorConfiguration>
         </motorConfigurations>
 
-        <motorStartDuration>3000</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="TEXT" valueType="rpm"   node="numbersRpm"   textSize="0.012" textMask="0000" textColor="0.9 0.9 0.9 1" font="DIGIT" emissiveScale="0.5" groups="MOTOR_ACTIVE"/>

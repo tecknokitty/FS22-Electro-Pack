@@ -1280,7 +1280,7 @@
             </motorConfiguration>
         </motorConfigurations>
 
-        <motorStartDuration>3400</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="ANIMATION" valueType="rpm" animName="loadingBarRPM" minValueAnim="0" maxValueAnim="2500" groups="MOTOR_ACTIVE"/>

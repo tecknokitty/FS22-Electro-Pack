@@ -1871,7 +1871,7 @@
             </motorConfiguration>
         </motorConfigurations>
 
-        <motorStartDuration>4200</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="ROT" valueType="movingDirection" node="directionLever" minRot="-10 0 0" maxRot="10 0 0" doInterpolation="true" groups="MOTOR_ACTIVE"/>

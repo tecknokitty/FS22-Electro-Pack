@@ -390,7 +390,7 @@
             </motorConfiguration>
         </motorConfigurations>
 
-        <motorStartDuration>4700</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="NUMBER" valueType="speed"     numbers="numbersSpeed"     precision="1" font="GENERIC" groups="MOTOR_ACTIVE"/>

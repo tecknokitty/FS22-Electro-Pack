@@ -381,7 +381,7 @@
         </animationNodes>
 
         <brakeCompressor capacity="2000" fillSpeed="250" />
-        <motorStartDuration>2800</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="ANIMATION" valueType="speedDir" animName="joystickMovement" groups="MOTOR_ACTIVE"/>

@@ -608,17 +608,13 @@
             </motorConfiguration>
         </motorConfigurations>
 
-        <exhaustEffects>
-            <exhaustEffect node="exhaustParticle" filename="$data/effects/exhaust/exhaust.i3d" minRpmColor="0.9 0.9 0.9 0.1" maxRpmColor="0.9 0.9 0.9 0.4" minRpmScale="0.05" maxRpmScale="0.5" />
-        </exhaustEffects>
-
         <animationNodes>
             <animationNode node="airFilterCleaner" rotSpeed="400" rotAxis="2" turnOnFadeTime="2" turnOffFadeTime="4" />
             <animationNode node="airFilterCleaner2" rotSpeed="400" rotAxis="2" turnOnFadeTime="2" turnOffFadeTime="4" />
         </animationNodes>
 
         <brakeCompressor capacity="2000" fillSpeed="250" />
-        <motorStartDuration>3500</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="ANIMATION" valueType="speedDir" animName="joystickMovement" groups="MOTOR_ACTIVE"/>

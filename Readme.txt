@@ -1,5 +1,6 @@
 to turn loose files into mod add mod_desc.xml, eco_mod.dds, vehicles folder, move the .zip into your mod folder and sounds folder to a .zip file and there you go!
 
+V1.0.0
 
 Made (almost) every vehicle electric
 
@@ -19,3 +20,9 @@ I havent tested all of the vehicles as there are 116 of them so fixes will come 
 big thanks to Eco mod pack by Louminia for inspiration and for making a better mod than me I just applyed the changes Louminia did for thier mod to every vehicle
 
 I had to cut some corneres to make sure I didn't go insane but it should be playable for now!
+
+V1.0.1
+
+made all motor start times 200ms
+
+no need to wait when you don't use explosives in your vehicle ;)

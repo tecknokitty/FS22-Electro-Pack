@@ -294,7 +294,7 @@
             </motorConfiguration>
         </motorConfigurations>
 
-        <motorStartDuration>3500</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="NUMBER" valueType="rpm"   numbers="numbersRpm"  numberColor="0.5 0.5 0.5 1" precision="0" font="GENERIC" groups="MOTOR_ACTIVE"/>

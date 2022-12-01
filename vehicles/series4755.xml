@@ -878,7 +878,7 @@
             <animationNode node="fan" rotSpeed="600" rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4" />
         </animationNodes>
 
-        <motorStartDuration>3500</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="ROT" valueType="clutchPedal" node="pedalClutch"   minRot="0 0 0" maxRot="-20 0 0" doInterpolation="true" groups="MOTOR_ACTIVE"/>

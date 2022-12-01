@@ -524,7 +524,7 @@
             </motorConfiguration>
         </motorConfigurations>
 
-        <motorStartDuration>3800</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <animationNodes>
             <animationNode node="airFilterCleaner" rotSpeed="-600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="4" />

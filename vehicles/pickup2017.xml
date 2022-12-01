@@ -277,7 +277,7 @@
             </motorConfiguration>
         </motorConfigurations>
 
-        <motorStartDuration>3000</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="ROT" valueType="speed" node="needleSpeed" minRot="0" maxRot="-115" rotAxis="3" doInterpolation="true" interpolationSpeed="10" groups="MOTOR_ACTIVE"/>

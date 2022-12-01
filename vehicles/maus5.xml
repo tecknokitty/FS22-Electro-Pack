@@ -433,7 +433,7 @@
             </differentialConfiguration>
         </differentialConfigurations>
 
-        <motorStartDuration>4200</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="NUMBER" valueType="rpm"   numbers="numbersRpm"   precision="0" numberColor="0.6307 0.6307 0.6307 0.4" groups="MOTOR_ACTIVE"/>

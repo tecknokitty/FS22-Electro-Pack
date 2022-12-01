@@ -1066,7 +1066,7 @@
             </motorConfiguration>
         </motorConfigurations>
 
-        <motorStartDuration>3000</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="TEXT"      valueType="speed" node="numbersSpeed" textColor="0 0 0 1" textSize="0.011" textMask="00.0" font="DIGIT" groups="MOTOR_ACTIVE"/>

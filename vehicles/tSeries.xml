@@ -1979,7 +1979,7 @@
             </motorConfiguration>
         </motorConfigurations>
 
-        <motorStartDuration>3400</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="SLIDER"      valueType="rpm"               node="sliderRpm_decal"         minValueSlider="0"  maxValueSlider="2600" groups="MOTOR_ACTIVE"/>

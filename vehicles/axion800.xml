@@ -1699,7 +1699,7 @@
             </motorConfiguration>
         </motorConfigurations>
 
-        <motorStartDuration>3400</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="SLIDER" valueType="motorTemperature" node="waterTemperatureBar" groups="MOTOR_ACTIVE"/>

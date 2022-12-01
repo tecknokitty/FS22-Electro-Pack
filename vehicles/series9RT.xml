@@ -479,7 +479,7 @@
             </motorConfiguration>
         </motorConfigurations>
 
-        <motorStartDuration>3500</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="ANIMATION"   valueType="motorTemperature" animName="loadingBarTemperature" minValueAnim="20" maxValueAnim="120" groups="MOTOR_ACTIVE"/>

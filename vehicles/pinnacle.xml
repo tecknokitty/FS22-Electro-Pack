@@ -302,7 +302,7 @@
             </motorConfiguration>
         </motorConfigurations>
 
-        <motorStartDuration>3100</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="ANIMATION" valueType="speed"            animName="speedDisplay"  minValueAnim="0" maxValueAnim="180" groups="MOTOR_ACTIVE"/>

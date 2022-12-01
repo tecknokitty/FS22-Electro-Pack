@@ -975,7 +975,7 @@
             </gearLever>
         </gearLevers>
 
-        <motorStartDuration>3200</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="ROT" valueType="clutchPedal" node="pedalClutch"   minRot="0 0 0" maxRot="-16 0 0" doInterpolation="true" groups="MOTOR_ACTIVE"/>

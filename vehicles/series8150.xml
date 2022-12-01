@@ -906,7 +906,7 @@
 
         <exhaustFlap node="exhaustFlap" maxRot="90" />
 
-        <motorStartDuration>3000</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="ROT" valueType="clutchPedal" node="pedalClutch" minRot="0 0 0" maxRot="-20 0 0" doInterpolation="true" groups="MOTOR_ACTIVE"/>

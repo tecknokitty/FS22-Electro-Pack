@@ -225,7 +225,7 @@
             </dashboard>
         </dashboards>
 
-        <motorStartDuration>3000</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
     </motorized>
 
     <fillUnit>

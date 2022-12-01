@@ -530,7 +530,7 @@
 
         <exhaustFlap node="exhaustPipeFlap" maxRot="82" rotationAxis="1"/>
 
-        <motorStartDuration>4700</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="MULTI_STATE" valueType="ignitionState" node="ignitionKey" doInterpolation="true" groups="MOTOR_ACTIVE">

@@ -236,7 +236,7 @@
         </motorConfigurations>
 
         <brakeCompressor capacity="2000" fillSpeed="200" />
-        <motorStartDuration>3600</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <animationNodes>
             <animationNode node="airFilterCleaner" rotAxis="1" rotSpeed="600" turnOnFadeTime="4" turnOffFadeTime="3"/>

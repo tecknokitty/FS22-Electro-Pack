@@ -1185,11 +1185,7 @@
             </motorConfiguration>
         </motorConfigurations>
 
-        <exhaustEffects>
-            <exhaustEffect node="exhaustParticle" filename="$data/effects/exhaust/exhaust.i3d" minRpmColor="0.9 0.9 0.9 0.1" maxRpmColor="0.9 0.9 0.9 0.4" minRpmScale="0.05" maxRpmScale="0.5" />
-        </exhaustEffects>
-
-        <motorStartDuration>3200</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="ANIMATION" valueType="rpm" animName="needleRPM" minValueAnim="0" maxValueAnim="2500" groups="MOTOR_ACTIVE"/>

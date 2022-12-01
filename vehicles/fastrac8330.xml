@@ -460,7 +460,7 @@
             </motorConfiguration>
         </motorConfigurations>
 
-        <motorStartDuration>3500</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="ROT"  valueType="motorTemperature" node="needleTemperature" minRot="0" maxRot="190" rotAxis="3" doInterpolation="true" interpolationSpeed="0.3" groups="MOTOR_ACTIVE"/>

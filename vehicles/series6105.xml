@@ -394,7 +394,7 @@
             </gearLever>
         </gearLevers>
 
-        <motorStartDuration>3000</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="ANIMATION"   valueType="rpm" animName="rpmNeedle" minValueAnim="0" maxValueAnim="2500" groups="MOTOR_ACTIVE"/>

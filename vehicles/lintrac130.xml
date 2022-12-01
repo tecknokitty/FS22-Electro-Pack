@@ -1054,7 +1054,7 @@
             </motorConfiguration>
         </motorConfigurations>
 
-        <motorStartDuration>3000</motorStartDuration>
+        <motorStartDuration>200</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="ANIMATION"   valueType="rpm" animName="rpmNeedle" minValueAnim="0" maxValueAnim="3000" doInterpolation="true" interpolationSpeed="1.5" groups="MOTOR_ACTIVE"/>
