@@ -1,3 +1,6 @@
+to turn loose files into mod add mod_desc.xml, eco_mod.dds, vehicles folder, move the .zip into your mod folder and sounds folder to a .zip file and there you go!
+
+
 Made (almost) every vehicle electric
 
 all fuel consumption changed to roughly match HP to KW conversion
