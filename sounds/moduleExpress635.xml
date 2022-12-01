@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<sounds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/vehicle_sounds.xsd">
+    <motorized>
+        <sounds>
+            <motor template="engineLarge" file="$data/vehicles/caseIH/moduleExpress635/sounds/moduleExpress635_loop.gls" volumeScale="1.25"/>
+            <motor template="indoorCabinRumble" />
+            <gearbox template="transmissionHarvester" volumeScale="2.0"/>
+            <reverseDrive template="REVERSE_BEEP_01" linkNode="0>" />
+            <motor template="filterLoop" fadeIn="3" fadeOut="2" linkNode="airFilter"/>
+        </sounds>
+    </motorized>
+
+    <lights>
+        <sounds>
+            <toggleLights template="SWITCH_01"  />
+            <turnLight template="SWITCH_TURNLIGHT"  />
+        </sounds>
+    </lights>
+
+    <attacherJoints>
+        <sounds>
+            <attach template="HEADER_ATTACH_01" />
+            <hydraulic template="defaultHydraulicSound" />
+        </sounds>
+    </attacherJoints>
+
+    <drivable>
+        <sounds>
+            <waterSplash template="WATER_SPLASH_01" />
+        </sounds>
+    </drivable>
+
+    <combine>
+        <sounds>
+            <start template="HARVESTER_TOOL_GRIMME_START" volumeScale="2.5" pitchScale="0.8" linkNode="pickerDrum03" />
+            <work template="HARVESTER_TOOL_GRIMME_WORK"   volumeScale="2.5" pitchScale="0.8" linkNode="pickerDrum03" />
+            <stop template="HARVESTER_TOOL_GRIMME_STOP"   volumeScale="2.5" pitchScale="0.8" fadeOut="2" linkNode="pickerDrum03" />
+        </sounds> 
+    </combine>
+
+    <baler>
+        <sounds>
+            <work  template="ROLLBELT_LOOP" volumeScale="1.5" fadeIn="1" linkNode="unloadingDoorJoint"/>
+            <eject template="ROLLBELT_LOOP" volumeScale="1.5" fadeIn="0.5" fadeOut="1" linkNode="unloadingDoorJoint"/>
+        </sounds>
+    </baler>
+
+    <honk>
+        <sound template="HONK_NEW_HOLLAND_HARVESTER" linkNode="0>" />
+    </honk>
+</sounds>

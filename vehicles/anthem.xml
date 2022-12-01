@@ -1,0 +1,743 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="tractor" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Anthem 6x4 Electric</name>
+        <specs>
+            <power>425</power>
+            <maxSpeed>80</maxSpeed>
+            <combination xmlFilename="$data/vehicles/demco/sideDump/sideDump.xml"/>
+            <combination xmlFilename="$data/vehicles/wilsonTrailer/pacesetter/pacesetter.xml"/>
+            <combination xmlFilename="$data/vehicles/lodeKing/distinctionTripleHopper/distinctionTripleHopper.xml"/>
+            <combination xmlFilename="$data/vehicles/krampe/sks30_150/sks30_150.xml"/>
+            <combination xmlFilename="$data/vehicles/lodeKing/distinctionSuperB/distinctionSuperB.xml"/>
+            <combination xmlFilename="$data/vehicles/meridian/conveyAllCST1550/conveyAllCST1550.xml"/>
+            <combination xmlFilename="$data/vehicles/lizard/moduleX/moduleX.xml"/>
+            <combination xmlFilename="$data/vehicles/kotte/tsa/tsa.xml"/>
+            <combination xmlFilename="$data/vehicles/fliegl/timberRunner/timberRunner.xml"/>
+            <combination xmlFilename="$data/vehicles/lizard/mks32/mks32.xml"/>
+            <combination xmlFilename="$data/vehicles/wilsonTrailer/silverstar/silverstar.xml"/>
+            <combination xmlFilename="$data/vehicles/demco/steelDropDeck/steelDropDeck.xml"/>
+            <combination xmlFilename="$data/vehicles/lodeKing/renownTriAxleBeavertailLowDrop/renownTriAxleBeavertailLowDrop.xml"/>
+            <combination xmlFilename="$data/vehicles/krone/profiLiner/profiLiner.xml"/>
+        </specs>
+        <functions>
+            <function>$l10n_function_truck</function>
+        </functions>
+        <image>$data/vehicles/mack/anthem/store_anthem.png</image>
+        <price>98500</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>MACK</brand>
+        <category>trucks</category>
+        <shopTranslationOffset>0 0.03 0</shopTranslationOffset>
+        <shopRotationOffset>0.195 0 0</shopRotationOffset>
+        <vertexBufferMemoryUsage>8933120</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>1554176</indexBufferMemoryUsage>
+        <textureMemoryUsage>7340032</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>386881</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_truck</typeDesc>
+        <filename>$data/vehicles/mack/anthem/anthem.i3d</filename>
+        <sounds filename="sounds/anthem.xml"/>
+        <size width="4" length="9" height="4.2" lengthOffset="-1.5"/>
+        <components>
+            <component centerOfMass="0 0.45 -0.5" solverIterationCount="10" mass="7250"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="TRUCK" />
+        <mapHotspot type="TRUCK" />
+    </base>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="CONTINENTAL" saveId="CONTINENTAL_DEFAULT">
+                <wheels autoRotateBackSpeed="2.1">
+                    <wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/385_65R22_5.xml" configId="mackSuperlinerFront" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics rotSpeed="1"  restLoad="2.3" repr="axisFrontLeft"  driveNode="wheelFrontLeft"  forcePointRatio="0.35" initialCompression="35" suspTravel="0.15" spring="40" damper="40" frictionScale="2.1" yOffset="0.001"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/385_65R22_5.xml" configId="mackSuperlinerFront" isLeft="false" hasTireTracks="true" hasParticles="true" >
+                        <physics rotSpeed="1"  restLoad="2.3" repr="axisFrontRight" driveNode="wheelFrontRight" forcePointRatio="0.35" initialCompression="35" suspTravel="0.15" spring="40" damper="40" frictionScale="2.1" yOffset="0.001"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/contiHybridHD3/315_80R22_5.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics rotSpeed="0"  restLoad="1.1" repr="wheelMiddleLeft"  forcePointRatio="0.35" initialCompression="15" suspTravel="0.07" spring="78" damper="250" frictionScale="2.2" yOffset="0.003"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/continental/contiHybridHD3/315_80R22_5.xml" configId="dualConnector" isLeft="true" offset="0.09" />
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/contiHybridHD3/315_80R22_5.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true" >
+                        <physics rotSpeed="0"  restLoad="1.1" repr="wheelMiddleRight" forcePointRatio="0.35" initialCompression="15" suspTravel="0.07" spring="78" damper="250" frictionScale="2.2" yOffset="0.003"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/continental/contiHybridHD3/315_80R22_5.xml" configId="dualConnector" isLeft="false" offset="0.09" />
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/contiHybridHD3/315_80R22_5.xml" configId="dual" isLeft="true" hasParticles="true" >
+                        <physics rotSpeed="0"  restLoad="1.1" repr="wheelBackLeft"    forcePointRatio="0.35" initialCompression="15" suspTravel="0.07" spring="78" damper="250" frictionScale="2.3" yOffset="-0.001"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/continental/contiHybridHD3/315_80R22_5.xml" configId="dualConnector" isLeft="true" offset="0.09" />
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/contiHybridHD3/315_80R22_5.xml" configId="dual" isLeft="false" hasParticles="true" >
+                        <physics rotSpeed="0"  restLoad="1.1" repr="wheelBackRight"   forcePointRatio="0.35" initialCompression="15" suspTravel="0.07" spring="78" damper="250" frictionScale="2.3" yOffset="-0.001"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/continental/contiHybridHD3/315_80R22_5.xml" configId="dualConnector" isLeft="false" offset="0.09" />
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+
+        <ackermannSteeringConfigurations>
+            <ackermannSteering rotSpeed="35" rotMax="45" rotCenterWheel1="5" rotCenterWheel2="6" />
+        </ackermannSteeringConfigurations>
+    </wheels>
+
+    <lights>
+        <sharedLight linkNode="rearLight26Red_01"   filename="$data/shared/assets/lights/lizard/rearLight26Red.xml" />
+        <sharedLight linkNode="rearLight26Red_02"   filename="$data/shared/assets/lights/lizard/rearLight26Red.xml" />
+        <sharedLight linkNode="rearLight26White_01" filename="$data/shared/assets/lights/lizard/rearLight26Reverse.xml" />
+        <sharedLight linkNode="redRound_03" filename="$data/shared/assets/reflectors/lizard/redRound_03.xml" />
+        <sharedLight linkNode="redRound_04" filename="$data/shared/assets/reflectors/lizard/redRound_03.xml" />
+        <sharedLight linkNode="redRound_05" filename="$data/shared/assets/reflectors/lizard/redRound_03.xml" />
+        <sharedLight linkNode="redRound_06" filename="$data/shared/assets/reflectors/lizard/redRound_03.xml" />
+        <sharedLight linkNode="redRound_07" filename="$data/shared/assets/reflectors/lizard/redRound_03.xml" />
+        <sharedLight linkNode="redRound_08" filename="$data/shared/assets/reflectors/lizard/redRound_03.xml" />
+
+        <states>
+            <state lightTypes="0" />
+            <state lightTypes="0 1" />
+        </states>
+
+        <realLights>
+            <low>
+                <light node="frontLightLow"      lightTypes="0" excludedLightTypes="3" />
+                <light node="highBeamLow"        lightTypes="3" />
+            </low>
+            <high>
+                <light node="frontLightHigh"     lightTypes="0" excludedLightTypes="3" />
+                <light node="backLightsHigh1"    lightTypes="0"/>
+                <light node="highBeamHigh"       lightTypes="3"/>
+                <light node="workLightBackHigh1" lightTypes="1"/>
+                <brakeLight node="backLightsHigh1" />
+                <turnLightLeft node="turnLightLeftFront" />
+                <turnLightRight node="turnLightRightFront" />
+                <interiorLight node="interiorScreenLight" />
+                <reverseLight node="reverseLightHigh1" />
+            </high>
+        </realLights>
+
+        <defaultLights>
+            <defaultLight shaderNode="defaultLight01_static"      lightTypes="0 3" intensity="10"/>
+            <defaultLight shaderNode="defaultLight02_static"      lightTypes="0" intensity="10"/>
+            <defaultLight shaderNode="defaultLightGlass_static"   lightTypes="0 3" intensity="0.02"/>
+            <defaultLight shaderNode="dayCabPremiumLight_static"  lightTypes="0"/>
+            <defaultLight shaderNode="sleeper48Light_static"      lightTypes="0"/>
+            <defaultLight shaderNode="sleeper70Light_static"      lightTypes="0"/>
+            <defaultLight shaderNode="reverseLightGlass_static01" lightTypes="1"/>
+            <defaultLight shaderNode="reverseLightGlass_static02" lightTypes="1"/>
+            <defaultLight shaderNode="reverseLightGlass_static03" lightTypes="1"/>
+        </defaultLights>
+
+        <turnLights>
+            <turnLightLeft  shaderNode="turnlightLeftFrontGlass_static" intensity="10"/>
+            <turnLightRight shaderNode="turnlightRightFrontGlass_static" intensity="10"/>
+        </turnLights>
+
+        <dashboards>
+            <dashboard displayType="EMITTER" valueType="lightState"      node="cabinDecalsLight" intensity="0.4" lightTypes="0" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState"      node="steeringWheelDecalsLight" intensity="0.4" lightTypes="0" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState"      node="defaultLightDecal" intensity="3" lightTypes="0" baseColor="BLACK" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState"      node="highBeamDecal" intensity="1" lightTypes="3" baseColor="BLACK" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="turnLightLeft"   node="arrowLeftDecal" intensity="5" baseColor="BLACK" emitColor="GREEN" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="turnLightRight"  node="arrowRightDecal" intensity="5" baseColor="BLACK" emitColor="GREEN" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="turnLightHazard" node="hazardlight_decal" intensity="0.4" emitColor="RED" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ROT"     valueType="turnLight"       node="leverTurnlight" minRot="15 0 0" maxRot="-15 0 0" doInterpolation="true" groups="MOTOR_ACTIVE"/>
+        </dashboards>
+    </lights>
+
+    <licensePlates defaultPlacement="BOTH">
+        <licensePlate node="licensePlateFront" position="FRONT"  preferedType="SQUARISH" placementArea="0.1 0.15 0.1 0.15"/>
+        <licensePlate node="licensePlateBack"  position="BACK"   preferedType="SQUARISH" placementArea="0.1 0.17 0.1 0.17"/>
+        <licensePlate node="licensePlateBack2"  position="BACK"  preferedType="SQUARISH" placementArea="0.1 0.17 0.1 0.17"/>
+        <licensePlate node="licensePlateBack3"  position="BACK"  preferedType="SQUARISH" placementArea="0.1 0.17 0.1 0.17"/>
+    </licensePlates>
+
+    <speedRotatingParts>
+        <speedRotatingPart node="pto1" radius="0.2" />
+        <speedRotatingPart node="pto2" radius="0.2" />
+        <speedRotatingPart node="pto3" radius="0.2" />
+        <speedRotatingPart node="pto4" radius="0.2" />
+        <speedRotatingPart node="pto5" radius="0.2" />
+    </speedRotatingParts>
+
+    <attacherJoints comboDuration="2">
+        <attacherJointConfigurations>
+            <attacherJointConfiguration>
+                <attacherJoint node="semitrailerAttacherJoint" jointType="semitrailer" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="0.8 125 15">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+            </attacherJointConfiguration>
+        </attacherJointConfigurations>
+    </attacherJoints>
+
+    <connectionHoses>
+        <target attacherJointIndices="1" type="airDoubleRed" node="airDoubleStorage" socket="air_red" straighteningFactor="2"/>
+        <target attacherJointIndices="1" type="airDoubleYellow" node="airDoubleControl" socket="air_yellow" straighteningFactor="2"/>
+        <target attacherJointIndices="1" type="electric" node="electric" socket="electric" straighteningFactor="2"/>
+        <target attacherJointIndices="1" type="hydraulicIn" node="hydraulicIn" straighteningFactor="2"/>
+        <target attacherJointIndices="1" type="hydraulicOut" node="hydraulicOut" straighteningFactor="2"/>
+    </connectionHoses>
+
+    <enterable isTabbable="true" >
+        <enterReferenceNode node="anthem_main_component1" />
+        <exitPoint node="exitPoint" />
+
+        <cameras>
+            <camera node="outdoorCamera1" rotatable="true" rotateNode="outdoorCameraTarget" limit="true" useWorldXZRotation="true" rotMinX="-1.4" rotMaxX="1" transMin="5" transMax="40" translation="0 0 10" rotation="-20 180 0">
+                <raycastNode node="cameraRaycastNode1"/>
+                <raycastNode node="cameraRaycastNode2"/>
+                <raycastNode node="cameraRaycastNode3"/>
+            </camera>
+            <camera node="indoorCamera1" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" useMirror="true" isInside="true" positionSmoothingParameter="0.4" shadowFocusBox="shadowFocusBox" suspensionNodeIndex="2"/>
+        </cameras>
+
+        <characterNode node="playerSkin" cameraMinDistance="0.5" spineRotation="-90 0 90" >
+            <target ikChain="rightFoot" targetNode="playerRightFootTarget" />
+            <target ikChain="leftFoot"  targetNode="playerLeftFootTarget" />
+            <target ikChain="rightArm"  targetNode="playerRightHandTarget" />
+            <target ikChain="leftArm"   targetNode="playerLeftHandTarget" />
+        </characterNode>
+
+        <characterTargetNodeModifier node="playerRightFootTarget" transitionTime="0.1">
+            <state node="playerRightFootTargetGas"   referenceNode="pedalGas" directionReferenceNode="playerRightFootTargetGasRef"/>
+            <state node="playerRightFootTargetBrake"   referenceNode="pedalBrake"/>
+        </characterTargetNodeModifier>
+
+        <passengerSeats>
+            <passengerSeat node="passengerSeat01" exitPoint="passengerSeat01ExitPoint" outdoorCameraIndex="1">
+                <camera node="passengerSeat01Camera" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" useMirror="true" isInside="true" positionSmoothingParameter="0" shadowFocusBox="shadowFocusBox"/>
+                <characterNode node="passengerSeat01PlayerSkin" cameraMinDistance="0.5" spineRotation="-90 0 90">
+                    <target ikChain="leftArm"   targetNode="passengerSeat01PlayerLeftHand" poseId="flatFingers"/>
+                    <target ikChain="rightArm"  targetNode="passengerSeat01PlayerRightHand" poseId="wideFingers"/>
+                    <target ikChain="leftFoot"  targetNode="passengerSeat01PlayerLeftFoot" />
+                    <target ikChain="rightFoot" targetNode="passengerSeat01PlayerRightFoot" />
+                </characterNode>
+            </passengerSeat>
+        </passengerSeats>
+
+        <mirrors>
+            <mirror node="mirrorDecal01" prio="1" />
+            <mirror node="mirrorDecal02" prio="1" />
+            <mirror node="mirrorDecal03" prio="1" />
+            <mirror node="mirrorDecal04" prio="1" />
+        </mirrors>
+
+        <dashboards>
+            <dashboard displayType="TEXT" valueType="time" node="numbersTime" textColor="1 1 1 1" textSize="0.004" textMask="00:00" font="GENERIC" textAlignment="CENTER" emissiveScale="0.4" groups="MOTOR_ACTIVE"/>
+        </dashboards>
+    </enterable>
+
+    <motorized statsType="truck">
+        <consumerConfigurations>
+            <consumerConfiguration>
+                <consumer fillUnitIndex="1" usage="42" fillType="electricCharge"/>
+                <consumer fillUnitIndex="2" usage="300" fillType="air" permanentConsumption="false" refillLitersPerSecond="350" refillCapacityPercentage="0.5" /> <!-- usage per second at full brake power -->
+            </consumerConfiguration>
+            <consumerConfiguration>
+                <consumer fillUnitIndex="1" usage="45" fillType="electricCharge"/>
+                <consumer fillUnitIndex="2" usage="300" fillType="air" permanentConsumption="false" refillLitersPerSecond="350" refillCapacityPercentage="0.5" /> <!-- usage per second at full brake power -->
+            </consumerConfiguration>
+            <consumerConfiguration>
+                <consumer fillUnitIndex="1" usage="50" fillType="electricCharge"/>
+                <consumer fillUnitIndex="2" usage="300" fillType="air" permanentConsumption="false" refillLitersPerSecond="350" refillCapacityPercentage="0.5" /> <!-- usage per second at full brake power -->
+            </consumerConfiguration>
+        </consumerConfigurations>
+
+        <differentialConfigurations>
+            <differentialConfiguration>
+                <differentials>
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.4" wheelIndex1="1" wheelIndex2="2" /> <!-- front left-right -->
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.4" wheelIndex1="3" wheelIndex2="4" /> <!-- middle left-right -->
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.4" wheelIndex1="5" wheelIndex2="6" /> <!-- back left-right -->
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.4" differentialIndex1="1" differentialIndex2="2" /> <!-- front-middle -->
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.3" differentialIndex1="3" differentialIndex2="4" /> <!-- back -front-middle-->
+                </differentials>
+            </differentialConfiguration>
+        </differentialConfigurations>
+
+        <motorConfigurations>
+            <motorConfiguration name="Anthem 6x4 (MP7 425)" hp="425" price="0">
+                <motor torqueScale="2.036" minRpm="850" maxRpm="2200" maxForwardSpeed="83" maxBackwardSpeed="10" brakeForce="4.5" lowBrakeForceScale="0.22" dampingRateScale="1.9" >
+                    <torque rpm="850" torque="0.9"/>
+                    <torque rpm="1000" torque="1"/>
+                    <torque rpm="1450" torque="1"/>
+                    <torque rpm="1900" torque="0.75"/>
+                    <torque rpm="2200" torque="0.63"/>
+                    <torque rpm="2500" torque="0.2"/>
+                </motor>
+
+                <!-- mDrive 12-speed transmission -->
+                <transmission autoGearChangeTime="0.5" gearChangeTime="0.4" axleRatio="8" name="$l10n_info_transmission_manual">
+                    <directionChange useGear="true" useGroup="false" changeTime="0.5"/>
+
+                    <forwardGear gearRatio="14.94" actionName="SHIFT_GEAR_SELECT_1"/>
+                    <forwardGear gearRatio="11.73" actionName="SHIFT_GEAR_SELECT_2"/>
+                    <forwardGear gearRatio="9.04"  actionName="-"/>
+                    <forwardGear gearRatio="7.09"  actionName="SHIFT_GEAR_SELECT_3"/>
+                    <forwardGear gearRatio="5.54"  actionName="-"/>
+                    <forwardGear gearRatio="4.35"  actionName="SHIFT_GEAR_SELECT_4"/>
+                    <forwardGear gearRatio="3.44"  actionName="-"/>
+                    <forwardGear gearRatio="2.70"  actionName="SHIFT_GEAR_SELECT_5"/>
+                    <forwardGear gearRatio="2.08"  actionName="-"/>
+                    <forwardGear gearRatio="1.63"  actionName="SHIFT_GEAR_SELECT_6"/>
+                    <forwardGear gearRatio="1.27"  actionName="-"/>
+                    <forwardGear gearRatio="1.00"  actionName="SHIFT_GEAR_SELECT_7"/>
+
+                    <backwardGear gearRatio="12.48" name="R1"/>
+                    <backwardGear gearRatio="9.04" name="R2"/>
+                </transmission>
+            </motorConfiguration>
+            <motorConfiguration name="Anthem 6x4 (MP8 455)" hp="455" price="10000" consumerConfigurationIndex="2">
+                <motor torqueScale="2.179" dampingRateScale="2.0"/>
+            </motorConfiguration>
+            <motorConfiguration name="Anthem 6x4 (MP8 505)" hp="505" price="26500" consumerConfigurationIndex="3">
+                <motor torqueScale="2.419" dampingRateScale="2.2"/>
+            </motorConfiguration>
+        </motorConfigurations>
+
+        <motorStartDuration>3100</motorStartDuration>
+
+        <dashboards>
+            <dashboard displayType="ANIMATION" valueType="speed"            animName="speedDisplay"  minValueAnim="0" maxValueAnim="180" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ANIMATION" valueType="motorTemperature" animName="tempDisplay"  minValueAnim="0" maxValueAnim="120" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ANIMATION" valueType="rpm"              animName="rpmDisplay"  minValueAnim="0" maxValueAnim="3000" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="TEXT"     valueType="speed" node="numbersSpeed" textColor="1 1 1 1" textSize="0.007" textMask="00.0" font="GENERIC" groups="MOTOR_ACTIVE" textAlignment="CENTER"/>
+        </dashboards>
+    </motorized>
+
+    <drivable>
+        <steeringWheel node="steeringWheel" indoorRotation="360" outdoorRotation="15" />
+
+        <dashboards>
+            <dashboard displayType="ROT" valueType="decelerationAxis" node="pedalBrake" minRot="0 0 0" maxRot="-20 0 0" doInterpolation="true" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ROT" valueType="accelerationAxis" node="pedalGas" minRot="0 0 0" maxRot="-20 0 0" doInterpolation="true" groups="MOTOR_ACTIVE"/>
+        </dashboards>
+    </drivable>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <fillUnit unitTextOverride="$l10n_unit_kw" showOnHud="false" showInShop="false" fillTypes="ELECTRICCHARGE" capacity="225"> 
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="fuelDisplay" groups="MOTOR_ACTIVE"/>
+                    </fillUnit>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" showOnInfoHud="false" fillTypes="air" capacity="4000">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="airDisplay" groups="MOTOR_ACTIVE"/>
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <fillUnit unitTextOverride="$l10n_unit_kw" showOnHud="false" showInShop="false" fillTypes="ELECTRICCHARGE" capacity="233"> 
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="fuelDisplay" groups="MOTOR_ACTIVE"/>
+                    </fillUnit>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" showOnInfoHud="false" fillTypes="air" capacity="4000">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="airDisplay" groups="MOTOR_ACTIVE"/>
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <fillUnit unitTextOverride="$l10n_unit_kw" showOnHud="false" showInShop="false" fillTypes="ELECTRICCHARGE" capacity="250"> 
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="fuelDisplay" groups="MOTOR_ACTIVE"/>
+                    </fillUnit>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" showOnInfoHud="false" fillTypes="air" capacity="4000">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="airDisplay" groups="MOTOR_ACTIVE"/>
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <animations>
+        <animation name="tempDisplay">
+            <part node="tempNeedle01" startTime="0" endTime="1" startRot="0 0 0" endRot="0 -60 0" />
+            <part node="tempNeedle02" startTime="0" endTime="1" startRot="0 0 0" endRot="0 -40 0" />
+            <part node="tempNeedle03" startTime="0" endTime="1" startRot="0 0 0" endRot="0 -20 0" />
+        </animation>
+        <animation name="airDisplay">
+            <part node="airNeedle01" startTime="0" endTime="1" startRot="0 0 0" endRot="0 0 -45" />
+            <part node="airNeedle02" startTime="0" endTime="1" startRot="0 0 0" endRot="0 0 -45" />
+        </animation>
+        <animation name="fuelDisplay">
+            <part node="fuelNeedle" startTime="0" endTime="1" startRot="0 0 0" endRot="0 0 -88" />
+        </animation>
+        <animation name="rpmDisplay">
+            <part node="rpmNeedle" startTime="0" endTime="1" startRot="0 0 0" endRot="0 0 -226" />
+        </animation>
+        <animation name="speedDisplay">
+            <part node="speedNeedle" startTime="0" endTime="1" startRot="0 0 0" endRot="0 -204.5 0" />
+        </animation>
+        <animation name="wiperFrontAnimation">
+            <part node="wiperFrontArm01" startTime="0" endTime="1" startRot="0 0 0" endRot="0 8.713 -81.104"/>
+            <part node="wiperFrontArm02" startTime="0" endTime="1" startRot="0 0 0" endRot="0 8.713 -81.104"/>
+
+            <sound template="wiper1" startTime="0" endTime="1" direction="1"  volumeScale="1.0" pitchScale="0.8" fadeOut="0.1" linkNode="wiperFrontArm01"/>
+            <sound template="wiper2" startTime="0" endTime="1" direction="-1" volumeScale="1.0" pitchScale="0.8" fadeOut="0.1" linkNode="wiperFrontArm01"/>
+        </animation>
+    </animations>
+
+    <wipers>
+        <wiper animName="wiperFrontAnimation" >
+            <state animSpeed="0.75" animPause="2.0" />
+            <state animSpeed="0.75" animPause="0.0" />
+            <state animSpeed="1.10" animPause="0.0" />
+        </wiper>
+    </wipers>
+
+    <cylindered>
+        <movingParts>
+            <movingPart node="steeringBar" referencePoint="steeringBarRef" referenceFrame="steeringBarRef" isActiveDirty="true" maxUpdateDistance="20"/>
+        </movingParts>
+    </cylindered>
+
+    <suspensions>
+        <suspension useCharacterTorso="true" weight="90" minRotation="0 -5 -5" maxRotation="0 5 5" suspensionParametersY="7 1" suspensionParametersZ="7 1" />
+    </suspensions>
+
+    <ai>
+        <agent width="2.65" length="7.25" height="2.85" lengthOffset="2.78" frontOffset="5.02" />
+        <collisionTrigger node="aiCollisionNode" width="3" height="4"/>
+    </ai>
+
+    <dashboard>
+        <groups>
+            <group name="MOTOR_STARTING" isMotorStarting="true"/>
+            <group name="MOTOR_ACTIVE"   isMotorStarting="true" isMotorRunning="true"/>
+        </groups>
+        <default>
+            <dashboard displayType="EMITTER" node="dashboardDisplay01" idleValue="-1" intensity="0.2" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="EMITTER" node="startingDecal" baseColor="SHARED_BLACK4" intensity="0.2" groups="MOTOR_STARTING" />
+            <dashboard displayType="VISIBILITY" node="dashboardDisplay01" idleValue="-1" intensity="0.2" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="EMITTER" node="dashboardDisplay02" idleValue="0" intensity="0.2" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="EMITTER" node="speedNeedle" idleValue="0" intensity="0.2" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="EMITTER" node="rpmNeedle" idleValue="0" intensity="0.2" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="EMITTER" node="fuelNeedle" idleValue="0" intensity="0.2" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="EMITTER" node="airNeedle01" idleValue="0" intensity="0.2" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="EMITTER" node="airNeedle02" idleValue="0" intensity="0.2" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="EMITTER" node="tempNeedle01" idleValue="0" intensity="0.2" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="EMITTER" node="tempNeedle02" idleValue="0" intensity="0.2" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="EMITTER" node="tempNeedle03" idleValue="0" intensity="0.2" groups="MOTOR_ACTIVE" />
+        </default>
+    </dashboard>
+
+    <foliageBending>
+        <bendingNode minX="-1.28" maxX="1.28" minZ="-4.45" maxZ="2.8" yOffset="0.5" />
+    </foliageBending>
+
+    <baseMaterial>
+        <material name="anthem_mat" baseNode="anthem_vis">
+            <shaderParameter name="colorMat0" value="MACK_RED1" material="0"/>
+            <shaderParameter name="colorMat3" value="1.000 1.000 1.000"/>
+            <shaderParameter name="colorMat4" value="0.8632 0.8713 0.8713 18"/>
+        </material>
+        <material name="anthemExtension_mat" baseNode="dayCab_FairingVersion">
+            <shaderParameter name="colorMat0" value="MACK_RED1"/>
+        </material>
+        <material name="anthemSleeper48_mat" baseNode="exterior_sleeper48">
+            <shaderParameter name="colorMat0" value="MACK_RED1"/>
+        </material>
+        <material name="anthemSleeper70_mat" baseNode="exteriorSleeper">
+            <shaderParameter name="colorMat0" value="MACK_RED1"/>
+            <shaderParameter name="colorMat3" value="0.8632 0.8713 0.8713 18"/>
+        </material>
+        <material name="anthemLights_mat" baseNode="lights_vis">
+            <shaderParameter name="colorMat3" value="1.000 1.000 1.000"/>
+        </material>
+        <material name="dayCabGridAlpha02_mat" baseNode="grill_bottom">
+            <shaderParameter name="colorMat0" value="0.95 0.95 0.95" material="8"/>
+            <shaderParameter name="colorMat1" value="0.95 0.95 0.95" material="8"/>
+            <shaderParameter name="colorMat2" value="0.95 0.95 0.95" material="8"/>
+        </material>
+    </baseMaterial>
+
+    <baseMaterialConfigurations price="1500" useDefaultColors="true" defaultColorIndex="0">
+        <baseMaterialConfiguration name="$l10n_ui_colorRed" color="MACK_RED1">
+            <objectChange node="limitedEdition_vis" visibilityActive="false"/>
+        </baseMaterialConfiguration>
+
+        <baseMaterialConfiguration name="Mack Black Anthem" price="0" color="SHARED_BLACK0" material="0" isSelectable="false" vehicleIcon="$data/vehicles/mack/anthem/store_anthemBlack.png">
+            <material name="anthem_mat" shaderParameter="colorMat3" color="SHARED_BLACK0" materialId="0"/>
+            <material name="anthem_mat" shaderParameter="colorMat4" color="SHARED_BLACK0" materialId="0"/>
+            <material name="anthemLights_mat" shaderParameter="colorMat3" color="SHARED_BLACK0" materialId="1"/>
+            <material name="anthemSleeper70_mat" shaderParameter="colorMat3" color="SHARED_BLACK0" materialId="0"/>
+            <material name="dayCabGridAlpha02_mat" shaderParameter="colorMat0" color="SHARED_BLACK2" materialId="0"/>
+            <material name="dayCabGridAlpha02_mat" shaderParameter="colorMat1" color="SHARED_BLACK2" materialId="0"/>
+            <material name="dayCabGridAlpha02_mat" shaderParameter="colorMat2" color="SHARED_BLACK2" materialId="0"/>
+            <material name="_hubColor1" color="SHARED_BLACK0"/>
+            <material name="_hubColor2" color="SHARED_BLACK0"/>
+            <objectChange node="limitedEdition_vis" visibilityActive="true"/>
+        </baseMaterialConfiguration>
+
+        <material name="anthem_mat" shaderParameter="colorMat0" material="0"/>
+        <material name="anthemExtension_mat" shaderParameter="colorMat0" />
+        <material name="anthemSleeper48_mat" shaderParameter="colorMat0" />
+        <material name="anthemSleeper70_mat" shaderParameter="colorMat0" />
+    </baseMaterialConfigurations>
+
+    <configurationSets>
+        <configurationSet name="Day Cab">
+            <configuration name="design" index="1"/>
+            <configuration name="fillUnit" index="3"/>
+        </configurationSet>
+        <configurationSet name="Day Cab Premium">
+            <configuration name="design" index="2"/>
+            <configuration name="fillUnit" index="3"/>
+        </configurationSet>
+        <configurationSet name="Sleeper 48">
+            <configuration name="design" index="3"/>
+            <configuration name="fillUnit" index="2"/>
+        </configurationSet>
+        <configurationSet name="Sleeper 48 Fairing">
+            <configuration name="design" index="4"/>
+            <configuration name="fillUnit" index="2"/>
+        </configurationSet>
+        <configurationSet name="Sleeper 70">
+            <configuration name="design" index="5"/>
+            <configuration name="fillUnit" index="1"/>
+        </configurationSet>
+    </configurationSets>
+
+    <designConfigurations preLoad="true">
+        <designConfiguration name="Day Cab">
+            <objectChange node="dayCab" visibilityActive="true"/>
+            <objectChange node="dayCab_premium" visibilityActive="false"/>
+            <objectChange node="sleeper48" visibilityActive="false"/>
+            <objectChange node="sleeper48_fairing" visibilityActive="false"/>
+            <objectChange node="sleeper48Basic" visibilityActive="false"/>
+            <objectChange node="sleeper70" visibilityActive="false"/>
+            <objectChange node="backWheels" translationActive="0 0 0"/>
+            <objectChange node="reverseLights" translationActive="0 0 0"/>
+            <objectChange node="exhaustParticle" translationActive="0 0 0"/>
+            <objectChange node="exhaustParticle1" translationActive="0 0 0"/>
+            <objectChange node="airConnectors" translationActive="0.656 1.192 -0.264"/>
+        </designConfiguration>
+        <designConfiguration name="Day Cab Premium" price="7500">
+            <objectChange node="dayCab" visibilityActive="true"/>
+            <objectChange node="dayCab_premium" visibilityActive="true"/>
+            <objectChange node="sleeper48" visibilityActive="false"/>
+            <objectChange node="sleeper48_fairing" visibilityActive="false"/>
+            <objectChange node="sleeper48Basic" visibilityActive="false"/>
+            <objectChange node="sleeper70" visibilityActive="false"/>
+            <objectChange node="backWheels" translationActive="0 0 0"/>
+            <objectChange node="reverseLights" translationActive="0 0 0"/>
+            <objectChange node="exhaustParticle" translationActive="0 0 0" rotationActive="0 0 0"/>
+            <objectChange node="exhaustParticle1" translationActive="0 0 0" rotationActive="0 0 0"/>
+            <objectChange node="colPart_dayCabPremium" compoundChildActive="true" compoundChildInactive="false"/>
+            <objectChange node="airConnectors" translationActive="0.656 1.192 -0.264"/>
+            <aiAgent height="3.8"/>
+        </designConfiguration>
+        <designConfiguration name="Sleeper 48" price="15000">
+            <objectChange node="dayCab" visibilityActive="false"/>
+            <objectChange node="dayCab_premium" visibilityActive="false"/>
+            <objectChange node="sleeper48" visibilityActive="true"/>
+            <objectChange node="sleeper48_fairing" visibilityActive="false"/>
+            <objectChange node="sleeper48Basic" visibilityActive="true"/>
+            <objectChange node="sleeper70" visibilityActive="false"/>
+            <objectChange node="backWheels" translationActive="0 0 -0.787"/>
+            <objectChange node="reverseLights" translationActive="0 0 -1"/>
+            <objectChange node="exhaustParticle" translationActive="1.007 -1.743 2.769" rotationActive="41.272 8.415 -9.467"/>
+            <objectChange node="exhaustParticle1" translationActive="-0.661 -1.743 2.769" rotationActive="41.003 -9.874 11.158"/>
+            <objectChange node="colPart_sleeper48" compoundChildActive="true" compoundChildInactive="false"/>
+            <objectChange node="airConnectors" translationActive="0.656 1.192 -1.301"/>
+            <foliageBendingModifier index="1" minZ="-5.2" maxZ="2.8"/>
+            <aiAgent length="8" lengthOffset="3.18" height="3.75" frontOffset="5.8"/>
+        </designConfiguration>
+        <designConfiguration name="Sleeper 48 Fairing" price="22500">
+            <objectChange node="dayCab" visibilityActive="false"/>
+            <objectChange node="dayCab_premium" visibilityActive="false"/>
+            <objectChange node="sleeper48" visibilityActive="true"/>
+            <objectChange node="sleeper48_fairing" visibilityActive="true"/>
+            <objectChange node="sleeper48Basic" visibilityActive="false"/>
+            <objectChange node="sleeper70" visibilityActive="false"/>
+            <objectChange node="backWheels" translationActive="0 0 -0.787"/>
+            <objectChange node="reverseLights" translationActive="0 0 -1"/>
+            <objectChange node="exhaustParticle" translationActive="1.007 -1.743 2.769" rotationActive="41.272 8.415 -9.467"/>
+            <objectChange node="exhaustParticle1" translationActive="-0.661 -1.743 2.769" rotationActive="41.003 -9.874 11.158"/>
+            <objectChange node="colPart_sleeper48Fairing" compoundChildActive="true" compoundChildInactive="false"/>
+            <objectChange node="airConnectors" translationActive="0.656 1.192 -1.301"/>
+            <foliageBendingModifier index="1" minZ="-5.2" maxZ="2.8"/>
+            <aiAgent length="8" lengthOffset="3.18" height="3.8" frontOffset="5.8"/>
+        </designConfiguration>
+        <designConfiguration name="Sleeper 70" price="30000">
+            <objectChange node="dayCab" visibilityActive="false"/>
+            <objectChange node="dayCab_premium" visibilityActive="false"/>
+            <objectChange node="sleeper48" visibilityActive="false"/>
+            <objectChange node="sleeper48_fairing" visibilityActive="false"/>
+            <objectChange node="sleeper48Basic" visibilityActive="false"/>
+            <objectChange node="sleeper70" visibilityActive="true"/>
+            <objectChange node="backWheels" translationActive="0 0 -1.238"/>
+            <objectChange node="reverseLights" translationActive="0 0 -1.557"/>
+            <objectChange node="exhaustParticle" translationActive="1.007 -1.26 3.007" rotationActive="41.272 8.415 -9.467"/>
+            <objectChange node="exhaustParticle1" translationActive="-0.661 -1.26 3.007" rotationActive="41.003 -9.874 11.158"/>
+            <objectChange node="colPart_sleeper70" compoundChildActive="true" compoundChildInactive="false"/>
+            <objectChange node="airConnectors" translationActive="0.656 1.192 -1.812"/>
+            <foliageBendingModifier index="1" minZ="-5.65" maxZ="2.8"/>
+            <aiAgent length="8.45" lengthOffset="3.4" height="4.05" frontOffset="6.26"/>
+        </designConfiguration>
+    </designConfigurations>
+
+
+    <design2Configurations>
+        <design2Configuration name="$l10n_configuration_valueDesign01">
+            <objectChange node="hoodMirrors" visibilityActive="true" visibilityInactive="false"/>
+        </design2Configuration>
+        <design2Configuration name="$l10n_configuration_valueDesign02"/>
+    </design2Configurations>
+
+    <rimColorConfigurations useDefaultColors="false" >
+        <rimColorConfiguration name="$l10n_ui_colorChrome" color="SHARED_WHITE2" material="3"  price="3000"/>
+        <rimColorConfiguration name="$l10n_ui_colorGrey"   color="SHARED_WHITE1" material="18" price="0"/>
+        <rimColorConfiguration name="$l10n_ui_colorWhite"  color="SHARED_WHITE2" material="0"  price="0"/>
+        <rimColorConfiguration name="$l10n_ui_colorBlack"  color="SHARED_BLACK0" material="0"  price="0"/>
+    </rimColorConfigurations>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="3" fieldMultiplier="2"/>
+
+    <i3dMappings>
+        <i3dMapping id="anthem_main_component1" node="0>" />
+        <i3dMapping id="anthem_vis" node="0>0" />
+        <i3dMapping id="axisFrontLeft" node="0>0|0|0|0" />
+        <i3dMapping id="wheelFrontLeft" node="0>0|0|0|0|0|0" />
+        <i3dMapping id="steeringBar" node="0>0|0|0|0|1" />
+        <i3dMapping id="axisFrontRight" node="0>0|0|1|0" />
+        <i3dMapping id="wheelFrontRight" node="0>0|0|1|0|0|0" />
+        <i3dMapping id="steeringBarRef" node="0>0|0|1|0|1" />
+        <i3dMapping id="backWheels" node="0>0|0|2" />
+        <i3dMapping id="wheelMiddleLeft" node="0>0|0|2|0" />
+        <i3dMapping id="wheelMiddleRight" node="0>0|0|2|1" />
+        <i3dMapping id="wheelBackLeft" node="0>0|0|2|2" />
+        <i3dMapping id="wheelBackRight" node="0>0|0|2|3" />
+        <i3dMapping id="semitrailerAttacherJoint" node="0>0|0|2|4|1" />
+        <i3dMapping id="backLightsHigh1" node="0>0|0|2|5|0" />
+        <i3dMapping id="rearLight26White_01" node="0>0|0|2|6|0" />
+        <i3dMapping id="rearLight26Red_01" node="0>0|0|2|6|1" />
+        <i3dMapping id="rearLight26Red_02" node="0>0|0|2|6|2" />
+        <i3dMapping id="defaultLight01_static" node="0>0|1|0|0" />
+        <i3dMapping id="defaultLight02_static" node="0>0|1|0|1" />
+        <i3dMapping id="defaultLightGlass_static" node="0>0|1|0|2" />
+        <i3dMapping id="turnlightLeftFront_static" node="0>0|1|0|3" />
+        <i3dMapping id="turnlightLeftFrontGlass_static" node="0>0|1|0|4" />
+        <i3dMapping id="turnlightRightFrontGlass_static" node="0>0|1|0|5" />
+        <i3dMapping id="lights_vis" node="0>0|1|0|6|1" />
+        <i3dMapping id="frontLightLow" node="0>0|1|1|0" />
+        <i3dMapping id="highBeamLow" node="0>0|1|1|1" />
+        <i3dMapping id="frontLightHigh" node="0>0|1|1|2" />
+        <i3dMapping id="highBeamHigh" node="0>0|1|1|3" />
+        <i3dMapping id="interiorScreenLight" node="0>0|1|1|4" />
+        <i3dMapping id="turnLightLeftFront" node="0>0|1|2|0" />
+        <i3dMapping id="turnLightRightFront" node="0>0|1|2|1" />
+        <i3dMapping id="reverseLights" node="0>0|1|3" />
+        <i3dMapping id="reverseLightHigh1" node="0>0|1|3|0" />
+        <i3dMapping id="workLightBackHigh1" node="0>0|1|4" />
+        <i3dMapping id="outdoorCameraTarget" node="0>0|2|0" />
+        <i3dMapping id="outdoorCamera1" node="0>0|2|0|0" />
+        <i3dMapping id="indoorCamera1" node="0>0|2|1" />
+        <i3dMapping id="cameraRaycastNode1" node="0>0|2|2" />
+        <i3dMapping id="cameraRaycastNode2" node="0>0|2|3" />
+        <i3dMapping id="cameraRaycastNode3" node="0>0|2|4" />
+        <i3dMapping id="shadowFocusBox" node="0>0|2|5" />
+        <i3dMapping id="exitPoint" node="0>0|3" />
+        <i3dMapping id="exhaustParticle" node="0>0|4|0" />
+        <i3dMapping id="exhaustParticle1" node="0>0|4|1" />
+        <i3dMapping id="aiCollisionNode" node="0>0|5|0" />
+        <i3dMapping id="electric" node="0>0|6|0" />
+        <i3dMapping id="hydraulicIn" node="0>0|6|1" />
+        <i3dMapping id="hydraulicOut" node="0>0|6|2" />
+        <i3dMapping id="airConnectors" node="0>0|6|3" />
+        <i3dMapping id="airDoubleControl" node="0>0|6|3|0" />
+        <i3dMapping id="airDoubleStorage" node="0>0|6|3|1" />
+        <i3dMapping id="steeringWheel" node="0>0|7|0|0" />
+        <i3dMapping id="playerLeftHandTarget" node="0>0|7|0|0|0" />
+        <i3dMapping id="playerRightHandTarget" node="0>0|7|0|0|1" />
+        <i3dMapping id="steeringWheelDecalsLight" node="0>0|7|0|0|2|0" />
+        <i3dMapping id="playerSkin" node="0>0|7|1|0" />
+        <i3dMapping id="playerRightFootTarget" node="0>0|7|1|1" />
+        <i3dMapping id="playerLeftFootTarget" node="0>0|7|1|2" />
+        <i3dMapping id="playerRightFootTargetGas" node="0>0|7|1|3" />
+        <i3dMapping id="mirrorDecal03" node="0>0|7|2|0" />
+        <i3dMapping id="mirrorDecal04" node="0>0|7|2|1" />
+        <i3dMapping id="pedalBrake" node="0>0|7|3|0" />
+        <i3dMapping id="playerRightFootTargetBrake" node="0>0|7|3|0|0" />
+        <i3dMapping id="pedalGas" node="0>0|7|3|1" />
+        <i3dMapping id="playerRightFootTargetGasRef" node="0>0|7|3|1|0" />
+        <i3dMapping id="wiperFrontArm01" node="0>0|7|4|0|0" />
+        <i3dMapping id="wiperFrontArm02" node="0>0|7|4|1|0" />
+        <i3dMapping id="rpmNeedle" node="0>0|7|5|0|0" />
+        <i3dMapping id="tempNeedle01" node="0>0|7|5|1|0" />
+        <i3dMapping id="tempNeedle02" node="0>0|7|5|2|0" />
+        <i3dMapping id="tempNeedle03" node="0>0|7|5|3|0" />
+        <i3dMapping id="airNeedle01" node="0>0|7|5|4|0" />
+        <i3dMapping id="airNeedle02" node="0>0|7|5|5|0" />
+        <i3dMapping id="fuelNeedle" node="0>0|7|5|6|0" />
+        <i3dMapping id="speedNeedle" node="0>0|7|5|7|0" />
+        <i3dMapping id="leverTurnlight" node="0>0|7|5|8|0" />
+        <i3dMapping id="dashboardDisplay01" node="0>0|7|5|9" />
+        <i3dMapping id="dashboardDisplay02" node="0>0|7|5|10" />
+        <i3dMapping id="cabinDecalsLight" node="0>0|7|5|11" />
+        <i3dMapping id="startingDecal" node="0>0|7|5|12" />
+        <i3dMapping id="numbersSpeed" node="0>0|7|5|13" />
+        <i3dMapping id="numbersTime" node="0>0|7|5|14" />
+        <i3dMapping id="arrowLeftDecal" node="0>0|7|5|15" />
+        <i3dMapping id="arrowRightDecal" node="0>0|7|5|16" />
+        <i3dMapping id="hazardlight_decal" node="0>0|7|5|17" />
+        <i3dMapping id="defaultLightDecal" node="0>0|7|5|18" />
+        <i3dMapping id="highBeamDecal" node="0>0|7|5|19" />
+        <i3dMapping id="workLightBackDecal" node="0>0|7|5|20" />
+        <i3dMapping id="passengerSeat01" node="0>0|7|6|0" />
+        <i3dMapping id="passengerSeat01Camera" node="0>0|7|6|0|0" />
+        <i3dMapping id="passengerSeat01PlayerSkin" node="0>0|7|6|0|1" />
+        <i3dMapping id="passengerSeat01PlayerLeftFoot" node="0>0|7|6|0|2" />
+        <i3dMapping id="passengerSeat01PlayerRightFoot" node="0>0|7|6|0|3" />
+        <i3dMapping id="passengerSeat01ExitPoint" node="0>0|7|6|0|4" />
+        <i3dMapping id="passengerSeat01PlayerLeftHand" node="0>0|7|6|0|5" />
+        <i3dMapping id="passengerSeat01PlayerRightHand" node="0>0|7|6|0|6" />
+        <i3dMapping id="dayCab" node="0>0|8|0" />
+        <i3dMapping id="reverseLightGlass_static01" node="0>0|8|0|0|0|0" />
+        <i3dMapping id="pto1" node="0>0|8|0|1|0|0" />
+        <i3dMapping id="pto2" node="0>0|8|0|1|1|0" />
+        <i3dMapping id="pto3" node="0>0|8|0|1|2|0" />
+        <i3dMapping id="licensePlateBack" node="0>0|8|0|3" />
+        <i3dMapping id="redRound_03" node="0>0|8|0|4" />
+        <i3dMapping id="redRound_04" node="0>0|8|0|5" />
+        <i3dMapping id="dayCab_premium" node="0>0|8|1" />
+        <i3dMapping id="dayCabPremiumLight_static" node="0>0|8|1|0|0|0" />
+        <i3dMapping id="dayCab_FairingVersion" node="0>0|8|1|1|0" />
+        <i3dMapping id="sleeper48" node="0>0|8|2" />
+        <i3dMapping id="reverseLightGlass_static02" node="0>0|8|2|0|0|0" />
+        <i3dMapping id="exterior_sleeper48" node="0>0|8|2|1|7" />
+        <i3dMapping id="sleeper48Basic" node="0>0|8|2|1|9" />
+        <i3dMapping id="licensePlateBack2" node="0>0|8|2|2" />
+        <i3dMapping id="pto5" node="0>0|8|2|3|0" />
+        <i3dMapping id="redRound_05" node="0>0|8|2|4" />
+        <i3dMapping id="redRound_06" node="0>0|8|2|5" />
+        <i3dMapping id="sleeper48_fairing" node="0>0|8|3" />
+        <i3dMapping id="sleeper48Light_static" node="0>0|8|3|0|0|0" />
+        <i3dMapping id="sleeper70" node="0>0|8|4" />
+        <i3dMapping id="sleeper70Light_static" node="0>0|8|4|0|0|0" />
+        <i3dMapping id="reverseLightGlass_static03" node="0>0|8|4|0|0|1" />
+        <i3dMapping id="frameSleeper70" node="0>0|8|4|1|5" />
+        <i3dMapping id="exteriorSleeper" node="0>0|8|4|1|9" />
+        <i3dMapping id="pto4" node="0>0|8|4|1|10|0" />
+        <i3dMapping id="licensePlateBack3" node="0>0|8|4|2" />
+        <i3dMapping id="redRound_07" node="0>0|8|4|3" />
+        <i3dMapping id="redRound_08" node="0>0|8|4|4" />
+        <i3dMapping id="hoodMirrors" node="0>0|8|5" />
+        <i3dMapping id="mirrorDecal01" node="0>0|8|5|1" />
+        <i3dMapping id="mirrorDecal02" node="0>0|8|5|2" />
+        <i3dMapping id="limitedEdition_vis" node="0>0|8|6" />
+        <i3dMapping id="grill_bottom" node="0>0|9|4" />
+        <i3dMapping id="licensePlateFront" node="0>0|10" />
+        <i3dMapping id="colPart_dayCabPremium" node="0>1|1" />
+        <i3dMapping id="colPart_sleeper48" node="0>1|2" />
+        <i3dMapping id="colPart_sleeper48Fairing" node="0>1|3" />
+        <i3dMapping id="colPart_sleeper70" node="0>1|4" />
+    </i3dMappings>
+</vehicle>

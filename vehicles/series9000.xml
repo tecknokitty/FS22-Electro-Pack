@@ -1,0 +1,1102 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="combineDrivable" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>9000 Series Electric</name>
+        <specs>
+            <power>770</power>
+            <maxSpeed>40</maxSpeed>
+            <combination xmlFilename="$data/vehicles/kemper/plus345/plus345_johnDeere.xml"/>
+            <combination xmlFilename="$data/vehicles/kemper/plus360/plus360_johnDeere.xml"/>
+            <combination xmlFilename="$data/vehicles/kemper/plus375/plus375_johnDeere.xml"/>
+            <combination xmlFilename="$data/vehicles/kemper/plus390/plus390_johnDeere.xml"/>
+            <combination xmlFilename="$data/vehicles/kemper/comfortSupportWheel/comfortSupportWheel.xml"/>
+            <combination xmlFilename="$data/vehicles/johnDeere/header639/header639.xml"/>
+            <combination xmlFilename="$data/objects/pallets/bonsilage/bonsilagePallet.xml"/>
+        </specs>
+        <functions>
+            <function>$l10n_function_combineForage</function>
+            <function>$l10n_function_combineNeedsForageCutter</function>
+        </functions>
+        <image>$data/vehicles/johnDeere/series9000/store_series9000.png</image>
+        <price>469500</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>JOHNDEERE</brand>
+        <category>forageHarvesters</category>
+        <shopTranslationOffset>0 0.102 0</shopTranslationOffset>
+        <shopRotationOffset>-1.458 0 0</shopRotationOffset>
+        <vertexBufferMemoryUsage>9645824</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>2131968</indexBufferMemoryUsage>
+        <textureMemoryUsage>6684672</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>407438</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_harvester</typeDesc>
+        <filename>$data/vehicles/johnDeere/series9000/series9000.i3d</filename>
+        <sounds filename="sounds/series9000.xml"/>
+        <size width="4.8" length="9" height="4.2"/>
+        <components>
+            <component centerOfMass="0.065 0.9 0.5" solverIterationCount="10" mass="7000" />
+            <component centerOfMass="0 0 0" solverIterationCount="35" mass="5000" />
+            <joint component1="1" component2="2" node="axisJoint" rotLimit="0 0 10" rotLimitSpring="0 0 4000" rotLimitDamping="0 0 75" maxRotDriveForce="0 0 15" rotDriveRotation="0 0 0" rotDriveSpring="0 0 25" rotDriveDamping="0 0 15" breakable="false"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="HARVESTER" />
+        <mapHotspot type="HARVESTER" />
+    </base>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="MICHELIN" saveId="MICHELIN_DEFAULT">
+                <wheels autoRotateBackSpeed="2.0">
+                    <wheel filename="$data/shared/wheels/tires/michelin/axioBib/710_75R42.xml" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="0" restLoad="2.0" repr="wheelFrontLeft"  forcePointRatio="0.45" initialCompression="15" suspTravel="0.2" spring="55" damper="40" frictionScale="2"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/michelin/axioBib/710_75R42.xml" isLeft="false" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="0" restLoad="2.0" repr="wheelFrontRight" forcePointRatio="0.45" initialCompression="15" suspTravel="0.2" spring="55" damper="40" frictionScale="2"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/michelin/axioBib/620_75R30.xml" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="1" restLoad="4.9" repr="axisBackLeft"  driveNode="wheelBackLeft"  forcePointRatio="0.55" initialCompression="60" suspTravel="0.25" spring="32" damper="80" frictionScale="2"/>
+                        <steering node="steeringBar" nodeMinTransX="-0.125" nodeMaxTransX="0.125" />
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/michelin/axioBib/620_75R30.xml" isLeft="false" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="1" restLoad="5.0" repr="axisBackRight" driveNode="wheelBackRight" forcePointRatio="0.55" initialCompression="60" suspTravel="0.25" spring="32" damper="80" frictionScale="2"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="1000" brand="MICHELIN" saveId="MICHELIN_BROAD">
+                <wheels baseConfig="MICHELIN_DEFAULT">
+                    <wheel filename="$data/shared/wheels/tires/michelin/axioBib/900_60R42.xml">
+                        <physics restLoad="2.1" yOffset="-0.001"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/michelin/axioBib/900_60R42.xml">
+                        <physics restLoad="2.1" yOffset="-0.001"/>
+                    </wheel>
+                    <wheel/>
+                    <wheel/>
+                </wheels>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="TRELLEBORG" saveId="TRELLEBORG_DEFAULT">
+                <wheels baseConfig="MICHELIN_DEFAULT">
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM1000/710_75R42.xml">
+                        <physics yOffset="0"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM1000/710_75R42.xml">
+                        <physics yOffset="0"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM1000/650_60R34.xml">
+                        <physics yOffset="-0.005"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM1000/650_60R34.xml">
+                        <physics yOffset="-0.005"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="1000" brand="TRELLEBORG" saveId="TRELLEBORG_BROAD">
+                <wheels baseConfig="TRELLEBORG_DEFAULT">
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM1000/900_60R42.xml">
+                        <physics restLoad="2.1" yOffset="-0.002"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM1000/900_60R42.xml">
+                        <physics restLoad="2.1" yOffset="-0.002"/>
+                    </wheel>
+                    <wheel/>
+                    <wheel/>
+                </wheels>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="MITAS" saveId="MITAS_DEFAULT">
+                <wheels baseConfig="MICHELIN_DEFAULT">
+                    <wheel filename="$data/shared/wheels/tires/mitas/SFT/710_75R42.xml">
+                        <physics yOffset="0.006"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/mitas/SFT/710_75R42.xml">
+                        <physics yOffset="0.006"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/mitas/SFT/620_75R30.xml">
+                        <physics yOffset="0.015"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/mitas/SFT/620_75R30.xml">
+                        <physics yOffset="0.015"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="1000" brand="MITAS" saveId="MITAS_BROAD">
+                <wheels baseConfig="MITAS_DEFAULT">
+                    <wheel filename="$data/shared/wheels/tires/mitas/SFT/900_60R42.xml">
+                        <physics restLoad="2.1" yOffset="-0.005"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/mitas/SFT/900_60R42.xml">
+                        <physics restLoad="2.1" yOffset="-0.005"/>
+                    </wheel>
+                    <wheel/>
+                    <wheel/>
+                </wheels>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="BKT" saveId="BKT_DEFAULT">
+                <wheels baseConfig="MICHELIN_DEFAULT">
+                    <wheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/710_75R42.xml">
+                        <physics yOffset="-0.01"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/710_75R42.xml">
+                        <physics yOffset="-0.01"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/620_75R30.xml">
+                        <physics yOffset="0.009"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/620_75R30.xml">
+                        <physics yOffset="0.009"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="1000" brand="BKT" saveId="BKT_BROAD">
+                <wheels baseConfig="BKT_DEFAULT">
+                    <wheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/900_60R42.xml">
+                        <physics restLoad="2.1" yOffset="-0.005"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/900_60R42.xml">
+                        <physics restLoad="2.1" yOffset="-0.005"/>
+                    </wheel>
+                    <wheel/>
+                    <wheel/>
+                </wheels>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="VREDESTEIN" saveId="VREDESTEIN_DEFAULT">
+                <wheels baseConfig="MICHELIN_DEFAULT">
+                    <wheel filename="$data/shared/wheels/tires/vredestein/traxionOptimall/710_75R42.xml">
+                        <physics yOffset="-0.01"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/vredestein/traxionOptimall/710_75R42.xml">
+                        <physics yOffset="-0.01"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/vredestein/traxionOptimall/650_60R34.xml">
+                        <physics yOffset="-0.01"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/vredestein/traxionOptimall/650_60R34.xml">
+                        <physics yOffset="-0.01"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="1000" brand="VREDESTEIN" saveId="VREDESTEIN_BROAD">
+                <wheels baseConfig="VREDESTEIN_DEFAULT">
+                    <wheel filename="$data/shared/wheels/tires/vredestein/traxionOptimall/900_60R42.xml">
+                        <physics restLoad="2.1" yOffset="-0.01"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/vredestein/traxionOptimall/900_60R42.xml">
+                        <physics restLoad="2.1" yOffset="-0.01"/>
+                    </wheel>
+                    <wheel/>
+                    <wheel/>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+
+        <hubs>
+            <color0>JOHNDEERE_YELLOW1</color0>
+            <color1>SHARED_GREY3</color1>
+            <hub linkNode="wheelFrontLeft"   filename="$data/shared/wheels/hubs/hub_n10_16.xml" isLeft="true"  scale="0.4 0.4 0.4" />
+            <hub linkNode="wheelFrontRight"  filename="$data/shared/wheels/hubs/hub_n10_16.xml" isLeft="false" scale="0.4 0.4 0.4" />
+            <hub linkNode="wheelBackLeft"    filename="$data/shared/wheels/hubs/hub_n8_4.xml"  isLeft="true"  scale="0.285 0.285 0.285" />
+            <hub linkNode="wheelBackRight"   filename="$data/shared/wheels/hubs/hub_n8_4.xml"  isLeft="false" scale="0.285 0.285 0.285" />
+        </hubs>
+
+        <rimColor>JOHNDEERE_YELLOW1</rimColor>
+
+        <ackermannSteeringConfigurations>
+            <ackermannSteering rotSpeed="35" rotMax="45" rotCenterWheel1="1" rotCenterWheel2="2" />
+        </ackermannSteeringConfigurations>
+    </wheels>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="0" linkNode="extinguisher_01" filename="$data/shared/assets/extinguisher.i3d"/>
+        <dynamicallyLoadedPart node="0" linkNode="extinguisher_02" filename="$data/shared/assets/extinguisher.i3d"/>
+        <dynamicallyLoadedPart node="0" linkNode="starFire" filename="$data/shared/assets/starfire.i3d" />
+    </dynamicallyLoadedParts>
+
+    <enterable>
+        <enterReferenceNode node="series9000_main_component1" />
+        <exitPoint node="exitPoint" />
+
+        <cameras>
+            <camera node="outdoorCamera1" rotatable="true" rotateNode="outdoorCameraTarget" limit="true" useWorldXZRotation="true" rotMinX="-1.4" rotMaxX="1" transMin="6.75" transMax="40" translation="0 0 9" rotation="-25.5 180 0">
+                <raycastNode node="cameraRaycastNode1"/>
+                <raycastNode node="cameraRaycastNode2"/>
+                <raycastNode node="cameraRaycastNode3"/>
+            </camera>
+            <camera node="indoorCamera1" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" useMirror="true" isInside="true" shadowFocusBox="shadowFocusBox" suspensionNodeIndex="1"/>
+        </cameras>
+
+       <characterNode node="playerSkin" cameraMinDistance="0.5" spineRotation="-90 0 90" >
+            <target ikChain="rightFoot" targetNode="playerRightFootTarget" />
+            <target ikChain="leftFoot"  targetNode="playerLeftFootTarget" />
+            <target ikChain="rightArm"  targetNode="playerRightHandTarget" poseId="wideFingers"/>
+            <target ikChain="leftArm"   targetNode="playerLeftHandTarget" />
+        </characterNode>
+
+        <mirrors>
+            <mirror node="mirror_interiorDecal" prio="2" />
+            <mirror node="mirror_leftDecal" prio="1" />
+            <mirror node="mirror_rightDecal" prio="1" />
+            <mirror node="mirror_rightTopDecal" prio="2" />
+        </mirrors>
+
+        <enterAnimation name="enterAnimation"/>
+    </enterable>
+
+    <drivable>
+         <steeringWheel node="steeringWheel" indoorRotation="540" outdoorRotation="40" />
+
+        <dashboards>
+            <dashboard displayType="TEXT" valueType="cruiseControl" node="numbersCruiseControl" textSize="0.007" textColor="0 0 0 1" textMask="000.0" font="GENERIC" groups="MOTOR_ACTIVE"/>
+        </dashboards>
+    </drivable>
+
+    <lights>
+        <sharedLight linkNode="redRound_03_01"               filename="$data/shared/assets/reflectors/lizard/redRound_03.xml" />
+        <sharedLight linkNode="redRound_03_02"               filename="$data/shared/assets/reflectors/lizard/redRound_03.xml" />
+        <sharedLight linkNode="redRound_03_03"               filename="$data/shared/assets/reflectors/lizard/redRound_03.xml" />
+        <sharedLight linkNode="redRound_03_04"               filename="$data/shared/assets/reflectors/lizard/redRound_03.xml" />
+        <sharedLight linkNode="redRound_04_01"               filename="$data/shared/assets/reflectors/lizard/redRound_03.xml" />
+        <sharedLight linkNode="redRound_04_02"               filename="$data/shared/assets/reflectors/lizard/redRound_03.xml" />
+        <sharedLight linkNode="reflectorYellowRound_03_01"   filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml" />
+        <sharedLight linkNode="reflectorYellowRound_03_02"   filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml" />
+        <sharedLight linkNode="reflectorYellowRound_03_03"   filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml" />
+        <sharedLight linkNode="reflectorYellowRound_03_04"   filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml" />
+        <sharedLight linkNode="reflectorYellowRound_03_05"   filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml" />
+        <sharedLight linkNode="reflectorYellowRound_03_06"   filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml" />
+        <sharedLight linkNode="reflectorYellowRound_03_07"   filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml" />
+        <sharedLight linkNode="reflectorYellowRound_03_08"   filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml" />
+        <sharedLight linkNode="reflectorYellowRound_03_09"   filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml" />
+        <sharedLight linkNode="reflectorYellowRound_03_010"  filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml" />
+        <states>
+            <state lightTypes="0" />
+            <state lightTypes="0 1" />
+            <state lightTypes="0 1 2" />
+            <state lightTypes="0 1 2 4" />
+        </states>
+
+        <realLights>
+            <low>
+                <light node="frontLightLow"       lightTypes="0" excludedLightTypes="2 3" />
+                <light node="workLightBackLow"    lightTypes="1"/>
+                <light node="workLightFrontLow"   lightTypes="2"/>
+                <light node="highBeamLow"         lightTypes="3" />
+            </low>
+            <high>
+                <light node="frontLightHigh"      lightTypes="0" excludedLightTypes="2 3" />
+                <light node="licensePlateLightHigh" lightTypes="0" />
+                <light node="workLightBackHigh1"  lightTypes="1"/>
+                <light node="workLightFrontHigh1" lightTypes="2"/>
+                <light node="highBeamHigh"        lightTypes="3"/>
+                <light node="workLightPipeS"      lightTypes="4"/>
+                <light node="workLightPipeM"      lightTypes="4"/>
+                <light node="workLightPipeL"      lightTypes="4"/>
+                <light node="backLightsHigh1"     lightTypes="0"/>
+                <brakeLight node="backLightsHigh1" />
+                <turnLightLeft node="turnLightLeftFront" />
+                <turnLightRight node="turnLightRightFront" />
+                <interiorLight node="interiorScreenLight"/>
+            </high>
+        </realLights>
+
+        <defaultLights>
+            <defaultLight shaderNode="frontlight01Static" lightTypes="0 3" />
+            <defaultLight shaderNode="backlightStatic" lightTypes="0" />
+            <defaultLight shaderNode="pipeMBacklight_static" lightTypes="0" />
+            <defaultLight shaderNode="pipeLBacklight_static" lightTypes="0" />
+            <defaultLight shaderNode="licensePlateLight_static" lightTypes="0" intensity="5"/>
+            <defaultLight shaderNode="worklightBackStatic" lightTypes="1" />
+            <defaultLight shaderNode="worklightFrontStatic" lightTypes="2" />
+            <defaultLight shaderNode="pipe_static" lightTypes="4" />
+            <defaultLight shaderNode="pipeS_static" lightTypes="4" />
+            <defaultLight shaderNode="pipeM_static" lightTypes="4" />
+            <defaultLight shaderNode="pipeL_static" lightTypes="4" />
+        </defaultLights>
+
+        <brakeLights>
+            <brakeLight shaderNode="pipeMBacklight_static"/>
+            <brakeLight shaderNode="pipeLBacklight_static"/>
+            <brakeLight shaderNode="backlightStatic"/>
+        </brakeLights>
+
+        <turnLights>
+            <turnLightLeft shaderNode="turnlightLeftStatic" />
+            <turnLightRight shaderNode="turnlightRightStatic" />
+        </turnLights>
+
+       <beaconLights>
+           <beaconLight node="beaconLight01" filename="$data/shared/assets/beaconLights/lizard/beaconLight07.xml" />
+           <beaconLight node="beaconLight02" filename="$data/shared/assets/beaconLights/lizard/beaconLight07.xml" />
+       </beaconLights>
+
+        <dashboards>
+            <dashboard displayType="EMITTER" valueType="lightState" node="joystickDecalLight" intensity="0.1" lightTypes="0" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="seatDecalsLight" intensity="0.1" lightTypes="0" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="radioDecalLight" intensity="0.1" lightTypes="0" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="turnLightLeft"  node="turnlightLeft01_decal"    baseColor="BLACK" emitColor="GREEN" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="turnLightRight" node="turnlightRight01_decal"   baseColor="BLACK" emitColor="GREEN" groups="MOTOR_ACTIVE"/>
+        </dashboards>
+    </lights>
+
+    <attacherJoints>
+        <attacherJoint jointType="cutterHarvester" node="attacherJointFront" jointPositionOffset="0 0 -1.054" lowerTransLimit="0 0 0" lowerRotLimit="0 0 25" lockDownRotLimit="true" moveTime="2.5" comboTime="0">
+            <distanceToGround lower="1.29" upper="2.02" />
+            <rotationNode node="attacherJointFrontRot" lowerRotation="0 0 0" upperRotation="-45 0 0" />
+            <bottomArm rotationNode="feeder" referenceNode="attacherJointFront"/>
+            <schema position="1 0" rotation="0" invertX="true" />
+            <attachSound template="HEADER_ATTACH_01" linkNode="attacherJointFront"/>
+        </attacherJoint>
+        <attacherJoint node="trailerAttacherJointBack" jointType="trailer" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="25 70 50" lowerTransLimit="0 0 0" canTurnOnImplement="false" comboTime="1" >
+            <schema position="1 0" rotation="0" invertX="false" />
+            <attachSound template="ATTACH_01" linkNode="trailerAttacherJointBack"/>
+        </attacherJoint>
+        <attacherJoint node="trailerAttacherJointBack" jointType="trailerLow" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="25 70 50" lowerTransLimit="0 0 0" canTurnOnImplement="false" comboTime="1" >
+            <schema position="1 0" rotation="0" invertX="false" />
+            <attachSound template="ATTACH_01" linkNode="trailerAttacherJointBack"/>
+        </attacherJoint>
+    </attacherJoints>
+
+    <connectionHoses>
+        <target attacherJointIndices="2" type="hydraulicIn" node="hydraulic01_in">
+            <objectChange node="hydraulic01_in_cover" rotationActive="0 0 -80" rotationInactive="0 0 0"/>
+        </target>
+        <target attacherJointIndices="2" type="hydraulicOut" node="hydraulic01_out">
+            <objectChange node="hydraulic01_out_cover" rotationActive="0 0 80" rotationInactive="0 0 0"/>
+        </target>
+        <target attacherJointIndices="2" type="electric" node="electric"/>
+        <target attacherJointIndices="1" type="hydraulicIn" node="hydraulic01_in1Front"/>
+        <target attacherJointIndices="1" type="hydraulicOut" node="hydraulic01_out1Front"/>
+        <target attacherJointIndices="1" type="hydraulicIn" node="hydraulic02_inFront"/>
+    </connectionHoses>
+
+    <licensePlates>
+        <licensePlate node="licensePlateFront" position="FRONT" preferedType="SQUARISH"  placementArea="0.03 0.25 0.25 0.25"/>
+        <licensePlate node="licensePlateBack"  position="BACK"  preferedType="ELONGATED" placementArea="0.08 0.29 0.09 0.29"/>
+    </licensePlates>
+
+    <motorized>
+        <consumerConfigurations>
+            <consumerConfiguration>
+                <consumer fillUnitIndex="2" usage="77" fillType="electricCharge"/>
+                <consumer fillUnitIndex="3" usage="25" fillType="def" />      <!-- usage is per hour at max load and max rpm -->
+            </consumerConfiguration>
+        </consumerConfigurations>
+
+        <differentialConfigurations>
+            <differentialConfiguration>
+                <differentials>
+                    <differential torqueRatio="0.5" maxSpeedRatio="2.1" wheelIndex1="1" wheelIndex2="2" /> <!-- front left-right -->
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.7" wheelIndex1="3" wheelIndex2="4" /> <!-- back left-right -->
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.4" differentialIndex1="1" differentialIndex2="2" /> <!-- front-back -->
+                </differentials>
+            </differentialConfiguration>
+        </differentialConfigurations>
+
+        <motorConfigurations>
+            <motorConfiguration name="9700" hp="770" price="0">
+                <motor torqueScale="3.845" minRpm="850" maxRpm="1860" maxForwardSpeed="41" maxBackwardSpeed="14.9" brakeForce="12" lowBrakeForceScale="0.22" ptoMotorRpmRatio="2.97" dampingRateScale="8" accelerationLimit="1.8" >
+                    <torque normRpm="0.45" torque="0.8"/>
+                    <torque normRpm="0.5" torque="0.87"/>
+                    <torque normRpm="0.59" torque="0.9"/>
+                    <torque normRpm="0.72" torque="1"/>
+                    <torque normRpm="0.86" torque="0.88"/>
+                    <torque normRpm="1" torque="0.72"/>
+                </motor>
+                <transmission minForwardGearRatio="11.05" maxForwardGearRatio="300" minBackwardGearRatio="40" maxBackwardGearRatio="300" name="$l10n_info_transmission_cvt"/>
+                <objectChange node="decal9700" visibilityActive="true"/>
+                <objectChange node="decal9800" visibilityActive="false"/>
+                <objectChange node="decal9900" visibilityActive="false"/>
+            </motorConfiguration>
+            <motorConfiguration name="9800" hp="870" price="31500">
+                <motor torqueScale="4.343" dampingRateScale="8.8"/>
+                <objectChange node="decal9700" visibilityActive="false"/>
+                <objectChange node="decal9800" visibilityActive="true"/>
+                <objectChange node="decal9900" visibilityActive="false"/>
+            </motorConfiguration>
+            <motorConfiguration name="9900" hp="970" price="63000">
+                <motor torqueScale="4.842" dampingRateScale="9.6"/>
+                <objectChange node="decal9700" visibilityActive="false"/>
+                <objectChange node="decal9800" visibilityActive="false"/>
+                <objectChange node="decal9900" visibilityActive="true"/>
+            </motorConfiguration>
+        </motorConfigurations>
+
+        <motorStartDuration>3000</motorStartDuration>
+
+        <dashboards>
+            <dashboard displayType="TEXT" valueType="rpm"   node="numbersRpm"   textSize="0.012" textMask="0000" textColor="0.9 0.9 0.9 1" font="DIGIT" emissiveScale="0.5" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="TEXT" valueType="speed" node="numbersSpeed" textSize="0.018" textMask="00.0" textColor="0.9 0.9 0.9 1" font="DIGIT" emissiveScale="0.5" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ANIMATION" valueType="speedDir" animName="joystickMovement" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ANIMATION" valueType="motorTemperature" animName="loadingBarTemperature" minValueAnim="20" maxValueAnim="120" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="TEXT" valueType="fuelUsage" node="numbersFuelUsage1" textSize="0.007" textColor="0 0 0 1" textMask="000.0" font="GENERIC" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="MULTI_STATE" valueType="ignitionState" node="ignitionKey" doInterpolation="true" groups="MOTOR_ACTIVE">
+                <state value="0" rotation="0 0 0"/>
+                <state value="1" rotation="0 0 -90"/>
+                <state value="2" rotation="0 0 -30"/>
+            </dashboard>
+        </dashboards>
+    </motorized>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showOnInfoHud="false" fillTypeCategories="forageHarvester"/>
+                    <fillUnit unitTextOverride="$l10n_unit_kw" showOnHud="false" showInShop="false" fillTypes="ELECTRICCHARGE" capacity="385"> 
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="loadingBarFuel" groups="MOTOR_ACTIVE"/>
+                    </fillUnit>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" showOnInfoHud="false" fillTypes="def" capacity="90" >
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="loadingBarDef" groups="MOTOR_ACTIVE"/>
+                    </fillUnit>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="SILAGE_ADDITIVE" capacity="20" uiPrecision="2">
+                        <exactFillRootNode node="exactFillRootNodeAdditives" />
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <configurationSets>
+        <configurationSet name="$l10n_configuration_valueMiddlePipe">
+            <configuration name="pipe" index="2" />
+        </configurationSet>
+        <configurationSet name="$l10n_configuration_valueLongPipe">
+            <configuration name="pipe" index="3" />
+        </configurationSet>
+        <configurationSet name="$l10n_configuration_valueShortPipe">
+            <configuration name="pipe" index="1" />
+        </configurationSet>
+    </configurationSets>
+
+    <wipers>
+        <wiper animName="wiperFrontAnimation" >
+            <state animSpeed="0.75" animPause="2.0" />
+            <state animSpeed="0.75" animPause="0.0" />
+            <state animSpeed="1.10" animPause="0.0" />
+        </wiper>
+        <wiper animName="wiperBackAnimation" >
+            <state animSpeed="1.0" animPause="2.0" />
+        </wiper>
+        <wiper animName="wiperLeftAnimation" >
+            <state animSpeed="1.0" animPause="2.2" />
+        </wiper>
+        <wiper animName="wiperRightAnimation" >
+            <state animSpeed="1.0" animPause="2.0" />
+        </wiper>
+    </wipers>
+
+    <animations>
+        <animation name="enterAnimation">
+            <part node="steeringBase01" startTime="0" duration="1" startRot="-20.005 0 0" endRot="-20.005 0 0"/>
+            <part node="steeringBase02" startTime="0" duration="1" startRot="-14.549 0 0" endRot="-14.549 0 0"/>
+        </animation>
+        <animation name="wiperFrontAnimation">
+            <part node="wiperArm01"  startTime="0.0" endTime="0.5" startRot="-2 0 0" endRot="-4.608 2.728 45" />
+            <part node="wiperArm01"  startTime="0.5" endTime="1.0" startRot="-4.608 2.728 45" endRot="0 0 90" />
+            <part node="wiperArm01"  startTime="1.0" endTime="1.5" startRot="0 0 90" endRot="-4.608 2.728 45" />
+            <part node="wiperArm01"  startTime="1.5" endTime="2.0" startRot="-4.608 2.728 45" endRot="-2 0 0" />
+            <part node="wiper"  startTime="0" endTime="1" startRot="0 0 0" endRot="-90 7.7 0" />
+            <part node="wiper"  startTime="1" endTime="2.0" startRot="-90 7.7 0" endRot="0 0 0" />
+
+            <sound template="wiper1" startTime="0" endTime="1" direction="1"   volumeScale="1.0" pitchScale="1.0" fadeOut="0.1" linkNode="wiper"/>
+            <sound template="wiper2" startTime="1" endTime="2" direction="1"   volumeScale="1.0" pitchScale="1.0" fadeOut="0.1" linkNode="wiper"/>
+            <sound template="wiper1" startTime="1" endTime="2" direction="-1"  volumeScale="1.0" pitchScale="1.0" fadeOut="0.1" linkNode="wiper"/>
+            <sound template="wiper2" startTime="0" endTime="1" direction="-1"  volumeScale="1.0" pitchScale="1.0" fadeOut="0.1" linkNode="wiper"/>
+        </animation>
+        <animation name="wiperBackAnimation">
+            <part node="wiperBack"  startTime="0.0" endTime="0.5" startRot="0 0 0"    endRot="-2.823 -2.819 -45" />
+            <part node="wiperBack"  startTime="0.5" endTime="1.0" startRot="-2.823 -2.819 -45"  endRot="0 0 -90" />
+            <part node="wiperBack"  startTime="1.0" endTime="1.5" startRot="0 0 -90"  endRot="-2.823 -2.819 -45" />
+            <part node="wiperBack"  startTime="1.5" endTime="2.0" startRot="-2.823 -2.819 -45"  endRot="0 0 0" />
+
+            <sound template="wiper1" startTime="0" endTime="1" direction="1"   volumeScale="0.6" pitchScale="0.9" fadeOut="0.1" linkNode="wiperBack"/>
+            <sound template="wiper2" startTime="1" endTime="2" direction="1"   volumeScale="0.6" pitchScale="0.9" fadeOut="0.1" linkNode="wiperBack"/>
+            <sound template="wiper1" startTime="1" endTime="2" direction="-1"  volumeScale="0.6" pitchScale="0.9" fadeOut="0.1" linkNode="wiperBack"/>
+            <sound template="wiper2" startTime="0" endTime="1" direction="-1"  volumeScale="0.6" pitchScale="0.9" fadeOut="0.1" linkNode="wiperBack"/>
+        </animation>
+        <animation name="wiperLeftAnimation">
+            <part node="wiperLeft"  startTime="0.0" endTime="0.8" startRot="0 0 0" endRot="85 6.909 -0.539" />
+
+            <sound template="wiper1" startTime="0" endTime="0.8" direction="1"  volumeScale="0.5" pitchScale="1.1" fadeOut="0.1" linkNode="wiperLeft"/>
+            <sound template="wiper2" startTime="0" endTime="0.8" direction="-1" volumeScale="0.5" pitchScale="1.1" fadeOut="0.1" linkNode="wiperLeft"/>
+        </animation>
+        <animation name="wiperRightAnimation">
+            <part node="wiperRight"  startTime="0.0" endTime="0.8" startRot="0 0 0" endRot="85 -6.909 0.539" />
+
+            <sound template="wiper1" startTime="0" endTime="0.8" direction="1"  volumeScale="0.5" pitchScale="1.2" fadeOut="0.1" linkNode="wiperRight"/>
+            <sound template="wiper2" startTime="0" endTime="0.8" direction="-1" volumeScale="0.5" pitchScale="1.2" fadeOut="0.1" linkNode="wiperRight"/>
+        </animation>
+
+        <animation name="loadingBarTemperature">
+            <part node="tempLoadingBar" startTime="0.0" endTime="1.0" startScale="1 0 1" endScale="1 1 1"/>
+        </animation>
+        <animation name="loadingBarFuel">
+            <part node="fuelLoadingBar" startTime="0.0" endTime="1.0" startScale="1 0 1" endScale="1 1 1"/>
+        </animation>
+        <animation name="loadingBarDef">
+            <part node="defLoadingBar" startTime="0.0" endTime="1.0" startScale="1 0 1" endScale="1 1 1"/>
+        </animation>
+        <animation name="joystickMovement">
+            <part node="joystick" startTime="0"    endTime="0.9" startRot="-17.089 -1.143 7.697"  endRot="-0.01 -1.302 7.126" />
+            <part node="joystick" startTime="0.9"  endTime="1.1" startRot="-0.01 -1.302 7.126"   endRot="2.47 -1.155 3.681" />
+            <part node="joystick" startTime="1.1"  endTime="2"   startRot="2.47 -1.155 3.681"    endRot="17.402 -1.155 3.681" />
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="pipeBase">
+                <dependentPart node="pipeBasePart" />
+            </movingTool>
+
+            <movingTool node="pipeRot" playSound="true">
+                <dependentPart node="pipeHydraulic" />
+            </movingTool>
+            <movingTool node="feeder" playSound="false">
+                <dependentPart node="feederHydraulic" />
+                <dependentPart node="ptoPart01" />
+                <dependentPart node="ptoPart02" />
+            </movingTool>
+            <movingTool node="wiperArm01" playSound="false">
+                <dependentPart node="wiperArm02" />
+            </movingTool>
+
+            <!-- pipe s -->
+            <movingTool node="pipeArm01S">
+                <dependentPart node="pipeArm02SHydraulic" />
+                <dependentPart node="pipeArm02BarS" />
+            </movingTool>
+            <movingTool node="pipeArm02S">
+                <dependentPart node="springS" />
+                <dependentPart node="pipeArm02BarS" />
+            </movingTool>
+
+            <!-- pipe m -->
+            <movingTool node="pipeArm01">
+                <dependentPart node="pipeArm02Hydraulic" />
+                <dependentPart node="pipeArm01Arm" />
+            </movingTool>
+            <movingTool node="pipeArm02">
+                <dependentPart node="pipeArm02Bar" />
+                <dependentPart node="pipeArm01Arm" />
+            </movingTool>
+
+            <!-- pipe l -->
+            <movingTool node="pipeArm01L">
+                <dependentPart node="pipeArm02LHydraulic" />
+                <dependentPart node="pipeArm02BarL" />
+            </movingTool>
+            <movingTool node="pipeArm02L">
+                <dependentPart node="springL" />
+                <dependentPart node="pipeArm02BarL" />
+            </movingTool>
+            <movingTool node="pipeLFolding" playSound="true">
+                <dependentPart node="foldingHydraulic" />
+                <dependentPart node="pipeLFoldingPartArm" />
+            </movingTool>
+
+            <!-- header tilt -->
+            <movingTool node="headerTilt">
+                <dependentPart node="headerTiltSpringLeft" />
+                <dependentPart node="headerTiltSpringRight" />
+                <dependentPart node="headerTiltHydraulic" />
+                <dependentPart node="headerTiltSensorArm01" />
+                <dependentPart node="ptoPart02" />
+            </movingTool>
+        </movingTools>
+
+        <movingParts>
+            <movingPart node="steeringBarBackLeft" referencePoint="steeringBarBackLeftRef" referenceFrame="steeringBarBackLeftRef" isActiveDirty="true" maxUpdateDistance="40"/>
+            <movingPart node="steeringBarBackRight" referencePoint="steeringBarBackRightRef" referenceFrame="steeringBarBackRightRef" isActiveDirty="true" maxUpdateDistance="40"/>
+
+            <!-- pipe s -->
+            <movingPart node="pipeArm02BarS" referencePoint="pipeArm02BarSRef" referenceFrame="pipeArm02BarSRef" scaleZ="true" />
+            <movingPart node="springS" referencePoint="springSRef" referenceFrame="springSRef" scaleZ="true" />
+            <movingPart node="pipeArm02SHydraulic" referencePoint="pipeArm02SHydraulicRef" referenceFrame="pipeArm02SHydraulicRef">
+                <translatingPart node="pipeArm02SHydraulicPunch" />
+            </movingPart>
+
+            <!-- pipe m -->
+            <movingPart node="pipeArm02Bar" referencePoint="pipeArm02BarRef" referenceFrame="pipeArm02BarRef" scaleZ="true"/>
+            <movingPart node="pipeArm01Arm" referencePoint="pipeArm01ArmRef" referenceFrame="pipeArm01ArmRef" scaleZ="true"/>
+            <movingPart node="pipeArm02Hydraulic" referencePoint="pipeArm02HydraulicRef" referenceFrame="pipeArm02HydraulicRef">
+                <translatingPart node="pipeArm02HydraulicPunch" />
+            </movingPart>
+
+            <!-- pipe l -->
+            <movingPart node="pipeLFoldingPartArm" referencePoint="pipeLFoldingPartArmRef" referenceFrame="pipeLFoldingPartArmRef"/>
+            <movingPart node="foldingHydraulic" referencePoint="foldingHydraulicRef" referenceFrame="foldingHydraulicRef">
+                <translatingPart node="foldingHydraulicPunch" />
+            </movingPart>
+            <movingPart node="pipeArm02BarL" referencePoint="pipeArm02BarLRef" referenceFrame="pipeArm02BarLRef" scaleZ="true" />
+            <movingPart node="springL" referencePoint="springLRef" referenceFrame="springLRef" scaleZ="true" />
+            <movingPart node="pipeArm02LHydraulic" referencePoint="pipeArm02LHydraulicRef" referenceFrame="pipeArm02LHydraulicRef" >
+                <translatingPart node="pipeArm02LHydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="pipeHydraulic" referencePoint="pipeHydraulicRef" referenceFrame="pipeHydraulicRef">
+                <translatingPart node="pipeHydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="ptoPart01" referencePoint="ptoPart01Ref" referenceFrame="ptoPart01Ref" />
+            <movingPart node="ptoPart02" referencePoint="ptoPart02Ref" referenceFrame="ptoPart02Ref"/>
+            <movingPart node="feederHydraulic" referencePoint="feederHydraulicRef" referenceFrame="feederHydraulicRef">
+                <translatingPart node="feederHydraulicPunch" />
+            </movingPart>
+            <movingPart node="wiperArm02" referencePoint="wiperArm02Ref" referenceFrame="wiperArm02RefFrame" />
+
+            <movingPart node="pipeBasePart" referenceFrame="pipeBase" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-4.03"/>
+
+            <!-- header tilt -->
+            <movingPart node="headerTiltSpringLeft" referencePoint="headerTiltSpringLeftRef" referenceFrame="headerTiltSpringLeftRef" scaleZ="true"/>
+            <movingPart node="headerTiltSpringRight" referencePoint="headerTiltSpringRightRef" referenceFrame="headerTiltSpringRightRef" scaleZ="true"/>
+            <movingPart node="headerTiltHydraulic" referencePoint="headerTiltHydraulicRef" referenceFrame="headerTiltHydraulicRef">
+                <translatingPart node="headerTiltHydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="headerTiltSensorArm01" localReferencePoint="headerTiltSensorArm01" referencePoint="headerTiltSensorArm02Ref" referenceFrame="headerTiltSensorArm01RefFrame">
+                <dependentPart node="headerTiltSensorArm02" />
+            </movingPart>
+            <movingPart node="headerTiltSensorArm02" referencePoint="headerTiltSensorArm02Ref" referenceFrame="headerTiltSensorArm02Ref"/>
+        </movingParts>
+    </cylindered>
+
+    <pipe>
+        <pipeConfigurations>
+            <pipeConfiguration name="$l10n_configuration_valueShortPipe" price="0" dischargeNodeIndex="1" toggleableDischargeToGround="true">
+                <pipeNodes>
+                    <pipeNode node="pipeBase" rotationSpeeds="0 35 0" autoAimYRotation="true" autoAimInvertZ="true" minRotationLimits="- -100 -" maxRotationLimits="- 100 -" foldPriority="1">
+                        <state rotation="0 0 0" />
+                        <state rotation="0 0 0"/>
+                    </pipeNode>
+                    <pipeNode node="pipeRot" rotationSpeeds="12.5 0 0">
+                        <state rotation="0 0 0"/>
+                        <state rotation="40 0 0"/>
+                    </pipeNode>
+                    <pipeNode node="pipeArm01S" rotationSpeeds="40 0 0" autoAimXRotation="true" subPipeNode="pipeArm02S" minRotationLimits="-70 - -" maxRotationLimits="0 - -" bendingRegulation="0.15">
+                        <state rotation="-47.8 0 0"/>
+                        <state rotation="-28.7 0 0"/>
+                    </pipeNode>
+                    <pipeNode node="pipeArm02S" rotationSpeeds="80 0 0" autoAimXRotation="true" minRotationLimits="-80 - -" maxRotationLimits="0 - -" bendingRegulation="0.15">
+                        <state rotation="-62.6 0 0"/>
+                        <state rotation="-38.0 0 0"/>
+                        <bendingRegulationNode node="pipeRaycastNodeS" axis="1" direction="1"/>
+                    </pipeNode>
+                </pipeNodes>
+                <states num="2" unloading="2" autoAiming="2" turnOnAllowed="2"/>
+                <unloadingTriggers>
+                    <unloadingTrigger node="trailerTrigger" />
+                </unloadingTriggers>
+                <objectChange node="pipeS" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="hoseS" visibilityActive="true" visibilityInactive="false"/>
+            </pipeConfiguration>
+            <pipeConfiguration name="$l10n_configuration_valueMiddlePipe" price="1500" dischargeNodeIndex="2" toggleableDischargeToGround="true">
+                <pipeNodes>
+                    <pipeNode node="pipeBase" rotationSpeeds="0 35 0" autoAimYRotation="true" autoAimInvertZ="true" minRotationLimits="- -100 -" maxRotationLimits="- 100 -" foldPriority="1">
+                        <state rotation="0 0 0" />
+                        <state rotation="0 0 0"/>
+                    </pipeNode>
+                    <pipeNode node="pipeRot" rotationSpeeds="12.5 0 0">
+                        <state rotation="0 0 0"/>
+                        <state rotation="40 0 0"/>
+                    </pipeNode>
+                    <pipeNode node="pipeArm01" rotationSpeeds="40 0 0" autoAimXRotation="true" subPipeNode="pipeArm02" minRotationLimits="-70 - -" maxRotationLimits="0 - -" bendingRegulation="0.15">
+                        <state rotation="-42 0 0"/>
+                        <state rotation="-25.2 0 0"/>
+                    </pipeNode>
+                    <pipeNode node="pipeArm02" rotationSpeeds="80 0 0" autoAimXRotation="true" minRotationLimits="-80 - -" maxRotationLimits="0 - -" bendingRegulation="0.15">
+                        <state rotation="-63.5 0 0"/>
+                        <state rotation="-38.1 0 0"/>
+                        <bendingRegulationNode node="pipeRaycastNodeM" axis="1" direction="1"/>
+                    </pipeNode>
+                </pipeNodes>
+                <states num="2" unloading="2" autoAiming="2" turnOnAllowed="2"/>
+                <unloadingTriggers>
+                    <unloadingTrigger node="trailerTrigger" />
+                </unloadingTriggers>
+                <objectChange node="pipeM" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="hoseM" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="colPartPipeM" compoundChildActive="true" compoundChildInactive="false"/>
+                <aiAgent length="8.4" lengthOffset="-2.25"/>
+            </pipeConfiguration>
+            <pipeConfiguration name="$l10n_configuration_valueLongPipe" price="3000" dischargeNodeIndex="3" foldMinState="1" foldMaxState="1" toggleableDischargeToGround="true">
+                <pipeNodes>
+                    <pipeNode node="pipeBase" rotationSpeeds="0 35 0" autoAimYRotation="true" autoAimInvertZ="true" minRotationLimits="- -100 -" maxRotationLimits="- 100 -" foldPriority="1">
+                        <state rotation="0 0 0" />
+                        <state rotation="0 0 0"/>
+                    </pipeNode>
+                    <pipeNode node="pipeRot" rotationSpeeds="12.5 0 0">
+                        <state rotation="0 0 0"/>
+                        <state rotation="40 0 0"/>
+                    </pipeNode>
+                    <pipeNode node="pipeArm01L" rotationSpeeds="40 0 0" autoAimXRotation="true" subPipeNode="pipeArm02L" minRotationLimits="-70 - -" maxRotationLimits="0 - -" bendingRegulation="0.15" >
+                        <state rotation="-44.3 0 0"/>
+                        <state rotation="-26.6 0 0"/>
+                    </pipeNode>
+                    <pipeNode node="pipeArm02L" rotationSpeeds="80 0 0" autoAimXRotation="true" minRotationLimits="-80 - -" maxRotationLimits="0 - -" bendingRegulation="0.15">
+                        <state rotation="-62.6 0 0"/>
+                        <state rotation="-37.5 0 0"/>
+                        <bendingRegulationNode node="pipeRaycastNodeL" axis="1" direction="1"/>
+                    </pipeNode>
+
+                    <pipeNode node="pipeLFolding" rotationSpeeds="50 0 0">
+                        <state rotation="83.871 0 0"/>
+                        <state rotation="0 0 0"/>
+                    </pipeNode>
+                    <pipeNode node="pipeLFolding02" rotationSpeeds="50 0 0">
+                        <state rotation="100 0 0"/>
+                        <state rotation="0 0 0"/>
+                    </pipeNode>
+                </pipeNodes>
+                <states num="2" unloading="2" autoAiming="2" turnOnAllowed="2"/>
+                <unloadingTriggers>
+                    <unloadingTrigger node="trailerTrigger" />
+                </unloadingTriggers>
+                <objectChange node="pipeL" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="hoseL" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="colPartPipeL" compoundChildActive="true" compoundChildInactive="false"/>
+                <objectChange node="colPartPipeLFolding" compoundChildActive="true" compoundChildInactive="false"/>
+                <aiAgent length="8.45" lengthOffset="-2.28"/>
+            </pipeConfiguration>
+        </pipeConfigurations>
+    </pipe>
+
+    <dischargeable>
+        <dischargeNode node="pipeRaycastNodeS" emptySpeed="1000" fillUnitIndex="1" maxDistance="20" stopDischargeOnEmpty="false" effectTurnOffThreshold="0.5">
+            <info width="0.4" length="0.4" useRaycastHitPosition="true"/>
+
+            <effects>
+                <effectNode                          effectNode="pipeEffectS_03"  delay="0"    materialType="unloading" fadeScale="0"/>
+                <effectNode                          effectNode="pipeEffectS_02"  delay="0.1"  materialType="unloading" fadeScale="0"/>
+                <effectNode effectClass="PipeEffect" effectNode="pipeEffectS_01"  delay="0.12" materialType="pipe"      maxBending="0.15" shapeScaleSpread="1.03 0.96 1 0"/>
+            </effects>
+            <dischargeSound template="dischargeForageHarvester" volumeScale="1.4" linkNode="attacherJointFront"/>
+        </dischargeNode>
+        <dischargeNode node="pipeRaycastNodeM" emptySpeed="1000" fillUnitIndex="1" maxDistance="20" stopDischargeOnEmpty="false" effectTurnOffThreshold="0.5">
+            <info width="0.4" length="0.4" useRaycastHitPosition="true"/>
+
+            <effects>
+                <effectNode                          effectNode="pipeEffectM_03"  delay="0"    materialType="unloading" fadeScale="0"/>
+                <effectNode                          effectNode="pipeEffectM_02"  delay="0.1"  materialType="unloading" fadeScale="0"/>
+                <effectNode effectClass="PipeEffect" effectNode="pipeEffectM_01"  delay="0.12" materialType="pipe"      maxBending="0.15" shapeScaleSpread="1.03 0.96 1 0"/>
+            </effects>
+            <dischargeSound template="dischargeForageHarvester" volumeScale="1.4" linkNode="attacherJointFront"/>
+        </dischargeNode>
+        <dischargeNode node="pipeRaycastNodeL" emptySpeed="1000" fillUnitIndex="1" maxDistance="20" stopDischargeOnEmpty="false" effectTurnOffThreshold="0.5">
+            <info width="0.4" length="0.4" useRaycastHitPosition="true"/>
+
+            <effects>
+                <effectNode                          effectNode="pipeEffectL_03"  delay="0"    materialType="unloading" fadeScale="0"/>
+                <effectNode                          effectNode="pipeEffectL_02"  delay="0.1"  materialType="unloading" fadeScale="0"/>
+                <effectNode effectClass="PipeEffect" effectNode="pipeEffectL_01"  delay="0.12" materialType="pipe"      maxBending="0.15" shapeScaleSpread="1.03 0.96 1 0"/>
+            </effects>
+            <dischargeSound template="dischargeForageHarvester" volumeScale="1.4" linkNode="attacherJointFront"/>
+        </dischargeNode>
+    </dischargeable>
+
+    <combine allowThreshingDuringRain="true" fillUnitIndex="1">
+        <additives fillUnitIndex="4" usage="0.0000275" fillTypes="CHAFF GRASS_WINDROW" />
+        <buffer loadingDelay="1.0" unloadingDelay="3.0"/>
+
+        <animationNodes>
+            <animationNode node="drum01" rotSpeed="700" rotAxis="1" turnOnFadeTime="4" turnOffFadeTime="8" />
+            <animationNode node="drum02" rotSpeed="-700" rotAxis="1" turnOnFadeTime="4" turnOffFadeTime="8" />
+            <animationNode node="drum03" rotSpeed="700" rotAxis="1" turnOnFadeTime="4" turnOffFadeTime="8" />
+            <animationNode node="drum04" rotSpeed="-700" rotAxis="1" turnOnFadeTime="4" turnOffFadeTime="8" />
+        </animationNodes>
+
+        <automaticTilt>
+            <automaticTiltNode node="headerTilt" minAngle="-5" maxAngle="5" />
+            <automaticTiltNode node="headerTiltJoint" minAngle="-5" maxAngle="5" updateAttacherJoint="true"/>
+        </automaticTilt>
+    </combine>
+
+    <suspensions>
+        <suspension node="seat"                 weight="150" minTranslation="-0.05 -0.15 0.0" maxTranslation="0.05 0.15 0.0" suspensionParametersX="20 4" suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+        <suspension useCharacterTorso="true"    weight="90"  minRotation="0 -5 -5" maxRotation="0 5 5" suspensionParametersY="7 1" suspensionParametersZ="7 1" />
+    </suspensions>
+
+    <dashboard>
+        <groups>
+            <group name="MOTOR_STARTING" isMotorStarting="true"/>
+            <group name="MOTOR_ACTIVE"   isMotorStarting="true" isMotorRunning="true"/>
+        </groups>
+        <default>
+            <dashboard displayType="EMITTER" node="dashboardDisplay" idleValue="-1" intensity="0.2" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="EMITTER" node="dashboardDisplayCabin" idleValue="-1" intensity="0.7" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="VISIBILITY" node="warningSigns_decal_start" groups="MOTOR_STARTING" />
+            <dashboard displayType="VISIBILITY" node="dashboards" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="VISIBILITY" node="dashboards2" groups="MOTOR_ACTIVE" />
+        </default>
+    </dashboard>
+
+    <ai>
+        <agent width="3.75" length="7.45" height="4.1" lengthOffset="-1.8" frontOffset="-3.08" />
+        <collisionTrigger node="aiCollisionNode" width="3.9" height="4.1"/>
+    </ai>
+
+    <foliageBending>
+        <bendingNode minX="-0.70" maxX="0.95" minZ="3.4" maxZ="3.9" yOffset="0.4" />
+        <bendingNode minX="-1.8" maxX="1.9" minZ="1.1" maxZ="3.4" yOffset="0.4" />
+        <bendingNode minX="-1.75" maxX="1.85" minZ="-2.8" maxZ="1.1" yOffset="0.4" />
+    </foliageBending>
+
+    <baseMaterial>
+        <material name="series9000A_mat" baseNode="series9000_vis">
+            <shaderParameter name="colorMat0" value="JOHNDEERE_GREEN1"/>
+        </material>
+        <material name="series9000B_mat" baseNode="series9000_visB">
+            <shaderParameter name="colorMat0" value="JOHNDEERE_GREEN1"/>
+        </material>
+        <material name="series9000Alpha_mat" baseNode="Alpha2">
+            <shaderParameter name="colorMat0" value="JOHNDEERE_GREEN1"/>
+        </material>
+    </baseMaterial>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" fieldMultiplier="2"/>
+
+    <i3dMappings>
+        <i3dMapping id="series9000_main_component1" node="0>" />
+        <i3dMapping id="wheelFrontLeft" node="0>0|0|0" />
+        <i3dMapping id="wheelFrontRight" node="0>0|0|1" />
+        <i3dMapping id="outdoorCameraTarget" node="0>0|1|0" />
+        <i3dMapping id="outdoorCamera1" node="0>0|1|0|0" />
+        <i3dMapping id="indoorCamera1" node="0>0|1|1" />
+        <i3dMapping id="cameraRaycastNode1" node="0>0|1|2" />
+        <i3dMapping id="cameraRaycastNode2" node="0>0|1|3" />
+        <i3dMapping id="cameraRaycastNode3" node="0>0|1|4" />
+        <i3dMapping id="shadowFocusBox" node="0>0|1|5" />
+        <i3dMapping id="extinguisher_01" node="0>0|2|0" />
+        <i3dMapping id="extinguisher_02" node="0>0|2|1" />
+        <i3dMapping id="worklightBackStatic" node="0>0|3|0|1" />
+        <i3dMapping id="worklightFrontStatic" node="0>0|3|0|2" />
+        <i3dMapping id="frontlight01Static" node="0>0|3|0|3" />
+        <i3dMapping id="backlightStatic" node="0>0|3|0|4" />
+        <i3dMapping id="turnlightLeftStatic" node="0>0|3|0|5" />
+        <i3dMapping id="turnlightRightStatic" node="0>0|3|0|6" />
+        <i3dMapping id="licensePlateLight_static" node="0>0|3|0|7" />
+        <i3dMapping id="redRound_03_01" node="0>0|3|1|0" />
+        <i3dMapping id="redRound_03_02" node="0>0|3|1|1" />
+        <i3dMapping id="redRound_03_03" node="0>0|3|1|2" />
+        <i3dMapping id="redRound_03_04" node="0>0|3|1|3" />
+        <i3dMapping id="reflectorYellowRound_03_03" node="0>0|3|1|4" />
+        <i3dMapping id="reflectorYellowRound_03_04" node="0>0|3|1|5" />
+        <i3dMapping id="reflectorYellowRound_03_05" node="0>0|3|1|6" />
+        <i3dMapping id="reflectorYellowRound_03_06" node="0>0|3|1|7" />
+        <i3dMapping id="frontLightLow" node="0>0|3|2|0" />
+        <i3dMapping id="highBeamLow" node="0>0|3|2|1" />
+        <i3dMapping id="frontLightHigh" node="0>0|3|2|2" />
+        <i3dMapping id="highBeamHigh" node="0>0|3|2|3" />
+        <i3dMapping id="licensePlateLightHigh" node="0>0|3|2|4" />
+        <i3dMapping id="workLightFrontLow" node="0>0|3|3|0" />
+        <i3dMapping id="workLightBackLow" node="0>0|3|3|1" />
+        <i3dMapping id="workLightFrontHigh1" node="0>0|3|3|2" />
+        <i3dMapping id="workLightBackHigh1" node="0>0|3|3|3" />
+        <i3dMapping id="backLightsHigh1" node="0>0|3|4|0" />
+        <i3dMapping id="turnLightRightFront" node="0>0|3|5|0" />
+        <i3dMapping id="turnLightLeftFront" node="0>0|3|5|1" />
+        <i3dMapping id="beaconLight01" node="0>0|3|6|0" />
+        <i3dMapping id="beaconLight02" node="0>0|3|6|1" />
+        <i3dMapping id="exitPoint" node="0>0|4" />
+        <i3dMapping id="axisJoint" node="0>0|5" />
+        <i3dMapping id="starFire" node="0>0|6" />
+        <i3dMapping id="exhaustParticle1" node="0>0|7|0" />
+        <i3dMapping id="exhaustParticle2" node="0>0|7|1" />
+        <i3dMapping id="trailerTrigger" node="0>0|8|0" />
+        <i3dMapping id="aiCollisionNode" node="0>0|8|1" />
+        <i3dMapping id="attacherJointFrontRot" node="0>0|9|0|0" />
+        <i3dMapping id="headerTiltJoint" node="0>0|9|0|0|0|0" />
+        <i3dMapping id="attacherJointFront" node="0>0|9|0|0|0|0|0|0" />
+        <i3dMapping id="feeder" node="0>0|9|0|1" />
+        <i3dMapping id="headerTilt" node="0>0|9|0|1|0|0" />
+        <i3dMapping id="headerTiltSpringLeft" node="0>0|9|0|1|0|0|0" />
+        <i3dMapping id="headerTiltSpringRight" node="0>0|9|0|1|0|0|1" />
+        <i3dMapping id="headerTiltHydraulicRef" node="0>0|9|0|1|0|0|2" />
+        <i3dMapping id="headerTiltSensorArm02Ref" node="0>0|9|0|1|0|0|3" />
+        <i3dMapping id="reflectorYellowRound_03_01" node="0>0|9|0|1|0|0|6" />
+        <i3dMapping id="ptoPart02" node="0>0|9|0|1|0|0|7" />
+        <i3dMapping id="ptoPart01Ref" node="0>0|9|0|1|0|0|7|0" />
+        <i3dMapping id="feederHydraulicRef" node="0>0|9|0|1|4" />
+        <i3dMapping id="drum01" node="0>0|9|0|1|5" />
+        <i3dMapping id="drum02" node="0>0|9|0|1|6" />
+        <i3dMapping id="drum03" node="0>0|9|0|1|7" />
+        <i3dMapping id="drum04" node="0>0|9|0|1|8" />
+        <i3dMapping id="reflectorYellowRound_03_02" node="0>0|9|0|1|11" />
+        <i3dMapping id="headerTiltHydraulic" node="0>0|9|0|1|12" />
+        <i3dMapping id="headerTiltHydraulicPunch" node="0>0|9|0|1|12|0" />
+        <i3dMapping id="headerTiltSensorArm01RefFrame" node="0>0|9|0|1|13" />
+        <i3dMapping id="headerTiltSensorArm01" node="0>0|9|0|1|13|0" />
+        <i3dMapping id="headerTiltSensorArm02" node="0>0|9|0|1|13|0|0" />
+        <i3dMapping id="headerTiltSpringLeftRef" node="0>0|9|0|1|14" />
+        <i3dMapping id="headerTiltSpringRightRef" node="0>0|9|0|1|15" />
+        <i3dMapping id="trailerAttacherJointBack" node="0>0|9|1|0" />
+        <i3dMapping id="electric" node="0>0|10|0" />
+        <i3dMapping id="hydraulic01_in" node="0>0|10|1" />
+        <i3dMapping id="hydraulic01_out" node="0>0|10|2" />
+        <i3dMapping id="hydraulic01_in_cover" node="0>0|10|3" />
+        <i3dMapping id="hydraulic01_out_cover" node="0>0|10|4" />
+        <i3dMapping id="hydraulic02_inFront" node="0>0|10|5" />
+        <i3dMapping id="hydraulic01_in1Front" node="0>0|10|6" />
+        <i3dMapping id="hydraulic01_out1Front" node="0>0|10|7" />
+        <i3dMapping id="playerRightFootTarget" node="0>0|11|0|0" />
+        <i3dMapping id="playerLeftFootTarget" node="0>0|11|0|1" />
+        <i3dMapping id="mirror_interiorDecal" node="0>0|11|1|0" />
+        <i3dMapping id="mirror_leftDecal" node="0>0|11|1|1" />
+        <i3dMapping id="mirror_rightDecal" node="0>0|11|1|2" />
+        <i3dMapping id="mirror_rightTopDecal" node="0>0|11|1|3" />
+        <i3dMapping id="wiperArm01" node="0>0|11|2|0" />
+        <i3dMapping id="wiper" node="0>0|11|2|0|0|0" />
+        <i3dMapping id="wiperArm02Ref" node="0>0|11|2|0|0|0|0" />
+        <i3dMapping id="wiperArm02RefFrame" node="0>0|11|2|0|2" />
+        <i3dMapping id="wiperArm02" node="0>0|11|2|1" />
+        <i3dMapping id="wiperBack" node="0>0|11|2|2" />
+        <i3dMapping id="wiperLeft" node="0>0|11|2|3" />
+        <i3dMapping id="wiperRight" node="0>0|11|2|4" />
+        <i3dMapping id="dashboardDisplayCabin" node="0>0|11|3|0" />
+        <i3dMapping id="radioDecalLight" node="0>0|11|3|1" />
+        <i3dMapping id="dashboards" node="0>0|11|4" />
+        <i3dMapping id="numbersSpeed" node="0>0|11|4|0" />
+        <i3dMapping id="numbersRpm" node="0>0|11|4|1" />
+        <i3dMapping id="loadingBars" node="0>0|11|4|2" />
+        <i3dMapping id="fuelLoadingBar" node="0>0|11|4|2|0" />
+        <i3dMapping id="tempLoadingBar" node="0>0|11|4|2|1" />
+        <i3dMapping id="defLoadingBar" node="0>0|11|4|2|2" />
+        <i3dMapping id="turnlightRight01_decal" node="0>0|11|4|3" />
+        <i3dMapping id="turnlightLeft01_decal" node="0>0|11|4|4" />
+        <i3dMapping id="warningSigns_decal_start" node="0>0|11|4|5" />
+        <i3dMapping id="ptoPart03" node="0>0|12|0" />
+        <i3dMapping id="ptoPart01" node="0>0|13|0" />
+        <i3dMapping id="ptoPart02Ref" node="0>0|13|0|0" />
+        <i3dMapping id="feederHydraulic" node="0>0|13|1" />
+        <i3dMapping id="feederHydraulicPunch" node="0>0|13|1|0" />
+        <i3dMapping id="feederLockArm" node="0>0|13|2" />
+        <i3dMapping id="exactFillRootNodeAdditives" node="0>0|14|0" />
+        <i3dMapping id="licensePlateFront" node="0>0|15|0" />
+        <i3dMapping id="licensePlateBack" node="0>0|15|1" />
+        <i3dMapping id="pipeBase" node="0>0|16|0" />
+        <i3dMapping id="pipeRot" node="0>0|16|0|0" />
+        <i3dMapping id="pipeS" node="0>0|16|0|0|0" />
+        <i3dMapping id="pipeArm01S" node="0>0|16|0|0|0|0|0" />
+        <i3dMapping id="pipeArm02S" node="0>0|16|0|0|0|0|0|0" />
+        <i3dMapping id="springSRef" node="0>0|16|0|0|0|0|0|0|0" />
+        <i3dMapping id="pipeArm02BarSRef" node="0>0|16|0|0|0|0|0|0|1" />
+        <i3dMapping id="pipeEffectS_01" node="0>0|16|0|0|0|0|0|0|2|0" />
+        <i3dMapping id="pipeRaycastNodeS" node="0>0|16|0|0|0|0|0|0|3" />
+        <i3dMapping id="springS" node="0>0|16|0|0|0|0|0|1" />
+        <i3dMapping id="pipeEffectS_02" node="0>0|16|0|0|0|0|0|2" />
+        <i3dMapping id="pipeArm02SHydraulic" node="0>0|16|0|0|0|0|0|4" />
+        <i3dMapping id="pipeArm02SHydraulicPunch" node="0>0|16|0|0|0|0|0|4|0" />
+        <i3dMapping id="pipeS_static" node="0>0|16|0|0|0|1|1" />
+        <i3dMapping id="workLightPipeS" node="0>0|16|0|0|0|1|3" />
+        <i3dMapping id="pipeArm02BarS" node="0>0|16|0|0|0|2" />
+        <i3dMapping id="pipeEffectS_03" node="0>0|16|0|0|0|3" />
+        <i3dMapping id="pipeArm02SHydraulicRef" node="0>0|16|0|0|0|4" />
+        <i3dMapping id="pipeM" node="0>0|16|0|0|1" />
+        <i3dMapping id="pipeArm01" node="0>0|16|0|0|1|1|0" />
+        <i3dMapping id="pipeArm02" node="0>0|16|0|0|1|1|0|0" />
+        <i3dMapping id="pipeArm02BarRef" node="0>0|16|0|0|1|1|0|0|0" />
+        <i3dMapping id="pipeRaycastNodeM" node="0>0|16|0|0|1|1|0|0|1" />
+        <i3dMapping id="pipeArm01ArmRef" node="0>0|16|0|0|1|1|0|0|2" />
+        <i3dMapping id="pipeEffectM_01" node="0>0|16|0|0|1|1|0|0|3|0" />
+        <i3dMapping id="pipeArm02Bar" node="0>0|16|0|0|1|1|0|1" />
+        <i3dMapping id="pipeArm02Hydraulic" node="0>0|16|0|0|1|1|0|2" />
+        <i3dMapping id="pipeArm02HydraulicPunch" node="0>0|16|0|0|1|1|0|2|0" />
+        <i3dMapping id="pipeEffectM_02" node="0>0|16|0|0|1|1|0|4" />
+        <i3dMapping id="pipeArm02HydraulicRef" node="0>0|16|0|0|1|2" />
+        <i3dMapping id="pipeArm01Arm" node="0>0|16|0|0|1|3" />
+        <i3dMapping id="pipeEffectM_03" node="0>0|16|0|0|1|4" />
+        <i3dMapping id="pipeM_static" node="0>0|16|0|0|1|5|0" />
+        <i3dMapping id="pipeMBacklight_static" node="0>0|16|0|0|1|5|3" />
+        <i3dMapping id="workLightPipeM" node="0>0|16|0|0|1|5|5" />
+        <i3dMapping id="redRound_04_01" node="0>0|16|0|0|1|7" />
+        <i3dMapping id="pipeL" node="0>0|16|0|0|2" />
+        <i3dMapping id="pipeLFolding" node="0>0|16|0|0|2|0" />
+        <i3dMapping id="pipeLFolding02" node="0>0|16|0|0|2|0|0" />
+        <i3dMapping id="pipeArm02LHydraulicRef" node="0>0|16|0|0|2|0|0|0" />
+        <i3dMapping id="pipeArm01L" node="0>0|16|0|0|2|0|0|1|0" />
+        <i3dMapping id="pipeArm02L" node="0>0|16|0|0|2|0|0|1|0|0" />
+        <i3dMapping id="springLRef" node="0>0|16|0|0|2|0|0|1|0|0|0" />
+        <i3dMapping id="pipeArm02BarLRef" node="0>0|16|0|0|2|0|0|1|0|0|1" />
+        <i3dMapping id="pipeRaycastNodeL" node="0>0|16|0|0|2|0|0|1|0|0|2" />
+        <i3dMapping id="pipeEffectL_01" node="0>0|16|0|0|2|0|0|1|0|0|3|0" />
+        <i3dMapping id="pipeArm02LHydraulic" node="0>0|16|0|0|2|0|0|1|0|1" />
+        <i3dMapping id="pipeArm02LHydraulicPunch" node="0>0|16|0|0|2|0|0|1|0|1|0" />
+        <i3dMapping id="pipeEffectL_02" node="0>0|16|0|0|2|0|0|1|0|2" />
+        <i3dMapping id="springL" node="0>0|16|0|0|2|0|0|1|0|3" />
+        <i3dMapping id="pipeArm02BarL" node="0>0|16|0|0|2|0|0|2" />
+        <i3dMapping id="colPartPipeLFolding" node="0>0|16|0|0|2|0|0|4" />
+        <i3dMapping id="foldingHydraulicRef" node="0>0|16|0|0|2|0|1" />
+        <i3dMapping id="pipeLBacklight_static" node="0>0|16|0|0|2|0|2|1" />
+        <i3dMapping id="pipeLFoldingPartArmRef" node="0>0|16|0|0|2|0|3" />
+        <i3dMapping id="pipeEffectL_03" node="0>0|16|0|0|2|0|4" />
+        <i3dMapping id="redRound_04_02" node="0>0|16|0|0|2|0|6" />
+        <i3dMapping id="foldingHydraulic" node="0>0|16|0|0|2|1" />
+        <i3dMapping id="foldingHydraulicPunch" node="0>0|16|0|0|2|1|0" />
+        <i3dMapping id="pipeLFoldingPart" node="0>0|16|0|0|2|2" />
+        <i3dMapping id="pipeLFoldingPartArm" node="0>0|16|0|0|2|2|0" />
+        <i3dMapping id="pipeL_static" node="0>0|16|0|0|2|3|1" />
+        <i3dMapping id="workLightPipeL" node="0>0|16|0|0|2|5" />
+        <i3dMapping id="reflectorYellowRound_03_07" node="0>0|16|0|0|2|7" />
+        <i3dMapping id="reflectorYellowRound_03_08" node="0>0|16|0|0|2|8" />
+        <i3dMapping id="reflectorYellowRound_03_010" node="0>0|16|0|0|2|9" />
+        <i3dMapping id="reflectorYellowRound_03_09" node="0>0|16|0|0|2|10" />
+        <i3dMapping id="pipeHydraulicRef" node="0>0|16|0|0|3" />
+        <i3dMapping id="pipe_static" node="0>0|16|0|0|4|2" />
+        <i3dMapping id="Decal_Exterior2" node="0>0|16|0|0|5" />
+        <i3dMapping id="colPartPipeM" node="0>0|16|0|0|6|4" />
+        <i3dMapping id="colPartPipeL" node="0>0|16|0|0|6|5" />
+        <i3dMapping id="pipeHydraulic" node="0>0|16|0|1" />
+        <i3dMapping id="pipeHydraulicPunch" node="0>0|16|0|1|0" />
+        <i3dMapping id="pipeBasePart" node="0>0|16|1" />
+        <i3dMapping id="Alpha2" node="0>0|17|9" />
+        <i3dMapping id="decal9700" node="0>0|17|14|0" />
+        <i3dMapping id="logoRight_decal" node="0>0|17|14|0|0" />
+        <i3dMapping id="logoLeft_decal" node="0>0|17|14|0|1" />
+        <i3dMapping id="decal9800" node="0>0|17|14|1" />
+        <i3dMapping id="decal9900" node="0>0|17|14|2" />
+        <i3dMapping id="series9000_vis" node="0>0|17|15|0" />
+        <i3dMapping id="series9000_visB" node="0>0|17|16|0" />
+        <i3dMapping id="steeringBase01" node="0>0|17|17|0|0" />
+        <i3dMapping id="steeringBase02" node="0>0|17|17|0|0|0" />
+        <i3dMapping id="steeringWheel" node="0>0|17|17|0|0|0|0" />
+        <i3dMapping id="playerLeftHandTarget" node="0>0|17|17|0|0|0|0|1" />
+        <i3dMapping id="ignitionKey" node="0>0|17|17|0|0|0|2|0" />
+        <i3dMapping id="seat" node="0>0|17|17|0|1" />
+        <i3dMapping id="playerSkin" node="0>0|17|17|0|1|0" />
+        <i3dMapping id="joystick" node="0>0|17|17|0|1|1|0" />
+        <i3dMapping id="joystickDecalLight" node="0>0|17|17|0|1|1|0|0" />
+        <i3dMapping id="playerRightHandTarget" node="0>0|17|17|0|1|1|0|1" />
+        <i3dMapping id="seatDecalsLight" node="0>0|17|17|0|1|2|0" />
+        <i3dMapping id="dashboardDisplay" node="0>0|17|17|0|1|2|1" />
+        <i3dMapping id="interiorScreenLight" node="0>0|17|17|0|1|2|2" />
+        <i3dMapping id="dashboards2" node="0>0|17|17|0|1|4" />
+        <i3dMapping id="numbersFuelUsage1" node="0>0|17|17|0|1|4|0" />
+        <i3dMapping id="numbersCruiseControl" node="0>0|17|17|0|1|4|1" />
+        <i3dMapping id="hose" node="0>1|0" />
+        <i3dMapping id="hoseS" node="0>1|1" />
+        <i3dMapping id="hoseM" node="0>1|2" />
+        <i3dMapping id="hoseL" node="0>1|3" />
+        <i3dMapping id="steeringBar" node="1>0|0" />
+        <i3dMapping id="steeringBarBackRightRef" node="1>0|0|0" />
+        <i3dMapping id="steeringBarBackLeftRef" node="1>0|0|1" />
+        <i3dMapping id="axisBackLeft" node="1>1|0" />
+        <i3dMapping id="wheelBackLeft" node="1>1|0|0|0" />
+        <i3dMapping id="steeringBarBackLeft" node="1>1|0|2" />
+        <i3dMapping id="axisBackRight" node="1>2|0" />
+        <i3dMapping id="wheelBackRight" node="1>2|0|0|0" />
+        <i3dMapping id="steeringBarBackRight" node="1>2|0|1" />
+    </i3dMappings>
+</vehicle>

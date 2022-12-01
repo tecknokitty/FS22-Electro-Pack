@@ -1,0 +1,1958 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="tractor" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../bin/shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Series 8 TTV Electric</name>
+        <specs>
+            <power>287</power>
+            <maxSpeed>60</maxSpeed>
+        </specs>
+        <functions>
+            <function>$l10n_function_tractor</function>
+        </functions>
+        <image>$data/vehicles/deutzFahr/series8/store_series8.png</image>
+        <price>246000</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>DEUTZFAHR</brand>
+        <category>tractorsM</category>
+        <shopTranslationOffset>0 -0.007 0</shopTranslationOffset>
+        <shopRotationOffset>-0.014 0 0</shopRotationOffset>
+        <vertexBufferMemoryUsage>6098176</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>1650688</indexBufferMemoryUsage>
+        <textureMemoryUsage>6553600</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>334663</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_tractor</typeDesc>
+        <filename>$data/vehicles/deutzFahr/series8/series8.i3d</filename>
+        <sounds filename="sounds/series8.xml"/>
+        <size width="3.8" length="5.5" height="3.55" lengthOffset="-0.2"/>
+        <components>
+            <component centerOfMass="0 1 -1.0" solverIterationCount="20" mass="4420" />
+            <component centerOfMass="0 0 0"  solverIterationCount="25" mass="4200" />
+            <joint component1="1" component2="2" node="componentJointAxis" rotLimit="0 0 11" rotLimitSpring="0 0 4000" rotLimitDamping="0 0 40" maxRotDriveForce="0 0 30" rotDriveRotation="0 0 0" rotDriveSpring="0 0 30" rotDriveDamping="0 0 40" breakable="false"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="VEHICLE" />
+        <mapHotspot type="TRACTOR" />
+    </base>
+
+    <configurationSets>
+        <configurationSet name="$l10n_configuration_valueDefault" isDefault="true">
+            <configuration name="design" index="1"/>
+            <configuration name="designMaterial" index="2"/>
+            <configuration name="rimColor" index="1"/>
+        </configurationSet>
+        <configurationSet name="WARRIOR">
+            <configuration name="design" index="2"/>
+        </configurationSet>
+    </configurationSets>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="TRELLEBORG" saveId="TRELLEBORG_DEFAULT">
+                <wheels autoRotateBackSpeed="2.1">
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM900/600_70R30.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="2.7" repr="wheelFrontLeftRepr"  driveNode="wheelFrontLeft"  forcePointRatio="0.4" initialCompression="25" suspTravel="0.16" spring="60" damper="55" yOffset="0.07"/>
+                        <fender node="fenderFrontLeft" rotMax="21"/>
+                        <steering node="steeringBarFrontCenter" nodeMinTransX="0.13" nodeMaxTransX="-0.13"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM900/600_70R30.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="2.7" repr="wheelFrontRightRepr" driveNode="wheelFrontRight" forcePointRatio="0.4" initialCompression="25" suspTravel="0.16" spring="60" damper="55" yOffset="0.07"/>
+                        <fender node="fenderFrontRight" rotMin="-21"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM900/710_70R42.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="2.5" repr="wheelBackLeft"  forcePointRatio="0.4" initialCompression="22" suspTravel="0.14" spring="67" damper="55" yOffset="0.06"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM900/710_70R42.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="2.5" repr="wheelBackRight" forcePointRatio="0.4" initialCompression="22" suspTravel="0.14" spring="67" damper="55" yOffset="0.06"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="false"/>
+                <objectChange node="fenderWide"  visibilityActive="true"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelWeights" price="1200" brand="TRELLEBORG" saveId="TRELLEBORG_WEIGHTS">
+                <wheels baseConfig="TRELLEBORG_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.5"/>
+                    </wheel>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.5"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="false"/>
+                <objectChange node="fenderWide"  visibilityActive="true"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="1500" brand="TRELLEBORG" saveId="TRELLEBORG_BROAD">
+                <wheels baseConfig="TRELLEBORG_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM900/800_70R38.xml">
+                        <physics yOffset="0.062"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM900/800_70R38.xml">
+                        <physics yOffset="0.062"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="0.99 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-0.99 0.977 -1.444"/>
+                <foliageBendingModifier index="2" minX="-1.43" maxX="1.43"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroadWeights" price="2700" brand="TRELLEBORG" saveId="TRELLEBORG_BROAD_WEIGHTS">
+                <wheels baseConfig="TRELLEBORG_BROAD">
+                    <wheel/>
+                    <wheel/>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.5"/>
+                    </wheel>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.5"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="0.99 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-0.99 0.977 -1.444"/>
+                <foliageBendingModifier index="2" minX="-1.43" maxX="1.43"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsBack" price="8000" brand="TRELLEBORG" saveId="TRELLEBORG_TWIN_BACK">
+                <wheels baseConfig="TRELLEBORG_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel>
+                        <physics restLoad="2.8"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/trelleborg/TM900/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.25">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="2.8"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/trelleborg/TM900/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.25">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+                <foliageBendingModifier index="2" minX="-2.24" maxX="2.24"/>
+                <aiAgent width="4.45"/>
+                <size width="5"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" price="11000" brand="TRELLEBORG" saveId="TRELLEBORG_TWIN_ALL">
+                <wheels baseConfig="TRELLEBORG_DEFAULT" ackermannSteeringIndex="2">
+                    <wheel>
+                        <physics restLoad="2.9"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/trelleborg/TM900/600_70R30.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.25">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="2.9"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/trelleborg/TM900/600_70R30.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.25">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="2.8"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/trelleborg/TM900/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.25">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="2.8"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/trelleborg/TM900/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.25">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+                <foliageBendingModifier index="1" minX="-2.12" maxX="2.12"/>
+                <foliageBendingModifier index="2" minX="-2.24" maxX="2.24"/>
+                <aiAgent width="4.45"/>
+                <size width="5.2"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelNarrow" price="1000" brand="TRELLEBORG" saveId="TRELLEBORG_NARROW">
+                <wheels baseConfig="TRELLEBORG_DEFAULT" ackermannSteeringIndex="3">
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM600/380_85R38.xml">
+                        <physics yOffset="0.071"/>
+                        <tire isCareWheel="true"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM600/380_85R38.xml">
+                        <physics yOffset="0.071"/>
+                        <tire isCareWheel="true"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM600/480_80R50.xml">
+                        <physics yOffset="0.052"/>
+                        <tire isCareWheel="true"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM600/480_80R50.xml">
+                        <physics yOffset="0.052"/>
+                        <tire isCareWheel="true"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="false"/>
+                <objectChange node="fenderWide"  visibilityActive="true"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+                <objectChange node="warningSigns" visibilityActive="false"/>
+                <foliageBendingModifier index="1" minX="-1.3" maxX="1.3"/>
+                <foliageBendingModifier index="2" minX="-1.3" maxX="1.3"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="MICHELIN" saveId="MICHELIN_DEFAULT">
+                <wheels baseConfig="TRELLEBORG_DEFAULT">
+                    <wheel filename="$data/shared/wheels/tires/michelin/axioBib/600_70R30.xml">
+                        <physics yOffset="0.058"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/michelin/axioBib/600_70R30.xml">
+                        <physics yOffset="0.058"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/michelin/axioBib/710_70R42.xml">
+                        <physics yOffset="0.061"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/michelin/axioBib/710_70R42.xml">
+                        <physics yOffset="0.061"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="false"/>
+                <objectChange node="fenderWide"  visibilityActive="true"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelWeights" price="1200" brand="MICHELIN" saveId="MICHELIN_WEIGHTS">
+                <wheels baseConfig="MICHELIN_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.5"/>
+                    </wheel>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.5"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="false"/>
+                <objectChange node="fenderWide"  visibilityActive="true"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="1500" brand="MICHELIN" saveId="MICHELIN_BROAD">
+                <wheels baseConfig="MICHELIN_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="$data/shared/wheels/tires/michelin/axioBib/800_70R38.xml">
+                        <physics yOffset="0.064"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/michelin/axioBib/800_70R38.xml">
+                        <physics yOffset="0.064"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="0.99 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-0.99 0.977 -1.444"/>
+                <foliageBendingModifier index="2" minX="-1.43" maxX="1.43"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroadWeights" price="2700" brand="MICHELIN" saveId="MICHELIN_BROAD_WEIGHTS">
+                <wheels baseConfig="MICHELIN_BROAD">
+                    <wheel/>
+                    <wheel/>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.5"/>
+                    </wheel>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.5"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="0.99 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-0.99 0.977 -1.444"/>
+                <foliageBendingModifier index="2" minX="-1.43" maxX="1.43"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsBack" price="8000" brand="MICHELIN" saveId="MICHELIN_TWIN_BACK">
+                <wheels baseConfig="MICHELIN_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel>
+                        <physics restLoad="2.8"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/michelin/axioBib/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.23">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="2.8"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/michelin/axioBib/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.23">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+                <foliageBendingModifier index="2" minX="-2.27" maxX="2.27"/>
+                <aiAgent width="4.53"/>
+                <size width="5"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" price="11000" brand="MICHELIN" saveId="MICHELIN_TWIN_ALL">
+                <wheels baseConfig="MICHELIN_DEFAULT" ackermannSteeringIndex="2">
+                    <wheel>
+                        <physics restLoad="2.9"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/michelin/axioBib/600_70R30.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.16">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="2.9"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/michelin/axioBib/600_70R30.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.16">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="2.8"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/michelin/axioBib/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.23">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="2.8"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/michelin/axioBib/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.23">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+                <foliageBendingModifier index="1" minX="-2.12" maxX="2.12"/>
+                <foliageBendingModifier index="2" minX="-2.27" maxX="2.27"/>
+                <aiAgent width="4.53"/>
+                <size width="5.2"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelNarrow" price="1000" brand="MICHELIN" saveId="MICHELIN_NARROW">
+                <wheels baseConfig="MICHELIN_DEFAULT" ackermannSteeringIndex="3">
+                    <wheel filename="$data/shared/wheels/tires/michelin/yieldBib/380_80R38.xml">
+                        <physics yOffset="0.062"/>
+                        <tire isCareWheel="true"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/michelin/yieldBib/380_80R38.xml">
+                        <physics yOffset="0.062"/>
+                        <tire isCareWheel="true"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/michelin/yieldBib/480_80R50.xml">
+                        <physics yOffset="0.05"/>
+                        <tire isCareWheel="true"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/michelin/yieldBib/480_80R50.xml">
+                        <physics yOffset="0.05"/>
+                        <tire isCareWheel="true"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="false"/>
+                <objectChange node="fenderWide"  visibilityActive="true"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+                <objectChange node="warningSigns" visibilityActive="false"/>
+                <foliageBendingModifier index="1" minX="-1.3" maxX="1.3"/>
+                <foliageBendingModifier index="2" minX="-1.3" maxX="1.3"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="CONTINENTAL" saveId="CONTINENTAL_DEFAULT">
+                <wheels baseConfig="TRELLEBORG_DEFAULT">
+                    <wheel filename="$data/shared/wheels/tires/continental/tractorMaster/600_70R30.xml">
+                        <physics yOffset="0.07"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/tractorMaster/600_70R30.xml">
+                        <physics yOffset="0.07"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/tractorMaster/710_70R42.xml">
+                        <physics yOffset="0.06"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/tractorMaster/710_70R42.xml">
+                        <physics yOffset="0.06"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="false"/>
+                <objectChange node="fenderWide"  visibilityActive="true"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelWeights" price="1200" brand="CONTINENTAL" saveId="CONTINENTAL_WEIGHTS">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.5"/>
+                    </wheel>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.5"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="false"/>
+                <objectChange node="fenderWide"  visibilityActive="true"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="1500" brand="CONTINENTAL" saveId="CONTINENTAL_BROAD">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="$data/shared/wheels/tires/continental/tractorMaster/800_70R38.xml">
+                        <physics yOffset="0.062"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/tractorMaster/800_70R38.xml">
+                        <physics yOffset="0.062"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="0.99 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-0.99 0.977 -1.444"/>
+                <foliageBendingModifier index="2" minX="-1.43" maxX="1.43"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroadWeights" price="2700" brand="CONTINENTAL" saveId="CONTINENTAL_BROAD_WEIGHTS">
+                <wheels baseConfig="CONTINENTAL_BROAD">
+                    <wheel/>
+                    <wheel/>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.5"/>
+                    </wheel>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.5"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="0.99 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-0.99 0.977 -1.444"/>
+                <foliageBendingModifier index="2" minX="-1.43" maxX="1.43"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsBack" price="8000" brand="CONTINENTAL" saveId="CONTINENTAL_TWIN_BACK">
+                <wheels baseConfig="CONTINENTAL_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel>
+                        <physics restLoad="3.0"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/continental/tractorMaster/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.28">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="3.0"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/continental/tractorMaster/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.28">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+                <foliageBendingModifier index="2" minX="-2.24" maxX="2.24"/>
+                <aiAgent width="4.55"/>
+                <size width="5"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" price="11000" brand="CONTINENTAL" saveId="CONTINENTAL_TWIN_ALL">
+                <wheels baseConfig="CONTINENTAL_DEFAULT" ackermannSteeringIndex="2">
+                    <wheel>
+                        <physics restLoad="3.0"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/continental/tractorMaster/600_70R30.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.245">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="3.0"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/continental/tractorMaster/600_70R30.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.245">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="3.0"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/continental/tractorMaster/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.28">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="3.0"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/continental/tractorMaster/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.28">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+                <foliageBendingModifier index="1" minX="-2.12" maxX="2.12"/>
+                <foliageBendingModifier index="2" minX="-2.24" maxX="2.24"/>
+                <aiAgent width="4.55"/>
+                <size width="5.2"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelNarrow" price="1000" brand="CONTINENTAL" saveId="CONTINENTAL_NARROW">
+                <wheels baseConfig="CONTINENTAL_DEFAULT" ackermannSteeringIndex="3">
+                    <wheel filename="$data/shared/wheels/tires/continental/tractor85/420_85R34.xml">
+                        <physics yOffset="0.055"/>
+                        <tire isCareWheel="true"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/tractor85/420_85R34.xml">
+                        <physics yOffset="0.055"/>
+                        <tire isCareWheel="true"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/tractor85/520_85R46.xml">
+                        <physics yOffset="0.052"/>
+                        <tire isCareWheel="true"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/tractor85/520_85R46.xml">
+                        <physics yOffset="0.052"/>
+                        <tire isCareWheel="true"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="false"/>
+                <objectChange node="fenderWide"  visibilityActive="true"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+                <objectChange node="warningSigns" visibilityActive="false"/>
+                <foliageBendingModifier index="1" minX="-1.3" maxX="1.3"/>
+                <foliageBendingModifier index="2" minX="-1.3" maxX="1.3"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="MITAS" saveId="MITAS_DEFAULT">
+                <wheels baseConfig="TRELLEBORG_DEFAULT">
+                    <wheel filename="$data/shared/wheels/tires/mitas/SFT/600_70R30.xml">
+                        <physics yOffset="0.064"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/mitas/SFT/600_70R30.xml">
+                        <physics yOffset="0.064"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/mitas/SFT/710_70R42.xml">
+                        <physics yOffset="0.065"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/mitas/SFT/710_70R42.xml">
+                        <physics yOffset="0.065"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="false"/>
+                <objectChange node="fenderWide"  visibilityActive="true"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelWeights" price="1200" brand="MITAS" saveId="MITAS_WEIGHTS">
+                <wheels baseConfig="MITAS_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.5"/>
+                    </wheel>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.5"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="false"/>
+                <objectChange node="fenderWide"  visibilityActive="true"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="1500" brand="MITAS" saveId="MITAS_BROAD">
+                <wheels baseConfig="MITAS_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="$data/shared/wheels/tires/mitas/SFT/800_70R38.xml">
+                        <physics yOffset="0.056"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/mitas/SFT/800_70R38.xml">
+                        <physics yOffset="0.056"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="0.99 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-0.99 0.977 -1.444"/>
+                <foliageBendingModifier index="2" minX="-1.43" maxX="1.43"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroadWeights" price="2700" brand="MITAS" saveId="MITAS_BROAD_WEIGHTS">
+                <wheels baseConfig="MITAS_BROAD">
+                    <wheel/>
+                    <wheel/>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.5"/>
+                    </wheel>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.5"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="0.99 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-0.99 0.977 -1.444"/>
+                <foliageBendingModifier index="2" minX="-1.43" maxX="1.43"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsBack" price="8000" brand="MITAS" saveId="MITAS_TWIN_BACK">
+                <wheels baseConfig="MITAS_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel>
+                        <physics restLoad="2.8"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/mitas/SFT/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.28">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="2.8"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/mitas/SFT/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.28">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+                <foliageBendingModifier index="2" minX="-2.27" maxX="2.27"/>
+                <aiAgent width="4.55"/>
+                <size width="5"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" price="11000" brand="MITAS" saveId="MITAS_TWIN_ALL">
+                <wheels baseConfig="MITAS_DEFAULT" ackermannSteeringIndex="2">
+                    <wheel>
+                        <physics restLoad="2.9"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/mitas/SFT/600_70R30.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.27">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="2.9"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/mitas/SFT/600_70R30.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.27">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="2.8"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/mitas/SFT/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.28">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="2.8"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/mitas/SFT/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.28">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+                <foliageBendingModifier index="1" minX="-2.15" maxX="2.15"/>
+                <foliageBendingModifier index="2" minX="-2.27" maxX="2.27"/>
+                <aiAgent width="4.55"/>
+                <size width="5.2"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="BKT" saveId="BKT_DEFAULT">
+                <wheels baseConfig="TRELLEBORG_DEFAULT">
+                    <wheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/600_70R30.xml">
+                        <physics restLoad="2.8" yOffset="0.051"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/600_70R30.xml">
+                        <physics restLoad="2.8" yOffset="0.051"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/710_70R42.xml">
+                        <physics restLoad="2.6" yOffset="0.06"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/710_70R42.xml">
+                        <physics restLoad="2.6" yOffset="0.06"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="false"/>
+                <objectChange node="fenderWide"  visibilityActive="true"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelWeights" price="1200" brand="BKT" saveId="BKT_WEIGHTS">
+                <wheels baseConfig="BKT_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.6"/>
+                    </wheel>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.6"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="false"/>
+                <objectChange node="fenderWide"  visibilityActive="true"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="1500" brand="BKT" saveId="BKT_BROAD">
+                <wheels baseConfig="BKT_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/800_70R38.xml">
+                        <physics yOffset="0.062"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/800_70R38.xml">
+                        <physics yOffset="0.062"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="0.99 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-0.99 0.977 -1.444"/>
+                <foliageBendingModifier index="2" minX="-1.43" maxX="1.43"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroadWeights" price="2700" brand="BKT" saveId="BKT_BROAD_WEIGHTS">
+                <wheels baseConfig="BKT_BROAD">
+                    <wheel/>
+                    <wheel/>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.6"/>
+                    </wheel>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.6"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="0.99 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-0.99 0.977 -1.444"/>
+                <foliageBendingModifier index="2" minX="-1.43" maxX="1.43"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsBack" price="8000" brand="BKT" saveId="BKT_TWIN_BACK">
+                <wheels baseConfig="BKT_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel>
+                        <physics restLoad="3.0"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.21">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="3.0"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.21">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+                <foliageBendingModifier index="2" minX="-2.24" maxX="2.24"/>
+                <aiAgent width="4.5"/>
+                <size width="5"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" price="11000" brand="BKT" saveId="BKT_TWIN_ALL">
+                <wheels baseConfig="BKT_DEFAULT" ackermannSteeringIndex="2">
+                    <wheel>
+                        <physics restLoad="3.0"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/600_70R30.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.175">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="3.0"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/600_70R30.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.175">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="3.0"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.21">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="3.0"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.21">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+                <foliageBendingModifier index="1" minX="-2.12" maxX="2.12"/>
+                <foliageBendingModifier index="2" minX="-2.24" maxX="2.24"/>
+                <aiAgent width="4.5"/>
+                <size width="5.2"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="VREDESTEIN" saveId="VREDESTEIN_DEFAULT">
+                <wheels baseConfig="TRELLEBORG_DEFAULT">
+                    <wheel filename="$data/shared/wheels/tires/vredestein/traxionXXL/600_70R30.xml">
+                        <physics yOffset="0.07"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/vredestein/traxionXXL/600_70R30.xml">
+                        <physics yOffset="0.07"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/vredestein/traxionXXL/710_70R42.xml">
+                        <physics yOffset="0.06"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/vredestein/traxionXXL/710_70R42.xml">
+                        <physics yOffset="0.06"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="false"/>
+                <objectChange node="fenderWide"  visibilityActive="true"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelWeights" price="1200" brand="VREDESTEIN" saveId="VREDESTEIN_WEIGHTS">
+                <wheels baseConfig="VREDESTEIN_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.5"/>
+                    </wheel>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.5"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="false"/>
+                <objectChange node="fenderWide"  visibilityActive="true"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="1500" brand="VREDESTEIN" saveId="VREDESTEIN_BROAD">
+                <wheels baseConfig="VREDESTEIN_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="$data/shared/wheels/tires/vredestein/traxionXXL/800_70R38.xml">
+                        <physics yOffset="0.062"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/vredestein/traxionXXL/800_70R38.xml">
+                        <physics yOffset="0.062"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="0.99 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-0.99 0.977 -1.444"/>
+                <foliageBendingModifier index="2" minX="-1.43" maxX="1.43"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroadWeights" price="2700" brand="VREDESTEIN" saveId="VREDESTEIN_BROAD_WEIGHTS">
+                <wheels baseConfig="VREDESTEIN_BROAD">
+                    <wheel/>
+                    <wheel/>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.5"/>
+                    </wheel>
+                    <wheel configId="weight3" additionalColor="DEUTZ_BLACK1">
+                        <physics restLoad="3.5"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="0.99 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-0.99 0.977 -1.444"/>
+                <foliageBendingModifier index="2" minX="-1.43" maxX="1.43"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsBack" price="8000" brand="VREDESTEIN" saveId="VREDESTEIN_TWIN_BACK">
+                <wheels baseConfig="VREDESTEIN_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel>
+                        <physics restLoad="3.0"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/vredestein/traxionXXL/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.265">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="3.0"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/vredestein/traxionXXL/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.265">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+                <foliageBendingModifier index="2" minX="-2.25" maxX="2.25"/>
+                <aiAgent width="4.5"/>
+                <size width="5"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" price="11000" brand="VREDESTEIN" saveId="VREDESTEIN_TWIN_ALL">
+                <wheels baseConfig="VREDESTEIN_DEFAULT" ackermannSteeringIndex="2">
+                    <wheel>
+                        <physics restLoad="3.0"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/vredestein/traxionXXL/600_70R30.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.22">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="3.0"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/vredestein/traxionXXL/600_70R30.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.22">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="3.0"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/vredestein/traxionXXL/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.265">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="3.0"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/vredestein/traxionXXL/710_70R42.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.265">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="true"/>
+                <objectChange node="fenderWide"  visibilityActive="false"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+                <foliageBendingModifier index="1" minX="-2.15" maxX="2.15"/>
+                <foliageBendingModifier index="2" minX="-2.25" maxX="2.25"/>
+                <aiAgent width="4.5"/>
+                <size width="5.2"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelNarrow" price="1000" brand="VREDESTEIN" saveId="VREDESTEIN_NARROW">
+                <wheels baseConfig="VREDESTEIN_DEFAULT" ackermannSteeringIndex="3">
+                    <wheel filename="$data/shared/wheels/tires/vredestein/traxion85/420_85R34.xml">
+                        <physics yOffset="0.055"/>
+                        <tire isCareWheel="true"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/vredestein/traxion85/420_85R34.xml">
+                        <physics yOffset="0.055"/>
+                        <tire isCareWheel="true"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/vredestein/traxion85/480_80R50.xml">
+                        <physics yOffset="0.052"/>
+                        <tire isCareWheel="true"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/vredestein/traxion85/480_80R50.xml">
+                        <physics yOffset="0.052"/>
+                        <tire isCareWheel="true"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="false"/>
+                <objectChange node="fenderWide"  visibilityActive="true"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+                <objectChange node="warningSigns" visibilityActive="false"/>
+                <foliageBendingModifier index="1" minX="-1.3" maxX="1.3"/>
+                <foliageBendingModifier index="2" minX="-1.3" maxX="1.3"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="NOKIAN" saveId="NOKIAN_DEFAULT">
+                <wheels baseConfig="TRELLEBORG_DEFAULT">
+                    <wheel filename="$data/shared/wheels/tires/nokian/groundKing/600_70R30.xml">
+                        <physics restLoad="2.6" yOffset="0.062"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/nokian/groundKing/600_70R30.xml">
+                        <physics restLoad="2.6" yOffset="0.062"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/nokian/groundKing/710_70R42.xml">
+                        <physics restLoad="2.4" yOffset="0.056"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/nokian/groundKing/710_70R42.xml">
+                        <physics restLoad="2.4" yOffset="0.056"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="false"/>
+                <objectChange node="fenderWide"  visibilityActive="true"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="NOKIAN" saveId="NOKIAN_DEFAULT2">
+                <wheels baseConfig="NOKIAN_DEFAULT">
+                    <wheel filename="$data/shared/wheels/tires/nokian/tractorKing/600_70R30.xml">
+                        <physics yOffset="0.065"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/nokian/tractorKing/600_70R30.xml">
+                        <physics yOffset="0.065"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/nokian/tractorKing/710_70R42.xml">
+                        <physics yOffset="0.059"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/nokian/tractorKing/710_70R42.xml">
+                        <physics yOffset="0.059"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="false"/>
+                <objectChange node="fenderWide"  visibilityActive="true"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelCommunal" price="1000" brand="NOKIAN" saveId="NOKIAN_COMMUNAL">
+                <wheels baseConfig="NOKIAN_DEFAULT">
+                    <wheel filename="$data/shared/wheels/tires/nokian/TRI2/440_80R34.xml">
+                        <physics yOffset="0.05"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/nokian/TRI2/440_80R34.xml">
+                        <physics yOffset="0.05"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/nokian/TRI2/620_80R42.xml">
+                        <physics yOffset="0.06"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/nokian/TRI2/620_80R42.xml">
+                        <physics yOffset="0.06"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="fenderSmall" visibilityActive="false"/>
+                <objectChange node="fenderWide"  visibilityActive="true"/>
+                <objectChange node="wheelBackLeft" translationActive="1.01 0.977 -1.444"/>
+                <objectChange node="wheelBackRight" translationActive="-1.01 0.977 -1.444"/>
+                <objectChange node="warningSigns" visibilityActive="false"/>
+                <foliageBendingModifier index="1" minX="-1.35" maxX="1.35"/>
+                <foliageBendingModifier index="2" minX="-1.35" maxX="1.35"/>
+            </wheelConfiguration>
+        </wheelConfigurations>
+
+        <rimColor material="18">SHARED_GREY2</rimColor>
+
+        <hubs>
+            <color0>SHARED_DA_METAL_BLACK</color0>
+            <color1>SHARED_GREY3</color1>
+            <hub linkNode="wheelFrontLeft"  filename="$data/shared/wheels/hubs/hub_n10_2.xml"  isLeft="true"  scale="0.23 0.35 0.35" />
+            <hub linkNode="wheelFrontRight" filename="$data/shared/wheels/hubs/hub_n10_2.xml"  isLeft="false" scale="0.23 0.35 0.35" />
+            <hub linkNode="wheelBackLeft"   filename="$data/shared/wheels/hubs/hub_n10_16.xml" isLeft="true"  scale="0.3 0.3 0.3" />
+            <hub linkNode="wheelBackRight"  filename="$data/shared/wheels/hubs/hub_n10_16.xml" isLeft="false" scale="0.3 0.3 0.3" />
+        </hubs>
+
+        <ackermannSteeringConfigurations>
+            <ackermannSteering rotSpeed="40" rotMax="41" rotCenterWheel1="3" rotCenterWheel2="4" />
+            <ackermannSteering rotSpeed="40" rotMax="27" rotCenterWheel1="3" rotCenterWheel2="4" />
+            <ackermannSteering rotSpeed="40" rotMax="45" rotCenterWheel1="3" rotCenterWheel2="4" />
+        </ackermannSteeringConfigurations>
+    </wheels>
+
+    <speedRotatingParts>
+        <speedRotatingPart node="driveShaftLeft01"  wheelIndex="1" wheelScale="5"/>
+        <speedRotatingPart node="driveShaftLeft02"  wheelIndex="1" wheelScale="5"/>
+        <speedRotatingPart node="driveShaftRight01" wheelIndex="2" wheelScale="5"/>
+        <speedRotatingPart node="driveShaftRight02" wheelIndex="2" wheelScale="5"/>
+        <speedRotatingPart node="driveShaftMain"    wheelIndex="3" wheelScale="5"/>
+    </speedRotatingParts>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="0" linkNode="camera_03" filename="$data/shared/assets/camera_03.i3d"/>
+    </dynamicallyLoadedParts>
+
+    <lights>
+        <states>
+            <state lightTypes="0" />
+            <state lightTypes="0 1" />
+            <state lightTypes="0 1 2" />
+        </states>
+
+        <sharedLight linkNode="workingLight21_01"            filename="$data/shared/assets/lights/lizard/workingLight21.xml" />
+        <sharedLight linkNode="workingLight21_02"            filename="$data/shared/assets/lights/lizard/workingLight21.xml" />
+        <sharedLight linkNode="hellaWorkingLightRound_01_01" filename="$data/shared/assets/lights/hella/hellaWorkingLightRound_01_front.xml" />
+        <sharedLight linkNode="hellaWorkingLightRound_01_02" filename="$data/shared/assets/lights/hella/hellaWorkingLightRound_01_front.xml" />
+        <sharedLight linkNode="hellaWorkingLightRound_01_03" filename="$data/shared/assets/lights/hella/hellaWorkingLightRound_01_front.xml" />
+        <sharedLight linkNode="hellaWorkingLightRound_01_04" filename="$data/shared/assets/lights/hella/hellaWorkingLightRound_01_front.xml" />
+        <sharedLight linkNode="hellaWorkingLightRound_01_05" filename="$data/shared/assets/lights/hella/hellaWorkingLightRound_01_front.xml" />
+        <sharedLight linkNode="hellaWorkingLightRound_01_06" filename="$data/shared/assets/lights/hella/hellaWorkingLightRound_01_front.xml" />
+        <sharedLight linkNode="hellaWorkingLightRound_01_07" filename="$data/shared/assets/lights/hella/hellaWorkingLightRound_01_back.xml" />
+        <sharedLight linkNode="hellaWorkingLightRound_01_08" filename="$data/shared/assets/lights/hella/hellaWorkingLightRound_01_back.xml" />
+        <sharedLight linkNode="hellaWorkingLightRound_01_09" filename="$data/shared/assets/lights/hella/hellaWorkingLightRound_01_back.xml" />
+        <sharedLight linkNode="hellaWorkingLightRound_01_10" filename="$data/shared/assets/lights/hella/hellaWorkingLightRound_01_back.xml" />
+        <sharedLight linkNode="hellaWorkingLightRound_01_11" filename="$data/shared/assets/lights/hella/hellaWorkingLightRound_01_back.xml" />
+        <sharedLight linkNode="hellaWorkingLightRound_01_12" filename="$data/shared/assets/lights/hella/hellaWorkingLightRound_01_back.xml" />
+        <sharedLight linkNode="hellaWorkingLightRound_01_13" filename="$data/shared/assets/lights/hella/hellaWorkingLightRound_01_back.xml" />
+        <sharedLight linkNode="hellaWorkingLightRound_01_14" filename="$data/shared/assets/lights/hella/hellaWorkingLightRound_01_back.xml" />
+        <sharedLight linkNode="hellaWorkingLightRound_01_15" filename="$data/shared/assets/lights/hella/hellaWorkingLightRound_01_back.xml" />
+        <sharedLight linkNode="hellaWorkingLightRound_01_16" filename="$data/shared/assets/lights/hella/hellaWorkingLightRound_01_back.xml" />
+        <sharedLight linkNode="hellaWorkingLightRound_01_17" filename="$data/shared/assets/lights/hella/hellaWorkingLightRound_01_back.xml" />
+
+        <realLights>
+            <low>
+                <light node="frontLightLow"     lightTypes="0" excludedLightTypes="2 3" />
+                <light node="workLightBackLow"  lightTypes="1"/>
+                <light node="workLightFrontLow" lightTypes="2"/>
+                <light node="highBeamLow"       lightTypes="3" />
+            </low>
+            <high>
+                <light node="frontLightHigh"        lightTypes="0" excludedLightTypes="2 3" />
+                <light node="licensePlateLightHigh" lightTypes="0"/>
+                <light node="backLightsHigh"        lightTypes="0"/>
+                <light node="workLightBackHigh"     lightTypes="1"/>
+                <light node="workLightFrontHigh"    lightTypes="2"/>
+                <light node="highBeamHigh"          lightTypes="3"/>
+                <brakeLight     node="brakeLightsHigh" />
+                <turnLightLeft  node="turnLightLeftFront" />
+                <turnLightRight node="turnLightRightFront" />
+                <reverseLight   node="reverseLightHigh" />
+                <interiorLight  node="interiorScreenLight"/>
+            </high>
+        </realLights>
+
+        <defaultLights>
+            <defaultLight shaderNode="defaultLights01_static"        lightTypes="0 3" intensity="100"/>
+            <defaultLight shaderNode="defaultLights01Glass_static"   lightTypes="0 3" intensity="0.5"/>
+            <defaultLight shaderNode="defaultLights02_static"        lightTypes="0" intensity="50"/>
+            <defaultLight shaderNode="defaultLights02Glass_static"   lightTypes="0" intensity="2"/>
+            <defaultLight shaderNode="warningSignLightsGlass_static" lightTypes="0" intensity="30"/>
+            <defaultLight shaderNode="backLights_static"             lightTypes="0" intensity="100"/>
+            <defaultLight shaderNode="backLightsGlass_static"        lightTypes="0" intensity="2"/>
+            <defaultLight shaderNode="licensePlateLight_static"      lightTypes="0" intensity="50"/>
+            <defaultLight shaderNode="licensePlateLightGlass_static" lightTypes="0" intensity="2"/>
+            <defaultLight shaderNode="sideMarkerStatic"              lightTypes="0" intensity="20"/>
+            <defaultLight shaderNode="sideMarkerStaticGlass"         lightTypes="0" intensity="2"/>
+        </defaultLights>
+
+        <turnLights>
+            <turnLightLeft  shaderNode="turnLightsLeft_static" intensity="100"/>
+            <turnLightLeft  shaderNode="turnLightsLeftGlass_static" intensity="1"/>
+            <turnLightRight shaderNode="turnLightsRight_static" intensity="100"/>
+            <turnLightRight shaderNode="turnLightsRightGlass_static" intensity="1"/>
+        </turnLights>
+
+        <brakeLights>
+            <brakeLight shaderNode="brakeLights_static" />
+            <brakeLight shaderNode="brakeLightsGlass_static" />
+        </brakeLights>
+
+        <reverseLights>
+            <reverseLight shaderNode="reverseLights_static" />
+            <reverseLight shaderNode="reverseLightsGlass_static" />
+        </reverseLights>
+
+         <beaconLights>
+             <beaconLight node="beaconLight08_01" filename="$data/shared/assets/beaconLights/lizard/beaconLight08.xml" />
+             <beaconLight node="beaconLight08_02" filename="$data/shared/assets/beaconLights/lizard/beaconLight08.xml" />
+         </beaconLights>
+
+        <dashboards>
+            <dashboard displayType="EMITTER" valueType="lightState"  node="defaultLight_decals"         lightTypes="0" intensity="0.3" baseColor="SHARED_GREY5" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState"  node="defaultLight2_decals"        lightTypes="0" intensity="0.3" emitColor="GREEN" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState"  node="interiorGlow_decals"         lightTypes="0" intensity="0.3" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState"  node="ambientLight_static"         lightTypes="0" intensity="0.6" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState"  node="seatGlow_decals"             lightTypes="0" intensity="0.3" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState"  node="seatButtonDecals"            lightTypes="0" intensity="0.2" baseColor="SHARED_GREY2" emitColor="0 0.5 0" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState"  node="seatButtonIconsLightDecal"   lightTypes="0" intensity="0.05" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState"  node="seat_decals"                 lightTypes="0" intensity="0.1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState"  node="switchDefaultLight_decals"   lightTypes="0" intensity="0.3" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState"  node="workLightBack_decals"        lightTypes="1" intensity="0.3" emitColor="GREEN" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState"  node="workLightFront01_decals"     lightTypes="2" intensity="0.3" emitColor="GREEN" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState"  node="workLightFront02_decals"     lightTypes="2" intensity="0.3" baseColor="SHARED_GREY5" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState"  node="switchWorkLightFront_decals" lightTypes="2" intensity="0.3" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState"  node="highbeam_decals"             lightTypes="3" intensity="0.3" baseColor="SHARED_GREY5" groups="MOTOR_ACTIVE"/>
+
+            <dashboard displayType="EMITTER" valueType="lightState"  node="leverDirection_decals"       lightTypes="0" intensity="0.3" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState"  node="leverTurnLight_decals"       lightTypes="0" intensity="0.3" groups="MOTOR_ACTIVE"/>
+
+            <dashboard displayType="ROT" valueType="lightState" node="switchDefaultLight"   lightTypes="0" minRot="0 0 0" maxRot="0 0 16" doInterpolation="true" />
+            <dashboard displayType="ROT" valueType="lightState" node="switchWorkLightFront" lightTypes="2" minRot="0 0 0" maxRot="0 0 16" doInterpolation="true" />
+
+            <dashboard displayType="EMITTER" valueType="turnLightLeft"   node="turnLightLeft_decals"    intensity="0.3" baseColor="SHARED_GREY5" emitColor="GREEN" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="turnLightRight"  node="turnLightRight_decals"   intensity="0.3" baseColor="SHARED_GREY5" emitColor="GREEN" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="turnLightAny"    node="turnLightFront_decals"   intensity="0.3" baseColor="SHARED_GREY5" emitColor="GREEN" groups="MOTOR_ACTIVE FRONT_ATTACHMENT"/>
+            <dashboard displayType="EMITTER" valueType="turnLightAny"    node="turnLightBack_decals"    intensity="0.3" baseColor="SHARED_GREY5" emitColor="GREEN" groups="MOTOR_ACTIVE BACK_ATTACHMENT"/>
+            <dashboard displayType="EMITTER" valueType="turnLightHazard" node="switchHazards"           />
+            <dashboard displayType="EMITTER" valueType="turnLightHazard" node="switchHazards_decals"    />
+            <dashboard displayType="ROT"     valueType="turnLight"       node="leverTurnLight"          minRot="10 0 0" maxRot="-10 0 0" doInterpolation="true" />
+
+            <dashboard displayType="EMITTER" valueType="beaconLight"     node="beaconLight_decals"      intensity="0.3" emitColor="GREEN" groups="MOTOR_ACTIVE"/>
+        </dashboards>
+    </lights>
+
+    <attacherJoints comboDuration="2">
+        <attacherJoint node="attacherJointBack" upperRotationOffset="-0.034" lowerRotationOffset="-0.034" moveTime="2.5" comboTime="1">
+            <distanceToGround lower="0.31" upper="1.25" />
+            <rotationNode node="attacherJointBackRot" lowerRotation="-18 0 0" upperRotation="35 0 0" />
+            <rotationNode2 node="attacherJointBackRot2" />
+            <bottomArm rotationNode="attacherJointBackArmBottom" translationNode="attacherJointBackArmBottomTrans" referenceNode="referencePointBackBottom" zScale="-1" startRotation="-15 0 0" />
+            <topArm baseNode="attacherJointBackArmTop" filename="$data/shared/assets/upperLinks/walterscheid03.i3d" zScale="-1" color="SHARED_DA_METAL_BLACK"/>
+            <schema position="1 0" rotation="0" invertX="false" />
+            <visuals hide="trailerAttacherLowTrans trailerAttacherTrans"/>
+            <objectChange node="attacherJointBackArmTopMount" rotationInactive="37 0 3" rotationActive="0 0 0" />
+        </attacherJoint>
+
+        <attacherJoint node="attacherJointFront" upperRotationOffset="0.02" lowerRotationOffset="0.034" moveTime="2.5" comboTime="0">
+            <distanceToGround lower="0.32" upper="1.01" />
+            <rotationNode node="attacherJointFrontRot" lowerRotation="30 0 0" upperRotation="-20 0 0" />
+            <rotationNode2 node="attacherJointFrontRot2" />
+            <bottomArm rotationNode="attacherJointFrontArmBottom" translationNode="attacherJointFrontArmBottomTrans" referenceNode="referencePointFrontBottom" zScale="1" startRotation="-20 0 0"/>
+            <topArm baseNode="attacherJointFrontArmTop" filename="$data/shared/assets/upperLinks/walterscheid01.i3d" zScale="1" toggleVisibility="true" secondPartUseMainColor="false" color="SHARED_DA_METAL_BLACK"/>
+            <schema position="1 0" rotation="0" invertX="true" />
+            <objectChange node="lowerLinkFrontLeft"  rotationActive="0 0 0" rotationInactive="-70 0 0"/>
+            <objectChange node="lowerLinkFrontRight" rotationActive="0 0 0" rotationInactive="-70 0 0"/>
+            <objectChange node="attacherJointFrontArmTopMount" visibilityActive="false" visibilityInactive="true" />
+        </attacherJoint>
+
+        <attacherJoint node="trailerAttacherJointBack" jointType="trailer" lowerRotLimit="25 55 50" allowsJointLimitMovement="false" comboTime="1">
+            <distanceToGround lower="0.53" upper="1.12" />
+            <transNode node="trailerAttacherTrans" minY="0.54" maxY="1.13" height="0.25">
+                <dependentBottomArm node="attacherJointBackArmBottom" threshold="0.65" rotation="37 0 0"/>
+            </transNode>
+            <schema position="1 0" rotation="0" invertX="false" />
+            <visuals nodes="trailerAttacherTrans" hide="trailerAttacherLowTrans"/>
+        </attacherJoint>
+
+        <attacherJoint node="trailerAttacherJointBackLow" jointType="trailerLow" lowerRotLimit="25 57 50" lowerTransLimit="0 0 0" allowsJointLimitMovement="false" comboTime="1">
+            <distanceToGround lower="0.57" upper="1.13" />
+            <transNode node="trailerAttacherLowTrans" minY="0.58" maxY="1.14">
+                <dependentBottomArm node="attacherJointBackArmBottom" rotation="37 0 0"/>
+            </transNode>
+            <schema position="1 0" rotation="0" invertX="false" />
+            <visuals nodes="trailerAttacherLowTrans" hide="trailerAttacherTrans"/>
+            <steeringBars leftNode="trailerSteeringLeftRef" rightNode="trailerSteeringRightRef" />
+        </attacherJoint>
+
+        <attacherJoint node="trailerAttacherJointFront" jointType="trailer" lowerRotLimit="25 60 50" lowerTransLimit="0 0 0" allowsJointLimitMovement="false" comboTime="0">
+            <schema position="1 0" rotation="0" invertX="true" />
+            <objectChange node="lowerLinkFrontLeft"  visibilityActive="false" visibilityInactive="true" />
+            <objectChange node="lowerLinkFrontRight" visibilityActive="false" visibilityInactive="true" />
+        </attacherJoint>
+    </attacherJoints>
+
+    <connectionHoses>
+        <target attacherJointIndices="2 5"   type="electric" node="electricFront" socket="electric"/>
+        <target attacherJointIndices="1 3 4" type="electric" node="electricBack"  socket="electric"/>
+
+        <target attacherJointIndices="1 3 4" type="airDoubleRed"    node="airDoubleRed"    socket="air_red"/>
+        <target attacherJointIndices="1 3 4" type="airDoubleYellow" node="airDoubleYellow" socket="air_yellow"/>
+
+        <target attacherJointIndices="2 5"   type="isobus"        node="isobusFront" socket="isobus"/>
+        <target attacherJointIndices="1 3 4" type="isobus"        node="isobusBack"  socket="isobus"/>
+
+        <target attacherJointIndices="1 3 4" type="hydraulicIn" node="hydraulicIn01">
+            <objectChange node="hydraulicIn01_cover" rotationActive="80 0 0" rotationInactive="0 0 0"/>
+        </target>
+        <target attacherJointIndices="1 3 4" type="hydraulicOut" node="hydraulicOut01">
+            <objectChange node="hydraulicOut01_cover" rotationActive="80 0 0" rotationInactive="0 0 0"/>
+        </target>
+        <target attacherJointIndices="1 3 4" type="hydraulicIn" node="hydraulicIn02">
+            <objectChange node="hydraulicIn02_cover" rotationActive="80 0 0" rotationInactive="0 0 0"/>
+        </target>
+        <target attacherJointIndices="1 3 4" type="hydraulicOut" node="hydraulicOut02">
+            <objectChange node="hydraulicOut02_cover" rotationActive="80 0 0" rotationInactive="0 0 0"/>
+        </target>
+        <target attacherJointIndices="1 3 4" type="hydraulicIn" node="hydraulicIn03">
+            <objectChange node="hydraulicIn03_cover" rotationActive="80 0 0" rotationInactive="0 0 0"/>
+        </target>
+        <target attacherJointIndices="1 3 4" type="hydraulicOut" node="hydraulicOut03">
+            <objectChange node="hydraulicOut03_cover" rotationActive="80 0 0" rotationInactive="0 0 0"/>
+        </target>
+        <target attacherJointIndices="1 3 4" type="hydraulicIn" node="hydraulicIn04">
+            <objectChange node="hydraulicIn04_cover" rotationActive="80 0 0" rotationInactive="0 0 0"/>
+        </target>
+        <target attacherJointIndices="1 3 4" type="hydraulicOut" node="hydraulicOut04">
+            <objectChange node="hydraulicOut04_cover" rotationActive="80 0 0" rotationInactive="0 0 0"/>
+        </target>
+        <target attacherJointIndices="1 3 4" type="hydraulicIn" node="hydraulicIn05">
+            <objectChange node="hydraulicIn05_cover" rotationActive="80 0 0" rotationInactive="0 0 0"/>
+        </target>
+        <target attacherJointIndices="1 3 4" type="hydraulicOut" node="hydraulicOut05">
+            <objectChange node="hydraulicOut05_cover" rotationActive="80 0 0" rotationInactive="0 0 0"/>
+        </target>
+
+        <target attacherJointIndices="1 3 4" type="hydraulicIn"  node="hydraulicIn06"  socket="hydraulic01"/>
+        <target attacherJointIndices="1 3 4" type="hydraulicOut" node="hydraulicOut06" socket="hydraulic01"/>
+        <target attacherJointIndices="1 3 4" type="hydraulicIn"  node="hydraulicIn07"  socket="hydraulic04"/>
+        <target attacherJointIndices="1 3 4" type="hydraulicOut" node="hydraulicOut07" socket="hydraulic03"/>
+
+        <target attacherJointIndices="2 5" type="hydraulicIn" node="hydraulicIn08">
+            <objectChange node="hydraulicIn08_cover" rotationActive="80 0 0" rotationInactive="0 0 0"/>
+        </target>
+        <target attacherJointIndices="2 5" type="hydraulicOut" node="hydraulicOut08">
+            <objectChange node="hydraulicOut08_cover" rotationActive="80 0 0" rotationInactive="0 0 0"/>
+        </target>
+        <target attacherJointIndices="2 5" type="hydraulicIn" node="hydraulicIn09">
+            <objectChange node="hydraulicIn09_cover" rotationActive="80 0 0" rotationInactive="0 0 0"/>
+        </target>
+        <target attacherJointIndices="2 5" type="hydraulicOut" node="hydraulicOut09">
+            <objectChange node="hydraulicOut09_cover" rotationActive="80 0 0" rotationInactive="0 0 0"/>
+        </target>
+
+        <toolConnectorHose mountingNode="rightPipe">
+            <startTarget attacherJointIndices="2 5" type="TOOL_CONNECTOR_TOP_RIGHT" node="rightPipe_frontConnector"/>
+            <endTarget attacherJointIndices="1 3 4" type="TOOL_CONNECTOR_TOP_RIGHT" node="rightPipe_backConnector"/>
+        </toolConnectorHose>
+
+        <toolConnectorHose mountingNode="bottomPipe01">
+            <startTarget attacherJointIndices="2 5" type="TOOL_CONNECTOR_BOTTOM_01" node="bottomPipe01_frontConnector"/>
+            <endTarget attacherJointIndices="1 3 4" type="TOOL_CONNECTOR_BOTTOM_01" node="bottomPipe01_backConnector"/>
+        </toolConnectorHose>
+
+        <toolConnectorHose mountingNode="bottomPipe02">
+            <startTarget attacherJointIndices="2 5" type="TOOL_CONNECTOR_BOTTOM_02" node="bottomPipe02_frontConnector"/>
+            <endTarget attacherJointIndices="1 3 4" type="TOOL_CONNECTOR_BOTTOM_02" node="bottomPipe02_backConnector"/>
+        </toolConnectorHose>
+
+        <toolConnectorHose mountingNode="bottomPipe03">
+            <startTarget attacherJointIndices="2 5" type="TOOL_CONNECTOR_BOTTOM_03" node="bottomPipe03_frontConnector"/>
+            <endTarget attacherJointIndices="1 3 4" type="TOOL_CONNECTOR_BOTTOM_03" node="bottomPipe03_backConnector"/>
+        </toolConnectorHose>
+
+        <toolConnectorHose mountingNode="bottomPipe04">
+            <startTarget attacherJointIndices="2 5" type="TOOL_CONNECTOR_BOTTOM_04" node="bottomPipe04_frontConnector"/>
+            <endTarget attacherJointIndices="1 3 4" type="TOOL_CONNECTOR_BOTTOM_04" node="bottomPipe04_backConnector"/>
+        </toolConnectorHose>
+    </connectionHoses>
+
+    <powerTakeOffs>
+        <output attacherJointIndices="1 3 4" outputNode="ptoBack"/>
+        <output attacherJointIndices="2 5" outputNode="ptoFront"/>
+    </powerTakeOffs>
+
+    <enterable isTabbable="true" >
+        <enterReferenceNode node="series8_main_component1" />
+        <exitPoint node="exitPoint" />
+
+        <cameras>
+            <camera node="outdoorCamera1" rotatable="true" rotateNode="outdoorCameraTarget" limit="true" useWorldXZRotation="true" rotMinX="-1.4" rotMaxX="1" transMin="4" transMax="40" translation="0 0 6.6" rotation="-22 180 0">
+                <raycastNode node="cameraRaycastNode1"/>
+                <raycastNode node="cameraRaycastNode2"/>
+                <raycastNode node="cameraRaycastNode3"/>
+            </camera>
+            <camera node="indoorCamera1" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" useMirror="true" isInside="true" shadowFocusBox="shadowFocusBox" suspensionNodeIndex="2" />
+        </cameras>
+
+        <characterNode node="playerSkin" cameraMinDistance="0.5" spineRotation="-90 0 90" >
+            <target ikChain="leftArm"   targetNode="playerLeftHandTarget" poseId="narrowFingers"/>
+            <target ikChain="rightArm"  targetNode="playerRightHandTarget" poseId="wideFingers"/>
+            <target ikChain="leftFoot"  targetNode="playerLeftFootTarget" />
+            <target ikChain="rightFoot" targetNode="playerRightFootTarget" />
+        </characterNode>
+
+        <characterTargetNodeModifier node="playerRightFootTarget" transitionTime="0.1" >
+            <state node="playerRightFootTargetGas"   referenceNode="pedalGas" directionReferenceNode="playerRightFootTargetGasRef" />
+            <state node="playerRightFootTargetBrake" referenceNode="pedalBrake" />
+        </characterTargetNodeModifier>
+
+        <mirrors>
+            <mirror node="mirrorLeft01"  prio="1" />
+            <mirror node="mirrorRight01" prio="1" />
+            <mirror node="mirrorRight02" prio="2" />
+        </mirrors>
+
+        <dashboards>
+            <dashboard displayType="TEXT" valueType="time" node="numbersTime01" textColor="1 1 1 1" emissiveScale="0.4" textSize="0.004" textMask="00:00" textAlignment="CENTER" font="GENERIC_BOLD" groups="MOTOR_ONLY_ACTIVE"/>
+            <dashboard displayType="TEXT" valueType="time" node="numbersTime02" textColor="1 1 1 1" emissiveScale="0.4" textSize="0.004" textMask="00:00" textAlignment="CENTER" font="GENERIC" groups="MOTOR_ONLY_ACTIVE"/>
+        </dashboards>
+    </enterable>
+
+    <licensePlates>
+        <licensePlate node="licensePlateFront" position="FRONT" preferedType="SQUARISH" placementArea="0.2 0.25 0.15 0.25">
+            <objectChange node="licensePlateFrontMount" visibilityActive="true" visibilityInactive="false" />
+        </licensePlate>
+        <licensePlate node="licensePlateBack" position="BACK"  preferedType="SQUARISH" placementArea="0.14 0.2 0.14 0.13"/>
+    </licensePlates>
+
+    <motorized>
+        <consumerConfigurations>
+            <consumerConfiguration>
+                <consumer fillUnitIndex="1" usage="29" fillType="electricCharge"/>
+                <consumer fillUnitIndex="2" usage="5.8" fillType="def" />    <!-- usage is per hour at max load and max rpm -->
+                <consumer fillUnitIndex="3" usage="250" fillType="air" permanentConsumption="false" refillLitersPerSecond="350" refillCapacityPercentage="0.5" /> <!-- usage per second at full brake power -->
+            </consumerConfiguration>
+        </consumerConfigurations>
+
+        <differentialConfigurations>
+            <differentialConfiguration>
+                <differentials>
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.7" wheelIndex1="1" wheelIndex2="2" /> <!-- front left-right -->
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.8" wheelIndex1="3" wheelIndex2="4" /> <!-- back left-right -->
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.4" differentialIndex1="1" differentialIndex2="2" /> <!-- front-back -->
+                </differentials>
+            </differentialConfiguration>
+        </differentialConfigurations>
+
+        <motorConfigurations>
+            <motorConfiguration name="8280 TTV" price="0" hp="287">
+                <motor torqueScale="1.213" minRpm="850" maxRpm="2200" maxForwardSpeed="63" maxBackwardSpeed="22" brakeForce="9.7" lowBrakeForceScale="0.22" dampingRateScale="1.45">
+                    <torque normRpm="0.45" torque="0.9"/>
+                    <torque normRpm="0.5"  torque="0.97"/>
+                    <torque normRpm="0.59" torque="1"/>
+                    <torque normRpm="0.72" torque="1"/>
+                    <torque normRpm="0.86" torque="0.88"/>
+                    <torque normRpm="1"    torque="0.72"/>
+                </motor>
+                <transmission minForwardGearRatio="10.2" maxForwardGearRatio="310" minBackwardGearRatio="32" maxBackwardGearRatio="310" name="$l10n_info_transmission_cvt"/>
+            </motorConfiguration>
+        </motorConfigurations>
+
+        <animationNodes>
+            <animationNode node="fanEngine" rotSpeed="-400" rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="1" />
+        </animationNodes>
+
+        <motorStartDuration>3000</motorStartDuration>
+
+        <dashboards>
+            <dashboard displayType="ROT" valueType="movingDirection" node="leverDirection" minRot="10 0 0" maxRot="-10 0 0" doInterpolation="true" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ANIMATION" valueType="speed" animName="needleSpeed" minValueAnim="0" maxValueAnim="70" doInterpolation="true" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ANIMATION" valueType="rpm" animName="needleRpm" minValueAnim="500" maxValueAnim="2800" doInterpolation="true" interpolationSpeed="0.5" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="TEXT" valueType="speed" node="numbersSpeed01" textColor="0 0.3006 0.6240 0" emissiveScale="0.6" textSize="0.009" textScaleX="0.9" textMask="00.0" font="GENERIC_BOLD" groups="MOTOR_ONLY_ACTIVE"/>
+            <dashboard displayType="TEXT" valueType="load" node="numbersMotorPower01" textColor="0 0.3006 0.6240 0" emissiveScale="0.6" textSize="0.006" textMask="000" font="GENERIC_BOLD" groups="MOTOR_ONLY_ACTIVE"/>
+            <dashboard displayType="TEXT" valueType="load" node="numbersMotorPower02" textColor="0 0.3006 0.6240 0" emissiveScale="0.6" textSize="0.006" textMask="000" font="GENERIC_BOLD" groups="MOTOR_ONLY_ACTIVE"/>
+            <dashboard displayType="TEXT" valueType="motorTemperature" node="numberTemp" textColor="1 1 1 1" textSize="0.006" textMask="000" font="GENERIC_BOLD" groups="MOTOR_ONLY_ACTIVE"/>
+            <dashboard displayType="ROT" valueType="motorTemperature" node="needleTemp" minRot="0 0 0" maxRot="0 -141 0" minValueRot="40" maxValueRot="120" doInterpolation="true" interpolationSpeed="0.02" groups="MOTOR_ACTIVE"/>
+
+            <dashboard displayType="MULTI_STATE" valueType="ignitionState" node="keyIgnition" doInterpolation="true" groups="MOTOR_ACTIVE">
+                <state value="0" rotation="0 0 0"/>
+                <state value="1" rotation="0 0 -90"/>
+                <state value="2" rotation="0 0 -30"/>
+            </dashboard>
+        </dashboards>
+    </motorized>
+
+    <drivable>
+        <steeringWheel node="steeringWheel" indoorRotation="540" outdoorRotation="30" />
+
+        <dashboards>
+            <dashboard displayType="ROT"  valueType="accelerationAxis" node="pedalGas"   minRot="0 0 0" maxRot="-7 0 0"  doInterpolation="true" />
+            <dashboard displayType="ROT"  valueType="decelerationAxis" node="pedalBrake" minRot="0 0 0" maxRot="-15 0 0" doInterpolation="true" />
+            <dashboard displayType="TEXT" valueType="cruiseControl" node="numberCruiseControl01" textColor="1 1 1 1" textSize="0.006" textMask="00.0" font="GENERIC_BOLD" textAlignment="CENTER" groups="MOTOR_ONLY_ACTIVE"/>
+            <dashboard displayType="TEXT" valueType="cruiseControl" node="numberCruiseControl02" textColor="1 1 1 1" textSize="0.006" textMask="00.0" font="GENERIC_BOLD" textAlignment="CENTER" groups="MOTOR_ONLY_ACTIVE"/>
+            <dashboard displayType="TEXT" valueType="cruiseControl" node="numberCruiseControl03" textColor="1 1 1 1" emissiveScale="0.4" textSize="0.006" textMask="00.0" font="GENERIC" textAlignment="RIGHT" groups="MOTOR_ONLY_ACTIVE"/>
+        </dashboards>
+    </drivable>
+
+    <animations>
+        <animation name="wiperFront">
+            <part node="wiperFrontPart01" startTime="0.0" endTime="0.5" startRot="0 0 0" endRot="0 0 -40" />
+            <part node="wiperFrontPart01" startTime="0.5" endTime="1.0" startRot="0 0 -40" endRot="0 0 -80" />
+            <part node="wiperFrontPart02" startTime="0.0" endTime="0.5" startRot="0 0 0" endRot="0 0 -40" />
+            <part node="wiperFrontPart02" startTime="0.5" endTime="1.0" startRot="0 0 -40" endRot="0 -1 -80" />
+            <part node="wiperFront"       startTime="0.0" endTime="0.5" startRot="0 0 0" endRot="6 40 0" />
+            <part node="wiperFront"       startTime="0.5" endTime="1.0" startRot="6 40 0" endRot="3 80 0" />
+            <part node="wiperFrontPart"   startTime="0.0" endTime="1.0" startRot="0 0 0" endRot="0 70 0" />
+
+            <sound template="wiper1" startTime="0" endTime="1" direction="1"   volumeScale="1.0" pitchScale="0.5" fadeOut="0.1" linkNode="wiperFront"/>
+            <sound template="wiper2" startTime="0" endTime="1" direction="-1"  volumeScale="1.0" pitchScale="0.5" fadeOut="0.1" linkNode="wiperFront"/>
+        </animation>
+
+        <animation name="wiperBack">
+            <part node="wiperBack" startTime="0.0" endTime="0.5" startRot="0 0 0" endRot="0 7 -90" />
+            <part node="wiperBack" startTime="0.5" endTime="1.0" startRot="0 7 -90" endRot="0 7.5 -180" />
+
+            <sound template="wiper1" startTime="0" endTime="1" direction="1"   volumeScale="0.6" pitchScale="0.8" fadeOut="0.1" linkNode="wiperBack"/>
+            <sound template="wiper2" startTime="0" endTime="1" direction="-1"  volumeScale="0.6" pitchScale="0.8" fadeOut="0.1" linkNode="wiperBack"/>
+        </animation>
+
+        <animation name="needleSpeed">
+            <part node="needleSpeed" startTime="0" endTime="0.2" startRot="0 0 0" endRot="0 -120 0" />
+            <part node="needleSpeed" startTime="0.2" endTime="0.7" startRot="0 -120 0" endRot="0 -211 0" />
+        </animation>
+
+        <animation name="needleRpm">
+            <part node="needleRpm" startTime="0" endTime="0.3" startRot="0 0 0" endRot="0 -19 0" />
+            <part node="needleRpm" startTime="0.3" endTime="1.7" startRot="0 -19 0" endRot="0 -182 0" />
+            <part node="needleRpm" startTime="1.7" endTime="2.3" startRot="0 -182 0" endRot="0 -221 0" />
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="steeringBarFrontCenter">
+                <dependentPart node="steeringbarFrontLeft" />
+                <dependentPart node="steeringbarFrontRight" />
+            </movingTool>
+
+            <movingTool node="attacherJointFrontArmBottom">
+                <dependentPart node="attacherJointFrontHydraulic" />
+            </movingTool>
+
+            <movingTool node="attacherJointBackArmBottom">
+                <dependentPart node="attacherJointBackArmMain" />
+            </movingTool>
+        </movingTools>
+
+        <movingParts>
+            <movingPart node="attacherJointFrontHydraulic" referencePoint="attacherJointFrontHydraulicRef" referenceFrame="attacherJointFrontHydraulicRef" >
+                <translatingPart node="attacherJointFrontHydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="attacherJointBackArmMain" localReferencePoint="attacherJointBackArmMainPart" referencePoint="attacherJointBackArmMainRef" referenceFrame="attacherJointBackArmMainRefFrame" >
+                <dependentPart node="attacherJointBackArmMainPart" />
+                <dependentPart node="attacherJointBackHydraulic" />
+                <dependentPart node="chainBack" />
+            </movingPart>
+
+            <movingPart node="attacherJointBackArmMainPart" referencePoint="attacherJointBackArmMainRef" referenceFrame="attacherJointBackArmMainRef" />
+
+            <movingPart node="attacherJointBackHydraulic" referencePoint="attacherJointBackHydraulicRef" referenceFrame="attacherJointBackHydraulicRefFrame" >
+                <translatingPart node="attacherJointBackHydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="chainBack" referencePoint="chainBackRef" referenceFrame="chainBackRef" scaleZ="true" />
+
+            <movingPart node="steeringbarFrontLeft" referencePoint="steeringbarFrontLeftRef" referenceFrame="steeringbarFrontLeftRef" scaleZ="true" isActiveDirty="true" maxUpdateDistance="50"/>
+            <movingPart node="steeringbarFrontRight" referencePoint="steeringbarFrontRightRef" referenceFrame="steeringbarFrontRightRef" scaleZ="true" isActiveDirty="true" maxUpdateDistance="50"/>
+        </movingParts>
+    </cylindered>
+
+    <wipers>
+        <wiper animName="wiperFront" >
+          <state animSpeed="1.0" animPause="1.0" />
+          <state animSpeed="1.0" animPause="0.0" />
+          <state animSpeed="1.5" animPause="0.0" />
+        </wiper>
+        <wiper animName="wiperBack" >
+            <state animSpeed="1.0" animPause="3.0" />
+        </wiper>
+    </wipers>
+
+    <suspensions>
+        <suspension node="cabin"             weight="400" minRotation="-3 0 -3" maxRotation="3 0 3" suspensionParametersX="200 17" suspensionParametersZ="200 17" />
+        <suspension node="seat"              weight="150" minTranslation="-0.05 -0.15 0.0" maxTranslation="0.05 0.15 0.0" suspensionParametersX="20 4" suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+        <suspension useCharacterTorso="true" weight="90" minRotation="0 -5 -5" maxRotation="0 5 5" suspensionParametersY="7 1" suspensionParametersZ="7 1" />
+    </suspensions>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <fillUnit unitTextOverride="$l10n_unit_kw" showOnHud="false" showInShop="false" fillTypes="ELECTRICCHARGE" capacity="140"> 
+                        <dashboard displayType="ROT" valueType="fillLevelPct" node="needleFuel" minRot="0 0 0" maxRot="0 -140 0" doInterpolation="true" interpolationSpeed="0.05" groups="MOTOR_ACTIVE"/>
+                    </fillUnit>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" showOnInfoHud="false" fillTypes="def" capacity="35"/>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" showOnInfoHud="false" fillTypes="air" capacity="3000" />
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <dashboard>
+        <groups>
+            <group name="MOTOR_STARTING" isMotorStarting="true"/>
+            <group name="MOTOR_ACTIVE"   isMotorStarting="true" isMotorRunning="true"/>
+            <group name="MOTOR_ONLY_ACTIVE" isMotorStarting="false" isMotorRunning="true"/>
+            <group name="BACK_ATTACHMENT"  attacherJointIndices="1 3 4"/>
+            <group name="FRONT_ATTACHMENT" attacherJointIndices="2 5"/>
+        </groups>
+
+        <default>
+            <dashboard displayType="EMITTER" node="daytimeLights_static" intensity="30" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="EMITTER" node="engineStart_decals"   intensity="0.3" baseColor="SHARED_GREY5" groups="MOTOR_STARTING" />
+            <dashboard displayType="EMITTER" node="alwaysOn_decals" baseColor="SHARED_GREY5" groups="MOTOR_ACTIVE" intensity="0.3"/>
+            <dashboard displayType="EMITTER" node="display01_decals"     intensity="0.3" idleValue="-1" groups="MOTOR_ONLY_ACTIVE" />
+            <dashboard displayType="EMITTER" node="display02_decals"     intensity="0.3" idleValue="-1" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="EMITTER" node="display03_decals"     intensity="0.3" idleValue="-1" groups="MOTOR_ONLY_ACTIVE" />
+
+            <dashboard displayType="EMITTER" node="needleSpeedDecal" idleValue="0" groups="MOTOR_ACTIVE" intensity="0.3"/>
+            <dashboard displayType="EMITTER" node="needleTempDecal"  idleValue="0" groups="MOTOR_ACTIVE" intensity="0.3"/>
+            <dashboard displayType="EMITTER" node="needleRpmDecal"   idleValue="0" groups="MOTOR_ACTIVE" intensity="0.3"/>
+            <dashboard displayType="EMITTER" node="needleFuelDecal"  idleValue="0" groups="MOTOR_ACTIVE" intensity="0.3"/>
+
+            <dashboard displayType="VISIBILITY" node="bootScreenDecal" groups="MOTOR_STARTING" />
+            <dashboard displayType="VISIBILITY" node="display01_decals" groups="MOTOR_ONLY_ACTIVE" />
+            <dashboard displayType="VISIBILITY" node="display01Boot_decals" groups="MOTOR_STARTING" />
+        </default>
+    </dashboard>
+
+    <designConfigurations>
+        <designConfiguration>
+            <objectChange node="designDefault" visibilityActive="true" visibilityInactive="false"/>
+        </designConfiguration>
+        <designConfiguration price="5000">
+            <objectChange node="designWarrior" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="warriorCabin" visibilityActive="true" visibilityInactive="false"/>
+            <material name="series8DecalsColor_mat" shaderParameter="colorMat0" color="0.3 0.3 0.3"/>
+        </designConfiguration>
+    </designConfigurations>
+
+    <designMaterialConfigurations title="$l10n_configuration_baseColor">
+        <designMaterialConfiguration color="DEUTZ_BLACK1" name="$l10n_ui_colorBlack">
+            <objectChange node="warriorArrow" visibilityActive="true"/>
+        </designMaterialConfiguration>
+        <designMaterialConfiguration color="DEUTZ_GREEN5" name="$l10n_ui_colorGreen">
+            <objectChange node="warriorArrow" visibilityActive="false"/>
+        </designMaterialConfiguration>
+
+        <designMaterialConfiguration name="Java Green" color="DEUTZ_JAVAGREEN" material="19" price="1000">
+            <objectChange node="warriorArrow" visibilityActive="false"/>
+        </designMaterialConfiguration>
+        <designMaterialConfiguration name="Matt Green" color="DEUTZ_MATTGREEN" material="18" price="1000">
+            <objectChange node="warriorArrow" visibilityActive="true"/>
+        </designMaterialConfiguration>
+        <designMaterialConfiguration name="Matt Black" color="DEUTZ_BLACK2" material="18" price="1000">
+            <objectChange node="warriorArrow" visibilityActive="true"/>
+        </designMaterialConfiguration>
+
+        <material name="series8_mat" shaderParameter="colorMat0"/>
+        <material name="series8Interior_mat" shaderParameter="colorMat3"/>
+        <material name="series8GridGreen_mat" shaderParameter="colorMat0"/>
+        <material name="series8GridGreen_mat" shaderParameter="colorMat1"/>
+        <material name="series8GridGreen_mat" shaderParameter="colorMat2"/>
+        <material name="series8GridGreen_mat" shaderParameter="colorMat3"/>
+        <material name="series8GridGreen_mat" shaderParameter="colorMat4"/>
+        <material name="series8GridGreen_mat" shaderParameter="colorMat5"/>
+        <material name="series8GridGreen_mat" shaderParameter="colorMat6"/>
+        <material name="series8GridGreen_mat" shaderParameter="colorMat7"/>
+    </designMaterialConfigurations>
+
+    <rimColorConfigurations useDefaultColors="false">
+        <rimColorConfiguration name="$l10n_ui_colorGrey"  color="SHARED_GREY2" material="18" price="0"/>
+        <rimColorConfiguration name="$l10n_ui_colorBlack" color="DEUTZ_BLACK1" price="500"/>
+    </rimColorConfigurations>
+
+    <ai>
+        <agent width="2.85" length="5.3" height="3.4" lengthOffset="1.25" frontOffset="2.935" />
+        <collisionTrigger node="aiCollisionNode" width="2.9" height="3.6"/>
+    </ai>
+
+    <foliageBending>
+        <bendingNode minX="-1.4" maxX="1.4" minZ="-0.35" maxZ="2.4" yOffset="0.55" />
+        <bendingNode minX="-1.4" maxX="1.4" minZ="-2.5" maxZ="-0.35" yOffset="0.55" />
+    </foliageBending>
+
+    <baseMaterial>
+        <material name="series8_mat" baseNode="series8_vis">
+            <shaderParameter name="colorMat0" value="DEUTZ_GREEN5"/>
+            <shaderParameter name="colorMat1" value="DEUTZ_BLUE6"/>
+            <shaderParameter name="colorMat2" value="DEUTZ_YELLOW1"/>
+            <shaderParameter name="colorMat3" value="DEUTZ_GREEN1"/>
+            <shaderParameter name="colorMat4" value="DEUTZ_RED1"/>
+        </material>
+        <material name="series8Interior_mat" baseNode="interior02">
+            <shaderParameter name="colorMat3" value="DEUTZ_GREEN5"/>
+        </material>
+        <material name="series8DecalsColor_mat" baseNode="cabinLogo_decal">
+            <shaderParameter name="colorMat0" value="DEUTZ_GREEN5"/>
+            <shaderParameter name="colorMat1" value="0.3 0.3 0.3"/>
+        </material>
+        <material name="series8GridGreen_mat" baseNode="engineGrid02">
+            <shaderParameter name="colorMat0" value="DEUTZ_GREEN5"/>
+            <shaderParameter name="colorMat1" value="DEUTZ_GREEN5"/>
+            <shaderParameter name="colorMat2" value="DEUTZ_GREEN5"/>
+            <shaderParameter name="colorMat3" value="DEUTZ_GREEN5"/>
+            <shaderParameter name="colorMat4" value="DEUTZ_GREEN5"/>
+            <shaderParameter name="colorMat5" value="DEUTZ_GREEN5"/>
+            <shaderParameter name="colorMat6" value="DEUTZ_GREEN5"/>
+            <shaderParameter name="colorMat7" value="DEUTZ_GREEN5"/>
+        </material>
+    </baseMaterial>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="3" fieldMultiplier="2"/>
+
+    <i3dMappings>
+        <i3dMapping id="series8_main_component1" node="0>" />
+        <i3dMapping id="series8_vis" node="0>0" />
+        <i3dMapping id="wheelBackLeft" node="0>0|0|0" />
+        <i3dMapping id="wheelBackRight" node="0>0|0|1" />
+        <i3dMapping id="outdoorCameraTarget" node="0>0|1|0" />
+        <i3dMapping id="outdoorCamera1" node="0>0|1|0|0" />
+        <i3dMapping id="indoorCamera1" node="0>0|1|1" />
+        <i3dMapping id="cameraRaycastNode1" node="0>0|1|2" />
+        <i3dMapping id="cameraRaycastNode2" node="0>0|1|3" />
+        <i3dMapping id="cameraRaycastNode3" node="0>0|1|4" />
+        <i3dMapping id="shadowFocusBox" node="0>0|1|5" />
+        <i3dMapping id="daytimeLights_static" node="0>0|2|0|0" />
+        <i3dMapping id="daytimeLightsGlass_static" node="0>0|2|0|1" />
+        <i3dMapping id="defaultLights01_static" node="0>0|2|0|2" />
+        <i3dMapping id="defaultLights01Glass_static" node="0>0|2|0|3" />
+        <i3dMapping id="sideMarkerStatic" node="0>0|2|0|4" />
+        <i3dMapping id="sideMarkerStaticGlass" node="0>0|2|0|5" />
+        <i3dMapping id="frontLightLow" node="0>0|2|1|0" />
+        <i3dMapping id="highBeamLow" node="0>0|2|1|1" />
+        <i3dMapping id="frontLightHigh" node="0>0|2|1|2" />
+        <i3dMapping id="highBeamHigh" node="0>0|2|1|3" />
+        <i3dMapping id="exitPoint" node="0>0|3" />
+        <i3dMapping id="componentJointAxis" node="0>0|4" />
+        <i3dMapping id="cabin" node="0>0|5" />
+        <i3dMapping id="steeringWheel" node="0>0|5|0|0" />
+        <i3dMapping id="playerLeftHandTarget" node="0>0|5|0|0|0" />
+        <i3dMapping id="seat" node="0>0|5|1" />
+        <i3dMapping id="display01_decals" node="0>0|5|1|0|0" />
+        <i3dMapping id="display01Boot_decals" node="0>0|5|1|0|1" />
+        <i3dMapping id="seatButtonDecals" node="0>0|5|1|0|2" />
+        <i3dMapping id="numberCruiseControl01" node="0>0|5|1|0|3" />
+        <i3dMapping id="numberCruiseControl02" node="0>0|5|1|0|4" />
+        <i3dMapping id="numberTemp" node="0>0|5|1|0|5" />
+        <i3dMapping id="numbersTime02" node="0>0|5|1|0|6" />
+        <i3dMapping id="seat_decals" node="0>0|5|1|1|2" />
+        <i3dMapping id="seatGlow_decals" node="0>0|5|1|1|3" />
+        <i3dMapping id="seatButtonIconsLightDecal" node="0>0|5|1|1|4" />
+        <i3dMapping id="playerSkin" node="0>0|5|1|2|0" />
+        <i3dMapping id="playerRightHandTarget" node="0>0|5|1|2|1" />
+        <i3dMapping id="workingLight21_01" node="0>0|5|2|0|0" />
+        <i3dMapping id="workingLight21_02" node="0>0|5|2|0|1" />
+        <i3dMapping id="hellaWorkingLightRound_01_01" node="0>0|5|2|0|2" />
+        <i3dMapping id="hellaWorkingLightRound_01_02" node="0>0|5|2|0|3" />
+        <i3dMapping id="hellaWorkingLightRound_01_03" node="0>0|5|2|0|4" />
+        <i3dMapping id="hellaWorkingLightRound_01_04" node="0>0|5|2|0|5" />
+        <i3dMapping id="hellaWorkingLightRound_01_05" node="0>0|5|2|0|6" />
+        <i3dMapping id="hellaWorkingLightRound_01_06" node="0>0|5|2|0|7" />
+        <i3dMapping id="hellaWorkingLightRound_01_07" node="0>0|5|2|0|8" />
+        <i3dMapping id="hellaWorkingLightRound_01_08" node="0>0|5|2|0|9" />
+        <i3dMapping id="hellaWorkingLightRound_01_09" node="0>0|5|2|0|10" />
+        <i3dMapping id="hellaWorkingLightRound_01_10" node="0>0|5|2|0|11" />
+        <i3dMapping id="hellaWorkingLightRound_01_11" node="0>0|5|2|0|12" />
+        <i3dMapping id="hellaWorkingLightRound_01_12" node="0>0|5|2|0|13" />
+        <i3dMapping id="hellaWorkingLightRound_01_13" node="0>0|5|2|0|14" />
+        <i3dMapping id="hellaWorkingLightRound_01_14" node="0>0|5|2|0|15" />
+        <i3dMapping id="hellaWorkingLightRound_01_15" node="0>0|5|2|0|16" />
+        <i3dMapping id="hellaWorkingLightRound_01_16" node="0>0|5|2|0|17" />
+        <i3dMapping id="hellaWorkingLightRound_01_17" node="0>0|5|2|0|18" />
+        <i3dMapping id="beaconLight08_01" node="0>0|5|2|0|19" />
+        <i3dMapping id="beaconLight08_02" node="0>0|5|2|0|20" />
+        <i3dMapping id="defaultLights02_static" node="0>0|5|2|1|0" />
+        <i3dMapping id="defaultLights02Glass_static" node="0>0|5|2|1|1" />
+        <i3dMapping id="backLights_static" node="0>0|5|2|1|2" />
+        <i3dMapping id="backLightsGlass_static" node="0>0|5|2|1|3" />
+        <i3dMapping id="brakeLights_static" node="0>0|5|2|1|4" />
+        <i3dMapping id="brakeLightsGlass_static" node="0>0|5|2|1|5" />
+        <i3dMapping id="licensePlateLight_static" node="0>0|5|2|1|6" />
+        <i3dMapping id="licensePlateLightGlass_static" node="0>0|5|2|1|7" />
+        <i3dMapping id="turnLightsLeft_static" node="0>0|5|2|1|8" />
+        <i3dMapping id="turnLightsLeftGlass_static" node="0>0|5|2|1|9" />
+        <i3dMapping id="turnLightsRight_static" node="0>0|5|2|1|10" />
+        <i3dMapping id="turnLightsRightGlass_static" node="0>0|5|2|1|11" />
+        <i3dMapping id="reverseLights_static" node="0>0|5|2|1|12" />
+        <i3dMapping id="reverseLightsGlass_static" node="0>0|5|2|1|13" />
+        <i3dMapping id="licensePlateLightHigh" node="0>0|5|2|2|0" />
+        <i3dMapping id="interiorScreenLight" node="0>0|5|2|2|1" />
+        <i3dMapping id="backLightsHigh" node="0>0|5|2|3|0" />
+        <i3dMapping id="brakeLightsHigh" node="0>0|5|2|4|0" />
+        <i3dMapping id="workLightFrontLow" node="0>0|5|2|5|0" />
+        <i3dMapping id="workLightBackLow" node="0>0|5|2|5|1" />
+        <i3dMapping id="workLightFrontHigh" node="0>0|5|2|5|2" />
+        <i3dMapping id="workLightBackHigh" node="0>0|5|2|5|3" />
+        <i3dMapping id="turnLightLeftFront" node="0>0|5|2|6|0" />
+        <i3dMapping id="turnLightRightFront" node="0>0|5|2|6|1" />
+        <i3dMapping id="reverseLightHigh" node="0>0|5|2|7|0" />
+        <i3dMapping id="wiperFrontPart01" node="0>0|5|3|0|0|0" />
+        <i3dMapping id="wiperFrontPart" node="0>0|5|3|0|0|0|0|0" />
+        <i3dMapping id="wiperFront" node="0>0|5|3|0|0|0|1|0" />
+        <i3dMapping id="wiperFrontPart02" node="0>0|5|3|0|1|0" />
+        <i3dMapping id="wiperBack" node="0>0|5|3|1|0" />
+        <i3dMapping id="engineStart_decals" node="0>0|5|4|0|0" />
+        <i3dMapping id="alwaysOn_decals" node="0>0|5|4|0|1" />
+        <i3dMapping id="defaultLight_decals" node="0>0|5|4|0|2" />
+        <i3dMapping id="defaultLight2_decals" node="0>0|5|4|0|3" />
+        <i3dMapping id="highbeam_decals" node="0>0|5|4|0|4" />
+        <i3dMapping id="workLightFront01_decals" node="0>0|5|4|0|5" />
+        <i3dMapping id="workLightFront02_decals" node="0>0|5|4|0|6" />
+        <i3dMapping id="workLightBack_decals" node="0>0|5|4|0|7" />
+        <i3dMapping id="turnLightLeft_decals" node="0>0|5|4|0|8" />
+        <i3dMapping id="turnLightRight_decals" node="0>0|5|4|0|9" />
+        <i3dMapping id="turnLightFront_decals" node="0>0|5|4|0|10" />
+        <i3dMapping id="turnLightBack_decals" node="0>0|5|4|0|11" />
+        <i3dMapping id="beaconLight_decals" node="0>0|5|4|0|12" />
+        <i3dMapping id="display02_decals" node="0>0|5|4|0|13" />
+        <i3dMapping id="display03_decals" node="0>0|5|4|0|14" />
+        <i3dMapping id="interiorGlow_decals" node="0>0|5|4|0|15" />
+        <i3dMapping id="bootScreenDecal" node="0>0|5|4|0|16" />
+        <i3dMapping id="ambientLight_static" node="0>0|5|4|0|17" />
+        <i3dMapping id="switchDefaultLight" node="0>0|5|4|1|0|0" />
+        <i3dMapping id="switchDefaultLight_decals" node="0>0|5|4|1|0|0|0" />
+        <i3dMapping id="switchWorkLightFront" node="0>0|5|4|1|1|0" />
+        <i3dMapping id="switchWorkLightFront_decals" node="0>0|5|4|1|1|0|0" />
+        <i3dMapping id="switchHazards" node="0>0|5|4|1|2" />
+        <i3dMapping id="switchHazards_decals" node="0>0|5|4|1|2|0" />
+        <i3dMapping id="needleSpeed" node="0>0|5|4|2|0|0" />
+        <i3dMapping id="needleSpeedDecal" node="0>0|5|4|2|0|0|0" />
+        <i3dMapping id="needleTemp" node="0>0|5|4|2|1|0" />
+        <i3dMapping id="needleTempDecal" node="0>0|5|4|2|1|0|0" />
+        <i3dMapping id="needleRpm" node="0>0|5|4|2|2|0" />
+        <i3dMapping id="needleRpmDecal" node="0>0|5|4|2|2|0|0" />
+        <i3dMapping id="needleFuel" node="0>0|5|4|2|3|0" />
+        <i3dMapping id="needleFuelDecal" node="0>0|5|4|2|3|0|0" />
+        <i3dMapping id="numbersSpeed01" node="0>0|5|4|3|0" />
+        <i3dMapping id="numbersMotorPower01" node="0>0|5|4|3|1" />
+        <i3dMapping id="numbersMotorPower02" node="0>0|5|4|3|2" />
+        <i3dMapping id="numbersTime01" node="0>0|5|4|3|3" />
+        <i3dMapping id="numberCruiseControl03" node="0>0|5|4|3|4" />
+        <i3dMapping id="leverTurnLight" node="0>0|5|4|4|0" />
+        <i3dMapping id="leverTurnLight_decals" node="0>0|5|4|4|0|0" />
+        <i3dMapping id="leverDirection" node="0>0|5|4|5|0" />
+        <i3dMapping id="leverDirection_decals" node="0>0|5|4|5|0|0" />
+        <i3dMapping id="keyIgnition" node="0>0|5|4|6|0" />
+        <i3dMapping id="pedalGas" node="0>0|5|5|0|0" />
+        <i3dMapping id="playerRightFootTargetGasRef" node="0>0|5|5|0|0|0" />
+        <i3dMapping id="pedalBrake" node="0>0|5|5|1" />
+        <i3dMapping id="playerRightFootTargetBrake" node="0>0|5|5|1|0" />
+        <i3dMapping id="playerLeftFootTarget" node="0>0|5|6|0" />
+        <i3dMapping id="playerRightFootTarget" node="0>0|5|6|1" />
+        <i3dMapping id="playerRightFootTargetGas" node="0>0|5|6|2" />
+        <i3dMapping id="mirrorLeft01" node="0>0|5|7|0" />
+        <i3dMapping id="mirrorRight01" node="0>0|5|7|1" />
+        <i3dMapping id="mirrorRight02" node="0>0|5|7|2" />
+        <i3dMapping id="fenderSmall" node="0>0|5|8|0" />
+        <i3dMapping id="fenderWide" node="0>0|5|8|1" />
+        <i3dMapping id="warriorCabin" node="0>0|5|8|2" />
+        <i3dMapping id="cabinLogo_decal" node="0>0|5|8|3" />
+        <i3dMapping id="camera_03" node="0>0|5|10|0" />
+        <i3dMapping id="licensePlateBack" node="0>0|5|10|1" />
+        <i3dMapping id="interior02" node="0>0|5|11|1" />
+        <i3dMapping id="warningSigns" node="0>0|5|11|6" />
+        <i3dMapping id="warningSignLightsGlass_static" node="0>0|5|11|6|1|1" />
+        <i3dMapping id="attacherJointBackRot" node="0>0|6|0|0" />
+        <i3dMapping id="attacherJointBackRot2" node="0>0|6|0|0|0" />
+        <i3dMapping id="attacherJointBack" node="0>0|6|0|0|0|0" />
+        <i3dMapping id="attacherJointBackArmBottom" node="0>0|6|0|1" />
+        <i3dMapping id="attacherJointBackArmBottomTrans" node="0>0|6|0|1|0" />
+        <i3dMapping id="referencePointBackBottom" node="0>0|6|0|1|0|0" />
+        <i3dMapping id="attacherJointBackArmMainRef" node="0>0|6|0|1|0|1" />
+        <i3dMapping id="chainBackRef" node="0>0|6|0|1|0|2" />
+        <i3dMapping id="attacherJointBackArmTop" node="0>0|6|0|2" />
+        <i3dMapping id="attacherJointBackArmTopMount" node="0>0|6|0|3" />
+        <i3dMapping id="attacherJointFrontRot" node="0>0|6|0|4" />
+        <i3dMapping id="attacherJointFrontRot2" node="0>0|6|0|4|0" />
+        <i3dMapping id="attacherJointFront" node="0>0|6|0|4|0|0" />
+        <i3dMapping id="attacherJointFrontArmBottom" node="0>0|6|0|5" />
+        <i3dMapping id="attacherJointFrontArmBottomTrans" node="0>0|6|0|5|0" />
+        <i3dMapping id="lowerLinkFrontLeft" node="0>0|6|0|5|0|0|0" />
+        <i3dMapping id="lowerLinkFrontRight" node="0>0|6|0|5|0|1|0" />
+        <i3dMapping id="referencePointFrontBottom" node="0>0|6|0|5|0|3" />
+        <i3dMapping id="attacherJointFrontHydraulicRef" node="0>0|6|0|5|0|4" />
+        <i3dMapping id="attacherJointFrontArmTop" node="0>0|6|0|6" />
+        <i3dMapping id="attacherJointFrontArmTopMount" node="0>0|6|0|7" />
+        <i3dMapping id="trailerAttacherTrans" node="0>0|6|1|0" />
+        <i3dMapping id="trailerAttacherJointBack" node="0>0|6|1|0|0" />
+        <i3dMapping id="trailerAttacherLowTrans" node="0>0|6|1|1" />
+        <i3dMapping id="trailerAttacherJointBackLow" node="0>0|6|1|1|0" />
+        <i3dMapping id="trailerSteeringLeftRef" node="0>0|6|1|1|1" />
+        <i3dMapping id="trailerSteeringRightRef" node="0>0|6|1|1|2" />
+        <i3dMapping id="trailerAttacherJointFront" node="0>0|6|1|2" />
+        <i3dMapping id="ptoFront" node="0>0|6|2|0" />
+        <i3dMapping id="ptoBack" node="0>0|6|2|1" />
+        <i3dMapping id="electricFront" node="0>0|6|3|0" />
+        <i3dMapping id="electricBack" node="0>0|6|3|1" />
+        <i3dMapping id="airDoubleYellow" node="0>0|6|3|2" />
+        <i3dMapping id="airDoubleRed" node="0>0|6|3|3" />
+        <i3dMapping id="isobusBack" node="0>0|6|3|4" />
+        <i3dMapping id="isobusFront" node="0>0|6|3|5" />
+        <i3dMapping id="hydraulicIn01" node="0>0|6|3|6" />
+        <i3dMapping id="hydraulicIn01_cover" node="0>0|6|3|6|0" />
+        <i3dMapping id="hydraulicOut01" node="0>0|6|3|7" />
+        <i3dMapping id="hydraulicOut01_cover" node="0>0|6|3|7|0" />
+        <i3dMapping id="hydraulicIn02" node="0>0|6|3|8" />
+        <i3dMapping id="hydraulicIn02_cover" node="0>0|6|3|8|0" />
+        <i3dMapping id="hydraulicOut02" node="0>0|6|3|9" />
+        <i3dMapping id="hydraulicOut02_cover" node="0>0|6|3|9|0" />
+        <i3dMapping id="hydraulicIn03" node="0>0|6|3|10" />
+        <i3dMapping id="hydraulicIn03_cover" node="0>0|6|3|10|0" />
+        <i3dMapping id="hydraulicOut03" node="0>0|6|3|11" />
+        <i3dMapping id="hydraulicOut03_cover" node="0>0|6|3|11|0" />
+        <i3dMapping id="hydraulicIn04" node="0>0|6|3|12" />
+        <i3dMapping id="hydraulicIn04_cover" node="0>0|6|3|12|0" />
+        <i3dMapping id="hydraulicOut04" node="0>0|6|3|13" />
+        <i3dMapping id="hydraulicOut04_cover" node="0>0|6|3|13|0" />
+        <i3dMapping id="hydraulicIn05" node="0>0|6|3|14" />
+        <i3dMapping id="hydraulicIn05_cover" node="0>0|6|3|14|0" />
+        <i3dMapping id="hydraulicOut05" node="0>0|6|3|15" />
+        <i3dMapping id="hydraulicOut05_cover" node="0>0|6|3|15|0" />
+        <i3dMapping id="hydraulicIn06" node="0>0|6|3|16" />
+        <i3dMapping id="hydraulicOut06" node="0>0|6|3|17" />
+        <i3dMapping id="hydraulicIn07" node="0>0|6|3|18" />
+        <i3dMapping id="hydraulicOut07" node="0>0|6|3|19" />
+        <i3dMapping id="hydraulicIn08" node="0>0|6|3|20" />
+        <i3dMapping id="hydraulicIn08_cover" node="0>0|6|3|20|0" />
+        <i3dMapping id="hydraulicOut08" node="0>0|6|3|21" />
+        <i3dMapping id="hydraulicOut08_cover" node="0>0|6|3|21|0" />
+        <i3dMapping id="hydraulicIn09" node="0>0|6|3|22" />
+        <i3dMapping id="hydraulicIn09_cover" node="0>0|6|3|22|0" />
+        <i3dMapping id="hydraulicOut09" node="0>0|6|3|23" />
+        <i3dMapping id="hydraulicOut09_cover" node="0>0|6|3|23|0" />
+        <i3dMapping id="rightPipe" node="0>0|6|3|24" />
+        <i3dMapping id="rightPipe_frontConnector" node="0>0|6|3|24|0" />
+        <i3dMapping id="rightPipe_backConnector" node="0>0|6|3|24|1" />
+        <i3dMapping id="bottomPipe01" node="0>0|6|3|25" />
+        <i3dMapping id="bottomPipe01_frontConnector" node="0>0|6|3|25|0" />
+        <i3dMapping id="bottomPipe01_backConnector" node="0>0|6|3|25|1" />
+        <i3dMapping id="bottomPipe02" node="0>0|6|3|26" />
+        <i3dMapping id="bottomPipe02_frontConnector" node="0>0|6|3|26|0" />
+        <i3dMapping id="bottomPipe02_backConnector" node="0>0|6|3|26|1" />
+        <i3dMapping id="bottomPipe03" node="0>0|6|3|27" />
+        <i3dMapping id="bottomPipe03_frontConnector" node="0>0|6|3|27|0" />
+        <i3dMapping id="bottomPipe03_backConnector" node="0>0|6|3|27|1" />
+        <i3dMapping id="bottomPipe04" node="0>0|6|3|28" />
+        <i3dMapping id="bottomPipe04_frontConnector" node="0>0|6|3|28|0" />
+        <i3dMapping id="bottomPipe04_backConnector" node="0>0|6|3|28|1" />
+        <i3dMapping id="attacherJointBackArmMainRefFrame" node="0>0|7|0" />
+        <i3dMapping id="attacherJointBackArmMain" node="0>0|7|0|0" />
+        <i3dMapping id="attacherJointBackArmMainPart" node="0>0|7|0|0|0" />
+        <i3dMapping id="attacherJointBackHydraulicRef" node="0>0|7|0|0|1" />
+        <i3dMapping id="attacherJointBackArmMain_decals" node="0>0|7|0|0|2" />
+        <i3dMapping id="chainBack" node="0>0|7|1" />
+        <i3dMapping id="attacherJointBackHydraulicRefFrame" node="0>0|7|2" />
+        <i3dMapping id="attacherJointBackHydraulic" node="0>0|7|2|0" />
+        <i3dMapping id="attacherJointBackHydraulicPunch" node="0>0|7|2|0|0" />
+        <i3dMapping id="attacherJointFrontHydraulic" node="0>0|7|3" />
+        <i3dMapping id="attacherJointFrontHydraulicPunch" node="0>0|7|3|0" />
+        <i3dMapping id="fanEngine" node="0>0|7|4" />
+        <i3dMapping id="driveShaftMain" node="0>0|7|5|0" />
+        <i3dMapping id="aiCollisionNode" node="0>0|8|0" />
+        <i3dMapping id="licensePlateFront" node="0>0|9|0" />
+        <i3dMapping id="licensePlateFrontMount" node="0>0|9|1" />
+        <i3dMapping id="exhaustParticle" node="0>0|9|2" />
+        <i3dMapping id="designDefault" node="0>0|10|0" />
+        <i3dMapping id="designWarrior" node="0>0|10|1" />
+        <i3dMapping id="motorDecal7230Warrior" node="0>0|10|1|0" />
+        <i3dMapping id="exhaustGrid_decal" node="0>0|10|1|3" />
+        <i3dMapping id="warriorArrow" node="0>0|10|1|4" />
+        <i3dMapping id="engineGrid02" node="0>0|11|3" />
+        <i3dMapping id="series8_axis_component2" node="1>" />
+        <i3dMapping id="axis_vis" node="1>0" />
+        <i3dMapping id="wheelFrontLeftRepr" node="1>0|0|0|0" />
+        <i3dMapping id="wheelFrontLeft" node="1>0|0|0|0|0" />
+        <i3dMapping id="fenderFrontLeft" node="1>0|0|0|0|1" />
+        <i3dMapping id="steeringbarFrontLeft" node="1>0|0|0|0|2" />
+        <i3dMapping id="driveShaftLeft02" node="1>0|0|0|0|3" />
+        <i3dMapping id="wheelFrontRightRepr" node="1>0|0|1|0" />
+        <i3dMapping id="wheelFrontRight" node="1>0|0|1|0|0" />
+        <i3dMapping id="fenderFrontRight" node="1>0|0|1|0|1" />
+        <i3dMapping id="steeringbarFrontRight" node="1>0|0|1|0|2" />
+        <i3dMapping id="driveShaftRight02" node="1>0|0|1|0|3" />
+        <i3dMapping id="driveShaftLeft01" node="1>0|1|0" />
+        <i3dMapping id="driveShaftRight01" node="1>0|1|1" />
+        <i3dMapping id="steeringBarFrontCenter" node="1>0|1|2" />
+        <i3dMapping id="steeringbarFrontLeftRef" node="1>0|1|2|0" />
+        <i3dMapping id="steeringbarFrontRightRef" node="1>0|1|2|1" />
+    </i3dMappings>
+</vehicle>

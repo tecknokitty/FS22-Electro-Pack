@@ -1,0 +1,1789 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="combineDrivable" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>LEXION 8900 Electric</name>
+        <specs>
+            <power>790</power>
+            <maxSpeed>40</maxSpeed>
+            <combination xmlFilename="$data/vehicles/claas/convioFlex1380/convioFlex1380.xml"/>
+            <combination xmlFilename="$data/vehicles/claas/corio1275C/corio1275C.xml"/>
+            <combination xmlFilename="$data/vehicles/capello/diamant12/diamant12.xml"/>
+            <combination xmlFilename="$data/vehicles/capello/helianthus12000/helianthus12000.xml"/>
+        </specs>
+        <functions>
+            <function>$l10n_function_combine</function>
+            <function>$l10n_function_combineNeedsCutter</function>
+        </functions>
+        <image>$data/vehicles/claas/lexion8000/store_lexion8000.png</image>
+        <price>500500</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>CLAAS</brand>
+        <category>harvesters</category>
+        <shopFoldingState>1</shopFoldingState>
+        <shopTranslationOffset>0 0.004 0</shopTranslationOffset>
+        <shopRotationOffset>0.685 0 0</shopRotationOffset>
+        <vertexBufferMemoryUsage>7560960</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>1302784</indexBufferMemoryUsage>
+        <textureMemoryUsage>9240576</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>343950</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_combine</typeDesc>
+        <filename>$data/vehicles/claas/lexion8000/lexion8000.i3d</filename>
+        <sounds filename="sounds/lexion8000.xml"/>
+        <size width="5" length="11.5" height="4.2" lengthOffset="-1.3" />
+
+        <components>
+            <component centerOfMass="0 1.2 0.33" solverIterationCount="10" mass="9000" />
+            <component centerOfMass="0 0 0" solverIterationCount="25" mass="8900" />
+            <joint component1="1" component2="2" node="backAxleJoint" rotLimit="0 0 7.3" transLimit="0 0 0" maxRotDriveForce="0 0 20" rotDriveRotation="- - 0" rotDriveSpring="0 0 30" rotDriveDamping="0 0 25" breakable="false"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="HARVESTER" />
+        <mapHotspot type="HARVESTER" />
+    </base>
+
+    <configurationSets>
+        <configurationSet name="$l10n_configuration_valueBig">
+            <configuration name="folding" index="1"/>
+            <configuration name="fillUnit" index="1"/>
+            <configuration name="fillVolume" index="1"/>
+        </configurationSet>
+        <configurationSet name="$l10n_configuration_valueSmall">
+            <configuration name="folding" index="2"/>
+            <configuration name="fillUnit" index="2"/>
+            <configuration name="fillVolume" index="2"/>
+        </configurationSet>
+    </configurationSets>
+
+    <powerConsumer ptoRpm="350" neededMaxPtoPower="10"/>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="TRELLEBORG" saveId="TRELLEBORG_DEFAULT">
+                <wheels autoRotateBackSpeed="2.4">
+                    <wheel hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="1"  restLoad="1.8" repr="trackLeftBackWheel" driveNode="trackLeftBackWheelDriveNode"   radius="0.539" width="0.86" mass="0.2" frictionScale="2" tireType="crawler" initialCompression="20" suspTravel="0.15" spring="52" damper="30" brakeFactor="0.45" yOffset="-0.02"/>
+                        <tire tireTrackAtlasIndex="7" isCareWheel="false"/>
+                    </wheel>
+                    <wheel>
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="1"  restLoad="1.8" repr="trackLeftFrontWheel"                                          radius="0.539" width="0.86" mass="0.2" frictionScale="2" tireType="crawler" initialCompression="20" suspTravel="0.15" spring="52" damper="30" brakeFactor="0.45" />
+                        <tire isCareWheel="false" />
+                    </wheel>
+                    <wheel hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="1"  restLoad="1.8" repr="trackRightBackWheel" driveNode="trackRightBackWheelDriveNode" radius="0.539" width="0.86" mass="0.2" frictionScale="2" tireType="crawler" initialCompression="20" suspTravel="0.15" spring="52" damper="30" brakeFactor="0.45" yOffset="-0.02"/>
+                        <tire tireTrackAtlasIndex="7" isCareWheel="false"/>
+                    </wheel>
+                    <wheel>
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="1"  restLoad="1.8" repr="trackRightFrontWheel"                                         radius="0.539" width="0.86" mass="0.2" frictionScale="2" tireType="crawler" initialCompression="20" suspTravel="0.15" spring="52" damper="30" brakeFactor="0.45" />
+                        <tire isCareWheel="false" />
+                    </wheel>
+
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM700/520_70R34.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="-1" restLoad="6.2" repr="backAxleLeft"  driveNode="backWheelLeft"  forcePointRatio="0.4" frictionScale="2" initialCompression="50" suspTravel="0.15" spring="78" damper="40" brakeFactor="0.55" yOffset="0.024"/>
+                        <steering node="steeringHydraulic" nodeMinTransX="0.11" nodeMaxTransX="-0.11" />
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM700/520_70R34.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="-1" restLoad="6.3" repr="backAxleRight" driveNode="backWheelRight" forcePointRatio="0.4" frictionScale="2" initialCompression="50" suspTravel="0.15" spring="81" damper="40" brakeFactor="0.55" yOffset="0.024"/>
+                    </wheel>
+                </wheels>
+
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackLeftLinkNode"  wheelIndices="1 2" isLeft="true"/>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackRightLinkNode" wheelIndices="3 4" isLeft="false"/>
+                </crawlers>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="2000" brand="TRELLEBORG" saveId="TRELLEBORG_BROAD">
+                <wheels baseConfig="TRELLEBORG_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM900/710_55R34.xml">
+                        <physics yOffset="0.021"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/TM900/710_55R34.xml">
+                        <physics yOffset="0.021"/>
+                    </wheel>
+                </wheels>
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackLeftLinkNode"  wheelIndices="1 2" isLeft="true"/>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackRightLinkNode" wheelIndices="3 4" isLeft="false"/>
+                </crawlers>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="MICHELIN" saveId="MICHELIN_DEFAULT">
+                <wheels baseConfig="TRELLEBORG_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="$data/shared/wheels/tires/michelin/cereXBib/620_70R30.xml">
+                        <physics yOffset="0.013"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/michelin/cereXBib/620_70R30.xml">
+                        <physics yOffset="0.013"/>
+                    </wheel>
+                </wheels>
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackLeftLinkNode"  wheelIndices="1 2" isLeft="true"/>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackRightLinkNode" wheelIndices="3 4" isLeft="false"/>
+                </crawlers>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="2000" brand="MICHELIN" saveId="MICHELIN_BROAD">
+                <wheels baseConfig="TRELLEBORG_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="$data/shared/wheels/tires/michelin/cereXBib/750_65R26.xml">
+                        <physics yOffset="0.017"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/michelin/cereXBib/750_65R26.xml">
+                        <physics yOffset="0.017"/>
+                    </wheel>
+                </wheels>
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackLeftLinkNode"  wheelIndices="1 2" isLeft="true"/>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackRightLinkNode" wheelIndices="3 4" isLeft="false"/>
+                </crawlers>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="CONTINENTAL" saveId="CONTINENTAL_DEFAULT">
+                <wheels baseConfig="TRELLEBORG_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="$data/shared/wheels/tires/continental/tractor70/520_70R34.xml">
+                        <physics yOffset="0.026"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/tractor70/520_70R34.xml">
+                        <physics yOffset="0.026"/>
+                    </wheel>
+                </wheels>
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackLeftLinkNode"  wheelIndices="1 2" isLeft="true"/>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackRightLinkNode" wheelIndices="3 4" isLeft="false"/>
+                </crawlers>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="2000" brand="CONTINENTAL" saveId="CONTINENTAL_BROAD">
+                <wheels baseConfig="TRELLEBORG_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="$data/shared/wheels/tires/continental/combineMasterVF/750_65R26.xml">
+                        <physics yOffset="0.024"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/combineMasterVF/750_65R26.xml">
+                        <physics yOffset="0.024"/>
+                    </wheel>
+                </wheels>
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackLeftLinkNode"  wheelIndices="1 2" isLeft="true"/>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackRightLinkNode" wheelIndices="3 4" isLeft="false"/>
+                </crawlers>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="MITAS" saveId="MITAS_DEFAULT">
+                <wheels baseConfig="TRELLEBORG_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="$data/shared/wheels/tires/mitas/SFT/600_70R30.xml">
+                        <physics yOffset="0.003"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/mitas/SFT/600_70R30.xml">
+                        <physics yOffset="0.003"/>
+                    </wheel>
+                </wheels>
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackLeftLinkNode"  wheelIndices="1 2" isLeft="true"/>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackRightLinkNode" wheelIndices="3 4" isLeft="false"/>
+                </crawlers>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="2000" brand="MITAS" saveId="MITAS_BROAD">
+                <wheels baseConfig="TRELLEBORG_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="$data/shared/wheels/tires/mitas/SFT/750_55R30.xml">
+                        <physics yOffset="-0.003"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/mitas/SFT/750_55R30.xml">
+                        <physics yOffset="-0.003"/>
+                    </wheel>
+                </wheels>
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackLeftLinkNode"  wheelIndices="1 2" isLeft="true"/>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackRightLinkNode" wheelIndices="3 4" isLeft="false"/>
+                </crawlers>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="BKT" saveId="BKT_DEFAULT">
+                <wheels baseConfig="TRELLEBORG_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/650_60R34.xml">
+                        <physics yOffset="0.024"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/650_60R34.xml">
+                        <physics yOffset="0.024"/>
+                    </wheel>
+                </wheels>
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackLeftLinkNode"  wheelIndices="1 2" isLeft="true"/>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackRightLinkNode" wheelIndices="3 4" isLeft="false"/>
+                </crawlers>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="2000" brand="BKT" saveId="BKT_BROAD">
+                <wheels baseConfig="TRELLEBORG_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/710_55R34.xml">
+                        <physics yOffset="0.021"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/710_55R34.xml">
+                        <physics yOffset="0.021"/>
+                    </wheel>
+                </wheels>
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackLeftLinkNode"  wheelIndices="1 2" isLeft="true"/>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackRightLinkNode" wheelIndices="3 4" isLeft="false"/>
+                </crawlers>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="VREDESTEIN" saveId="VREDESTEIN_DEFAULT">
+                <wheels baseConfig="TRELLEBORG_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="$data/shared/wheels/tires/vredestein/traxion70/520_70R34.xml">
+                        <physics yOffset="0.024"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/vredestein/traxion70/520_70R34.xml">
+                        <physics yOffset="0.024"/>
+                    </wheel>
+                </wheels>
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackLeftLinkNode"  wheelIndices="1 2" isLeft="true"/>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackRightLinkNode" wheelIndices="3 4" isLeft="false"/>
+                </crawlers>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="2000" brand="VREDESTEIN" saveId="VREDESTEIN_BROAD">
+                <wheels baseConfig="TRELLEBORG_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="$data/shared/wheels/tires/vredestein/traxion65/600_65R34.xml">
+                        <physics yOffset="0.024"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/vredestein/traxion65/600_65R34.xml">
+                        <physics yOffset="0.024"/>
+                    </wheel>
+                </wheels>
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackLeftLinkNode"  wheelIndices="1 2" isLeft="true"/>
+                    <crawler filename="$data/shared/crawlers/claas/terraTracLexion/terraTracLexion.xml" linkNode="trackRightLinkNode" wheelIndices="3 4" isLeft="false"/>
+                </crawlers>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="US" price="0" brand="MITAS" saveId="MITAS_US_TWINS">
+                <wheels differentialIndex="2" ackermannSteeringIndex="2">
+                    <wheel filename="$data/shared/wheels/tires/mitas/SFT/580_85R42.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="3.9" repr="wheelFrontLeft"  forcePointRatio="0.5" frictionScale="2" initialCompression="20" suspTravel="0.15" spring="105" damper="50" yOffset="0.0167"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/mitas/SFT/580_85R42.xml" offset="0.22" hasTireTracks="true" hasParticles="true"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/mitas/SFT/580_85R42.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="3.9" repr="wheelFrontRight" forcePointRatio="0.5" frictionScale="2" initialCompression="20" suspTravel="0.15" spring="105" damper="50" yOffset="0.0167"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/mitas/SFT/580_85R42.xml" offset="0.22" hasTireTracks="true" hasParticles="true"/>
+                    </wheel>
+
+                    <wheel filename="$data/shared/wheels/tires/mitas/SFT/710_60R30.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="-1" restLoad="6.5" repr="backAxleLeft"  driveNode="backWheelLeft"  forcePointRatio="0.35" frictionScale="2" initialCompression="50" suspTravel="0.15" spring="82" damper="65" yOffset="0.029"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/mitas/SFT/710_60R30.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="-1" restLoad="6.6" repr="backAxleRight" driveNode="backWheelRight" forcePointRatio="0.35" frictionScale="2" initialCompression="50" suspTravel="0.15" spring="82" damper="65" yOffset="0.029"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="config_us" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="ladder_us" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="ladder_us" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="lights_us" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="lights_us" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="decalTerraTrac" visibilityActive="false" visibilityInactive="true"/>
+
+                <objectChange node="config_eu" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="ladder_eu" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="lights_eu" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="ladderRailing" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="ladderRalingFrontRot" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="backLightStatic01" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="backLightStatic02" visibilityActive="false" visibilityInactive="true"/>
+
+                <objectChange node="warningSigns_eu" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="backlightLeft" translationActive="-0.219 0.153 0" translationInactive="0 0 0"/>
+                <objectChange node="backlightRight" translationActive="0.219 0.153 0" translationInactive="0 0 0"/>
+                <foliageBendingModifier index="1" minX="-2.55" maxX="2.55"/>
+                <foliageBendingModifier index="2" minX="-2.0" maxX="2.05"/>
+                <aiAgent width="5.1"/>
+                <size width="6.8"/>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="US" price="0" brand="BKT" saveId="BKT_US_TWINS">
+                <wheels baseConfig="MITAS_US_TWINS">
+                    <wheel filename="$data/shared/wheels/tires/bkt/agrimaxVFlecto/580_85R42.xml">
+                        <physics yOffset="0.0167"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/bkt/agrimaxVFlecto/580_85R42.xml" offset="0.22"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/bkt/agrimaxVFlecto/580_85R42.xml">
+                        <physics yOffset="0.0167"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/bkt/agrimaxVFlecto/580_85R42.xml" offset="0.22"/>
+                    </wheel>
+
+                    <wheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/710_60R30.xml">
+                        <physics yOffset="0.001"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/bkt/agrimaxForce/710_60R30.xml">
+                        <physics yOffset="0.001"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="config_us" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="ladder_us" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="ladder_us" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="lights_us" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="lights_us" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="decalTerraTrac" visibilityActive="false" visibilityInactive="true"/>
+
+                <objectChange node="config_eu" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="ladder_eu" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="lights_eu" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="ladderRailing" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="ladderRalingFrontRot" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="backLightStatic01" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="backLightStatic02" visibilityActive="false" visibilityInactive="true"/>
+
+                <objectChange node="warningSigns_eu" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="backlightLeft" translationActive="-0.219 0.153 0" translationInactive="0 0 0"/>
+                <objectChange node="backlightRight" translationActive="0.219 0.153 0" translationInactive="0 0 0"/>
+                <foliageBendingModifier index="1" minX="-2.55" maxX="2.55"/>
+                <foliageBendingModifier index="2" minX="-2.0" maxX="2.05"/>
+                <aiAgent width="5.1"/>
+                <size width="6.8"/>
+            </wheelConfiguration>
+        </wheelConfigurations>
+
+        <ackermannSteeringConfigurations>
+            <ackermannSteering rotSpeed="40" rotMax="45" rotCenterWheel1="1" rotCenterWheel2="3" />
+            <ackermannSteering rotSpeed="40" rotMax="45" rotCenterWheel1="1" rotCenterWheel2="2" />
+        </ackermannSteeringConfigurations>
+
+        <rimColor>CLAAS_RED1</rimColor>
+
+        <hubs>
+            <color0>CLAAS_DARKGREY2</color0>
+            <color1>SHARED_GREY3</color1>
+            <hub linkNode="backWheelLeft"   filename="$data/shared/wheels/hubs/hub_n10_1.xml" isLeft="true"  scale="0.28 0.28 0.28" />
+            <hub linkNode="backWheelRight"  filename="$data/shared/wheels/hubs/hub_n10_1.xml" isLeft="false" scale="0.28 0.28 0.28" />
+        </hubs>
+    </wheels>
+
+    <speedRotatingParts>
+        <speedRotatingPart node="frontDrive" radius="0.1" />
+        <speedRotatingPart node="leftTrackDrive" radius="0.1" />
+        <speedRotatingPart node="rightTrackDrive" radius="0.1" />
+    </speedRotatingParts>
+
+    <lights>
+        <sharedLight linkNode="reflectorYellowRound01"  filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml" />
+        <sharedLight linkNode="reflectorYellowRound02"  filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml" />
+        <sharedLight linkNode="reflectorYellowRound03"  filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml" />
+        <sharedLight linkNode="reflectorYellowRound04"  filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml" />
+
+        <sharedLight linkNode="redRound01"  filename="$data/shared/assets/reflectors/lizard/redRound_03.xml" />
+        <sharedLight linkNode="redRound02"  filename="$data/shared/assets/reflectors/lizard/redRound_03.xml" />
+
+        <sharedLight linkNode="bigTriangle"  filename="$data/shared/assets/reflectors/lizard/bigTriangle.xml" />
+
+        <sharedLight linkNode="rearLight54Left01" filename="$data/shared/assets/lights/lizard/rearLight54_left1.xml" />
+        <sharedLight linkNode="rearLight54Right01" filename="$data/shared/assets/lights/lizard/rearLight54_right1.xml" />
+
+        <states>
+            <state lightTypes="0" />
+            <state lightTypes="0 1" />
+            <state lightTypes="0 1 2" />
+            <state lightTypes="0 1 2 4" />
+        </states>
+
+        <realLights>
+            <low>
+                <light node="frontLightLow"         lightTypes="0" excludedLightTypes="2 3" />
+                <light node="highBeamLow"           lightTypes="3" />
+                <light node="workLightBackLow"      lightTypes="1"/>
+                <light node="workLightFrontLow"     lightTypes="2"/>
+                <light node="workLightPipe"         lightTypes="4" />
+            </low>
+            <high>
+                <light node="frontLightHigh"         lightTypes="0" excludedLightTypes="2 3" />
+                <light node="frontLightHigh2"        lightTypes="0"/>
+                <light node="backLightsHigh"         lightTypes="0"/>
+                <light node="licensePlateLightHigh"  lightTypes="0"/>
+                <light node="workLightBackHigh"      lightTypes="1"/>
+                <light node="workLightGrainTankHigh" lightTypes="1"/>
+                <light node="workLightFrontHigh"     lightTypes="2"/>
+                <light node="highBeamHigh"           lightTypes="3"/>
+                <light node="workLightPipe"          lightTypes="4"/>
+                <brakeLight node="backLightsHigh" />
+                <turnLightLeft node="turnLightLeftFront" />
+                <turnLightRight node="turnLightRightFront" />
+                <interiorLight node="interiorScreenLight"/>
+            </high>
+        </realLights>
+
+        <defaultLights>
+            <defaultLight shaderNode="frontLightStatic01" lightTypes="0 3" />
+            <defaultLight shaderNode="frontLightStatic02" lightTypes="0 3" />
+
+            <defaultLight shaderNode="workLightBackStatic01" lightTypes="1" />
+
+            <defaultLight shaderNode="grainTankLightStatic01" lightTypes="1" />
+            <defaultLight shaderNode="grainTankLightStatic02" lightTypes="1" />
+            <defaultLight shaderNode="grainTankLightStatic03" lightTypes="1" />
+            <defaultLight shaderNode="grainTankLightStatic04" lightTypes="1" />
+            <defaultLight shaderNode="grainTankLightStatic05" lightTypes="1" />
+            <defaultLight shaderNode="grainTankLightStatic06" lightTypes="1" />
+            <defaultLight shaderNode="grainTankLightStatic07" lightTypes="1" />
+            <defaultLight shaderNode="grainTankLightStatic08" lightTypes="1" />
+
+            <defaultLight shaderNode="workLightFrontStatic01" lightTypes="2" />
+            <defaultLight shaderNode="workLightFrontStatic02" lightTypes="2" />
+            <defaultLight shaderNode="workLightFrontStatic03" lightTypes="2" />
+            <defaultLight shaderNode="workLightFrontStatic04" lightTypes="2" />
+            <defaultLight shaderNode="workLightFrontStatic05" lightTypes="2" />
+            <defaultLight shaderNode="workLightFrontStatic06" lightTypes="2" />
+
+            <defaultLight shaderNode="pipeLightStatic01" lightTypes="4" />
+            <defaultLight shaderNode="pipeLightStatic02" lightTypes="4" />
+
+            <defaultLight shaderNode="licensePlateLightStatic01" lightTypes="0" />
+            <defaultLight shaderNode="licensePlateLightStatic02" lightTypes="0" />
+
+            <defaultLight shaderNode="backLightStatic01" lightTypes="0" />
+            <defaultLight shaderNode="backLightStatic02" lightTypes="0" />
+            <defaultLight shaderNode="backLightStatic03" lightTypes="0" />
+            <defaultLight shaderNode="backLightStatic04" lightTypes="0" />
+            <defaultLight shaderNode="backLightStatic05" lightTypes="0" />
+            <defaultLight shaderNode="backLightStatic06" lightTypes="0" />
+        </defaultLights>
+
+        <turnLights>
+            <turnLightLeft  shaderNode="turnLightLeftStatic01" />
+            <turnLightLeft  shaderNode="turnLightLeftStatic02" />
+            <turnLightLeft  shaderNode="turnLightLeftStatic01_us" />
+            <turnLightRight shaderNode="turnLightRightStatic01" />
+            <turnLightRight shaderNode="turnLightRightStatic02" />
+            <turnLightRight shaderNode="turnLightRightStatic01_us" />
+        </turnLights>
+
+        <beaconLights>
+           <beaconLight node="beaconLight01" speed="0.015" filename="$data/shared/assets/beaconLights/lizard/beaconLight07.xml" />
+           <beaconLight node="beaconLight02" speed="0.016" filename="$data/shared/assets/beaconLights/lizard/beaconLight07.xml" />
+           <beaconLight node="beaconLight03" speed="0.016" filename="$data/shared/assets/beaconLights/lizard/beaconLight07.xml" />
+           <beaconLight node="beaconLight04" speed="0.016" filename="$data/shared/assets/beaconLights/lizard/beaconLight07.xml" />
+        </beaconLights>
+
+        <dashboards>
+            <dashboard displayType="EMITTER" valueType="lightState"  node="joystickDecalsLit" intensity="0.2" lightTypes="0" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState"  node="seatDecalsLit" intensity="0.2" lightTypes="0" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState"  node="interiorDecalLit" intensity="0.1" lightTypes="0" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState"  node="workLightFrontDecal" intensity="0.1" lightTypes="2" emitColor="SHARED_WHITE2" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState"  node="workLightBackDecal" intensity="0.1" lightTypes="1" emitColor="SHARED_WHITE2" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="lightState"  node="frontLightDecal" intensity="0.1" lightTypes="0" emitColor="SHARED_WHITE2" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="beaconLight" node="beaconLightDecal" intensity="0.1" emitColor="SHARED_WHITE2" groups="MOTOR_ACTIVE"/>
+        </dashboards>
+    </lights>
+
+    <licensePlates>
+        <licensePlate node="licensePlateFront" position="FRONT" preferedType="SQUARISH"  placementArea="0.09 0.18 0.2 0.18"/>
+        <licensePlate node="licensePlateBack"  position="BACK"  preferedType="ELONGATED" placementArea="0.07 0.28 0.09 0.26"/>
+    </licensePlates>
+
+    <enterable isTabbable="true" >
+        <enterReferenceNode node="exitPoint" />
+        <exitPoint node="exitPoint" />
+
+        <cameras>
+            <camera node="outdoorCamera" rotatable="true" rotateNode="outdoorCameraTarget" limit="true" useWorldXZRotation="true" rotMinX="-1.4" rotMaxX="1" transMin="7" transMax="40" translation="0 0 10" rotation="-24 180 0" >
+                <raycastNode node="cameraRaycastNode1"/>
+                <raycastNode node="cameraRaycastNode2"/>
+                <raycastNode node="cameraRaycastNode3"/>
+            </camera>
+            <camera node="indoorCamera" rotation="-25 180 0" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" useMirror="true" isInside="true" shadowFocusBox="shadowFocusBox" positionSmoothingParameter="0.45" suspensionNodeIndex="1"/>
+        </cameras>
+
+        <mirrors>
+            <mirror node="topLeftMirror" prio="2" />
+            <mirror node="middleLeftMirror" prio="1" />
+            <mirror node="bottomLeftMirror" prio="3" />
+            <mirror node="topRightMirror" prio="2" />
+            <mirror node="middleRightMirror" prio="1" />
+            <mirror node="bottomRightMirror" prio="3" />
+        </mirrors>
+
+        <characterNode node="playerSkin" cameraMinDistance="0.5" spineRotation="-90 0 90" >
+            <target ikChain="rightFoot" targetNode="playerRightFootTarget" />
+            <target ikChain="leftFoot"  targetNode="playerLeftFootTarget" />
+            <target ikChain="rightArm"  targetNode="playerRightHandTarget" poseId="flatFingers"/>
+            <target ikChain="leftArm"   targetNode="playerLeftHandTarget" poseId="wideFingers"/>
+        </characterNode>
+
+        <characterTargetNodeModifier node="playerRightFootTarget" transitionTime="0.1" >
+            <state node="playerRightFootTargetBrake" referenceNode="brakePedal" />
+        </characterTargetNodeModifier>
+
+        <dashboards>
+            <dashboard displayType="NUMBER" valueType="time" numbers="numbersTime" numberColor="0.9 0.9 0.9 1" precision="2" font="GENERIC" groups="MOTOR_ACTIVE"/>
+        </dashboards>
+    </enterable>
+
+    <motorized>
+        <consumerConfigurations>
+            <consumerConfiguration>
+                <consumer fillUnitIndex="2" usage="78" fillType="electricCharge"/>
+                <consumer fillUnitIndex="3" usage="30"  fillType="def" />     <!-- usage is per hour at max load and max rpm -->
+            </consumerConfiguration>
+        </consumerConfigurations>
+
+        <differentialConfigurations>
+          <differentialConfiguration>
+              <differentials>
+                  <differential torqueRatio="0.5" maxSpeedRatio="1.3" wheelIndex1="1" wheelIndex2="2" />
+                  <differential torqueRatio="0.5" maxSpeedRatio="1.3" wheelIndex1="3" wheelIndex2="4" />
+                  <differential torqueRatio="0.5" maxSpeedRatio="2.1" differentialIndex1="1" differentialIndex2="2" /> <!-- front left-right -->
+                  <differential torqueRatio="0.5" maxSpeedRatio="1.8" wheelIndex1="5" wheelIndex2="6" /> <!-- back left-right -->
+                  <differential torqueRatio="0.5" maxSpeedRatio="1.3" differentialIndex1="3" differentialIndex2="4" /> <!-- front-back -->
+              </differentials>
+          </differentialConfiguration>
+
+          <differentialConfiguration>
+              <differentials>
+                  <differential torqueRatio="0.5" maxSpeedRatio="1.9" wheelIndex1="1" wheelIndex2="2" /> <!-- back left-right -->
+                  <differential torqueRatio="0.5" maxSpeedRatio="1.6" wheelIndex1="3" wheelIndex2="4" /> <!-- front left-right -->
+                  <differential torqueRatio="0.5" maxSpeedRatio="1.4" differentialIndex1="1" differentialIndex2="2" /> <!-- front-back -->
+              </differentials>
+          </differentialConfiguration>
+        </differentialConfigurations>
+
+        <motorConfigurations>
+            <motorConfiguration name="LEXION 8900" hp="780">
+                <motor torqueScale="3.293" minRpm="1200" maxRpm="2200" minSpeed="0.01" maxForwardSpeed="42" maxBackwardSpeed="14.9" brakeForce="17" lowBrakeForceScale="0.22" accelerationLimit="1.7" rotInertia="0.002">
+                    <torque normRpm="0.45" torque="0.9"/>
+                    <torque normRpm="0.5" torque="0.97"/>
+                    <torque normRpm="0.59" torque="1"/>
+                    <torque normRpm="0.72" torque="1"/>
+                    <torque normRpm="0.86" torque="0.88"/>
+                    <torque normRpm="1" torque="0.72"/>
+                </motor>
+                <transmission minForwardGearRatio="17" maxForwardGearRatio="380" minBackwardGearRatio="47.5" maxBackwardGearRatio="380" name="$l10n_info_transmission_cvt"/>
+            </motorConfiguration>
+        </motorConfigurations>
+
+        <exhaustEffects>
+            <exhaustEffect node="exhaustParticle" filename="$data/effects/exhaust/exhaust.i3d" minRpmColor="0.9 0.9 0.9 0.1" maxRpmColor="0.9 0.9 0.9 0.4" minRpmScale="0.05" maxRpmScale="0.5" />
+        </exhaustEffects>
+
+        <animationNodes>
+            <animationNode node="airFilterCleaner" rotSpeed="400" rotAxis="2" turnOnFadeTime="2" turnOffFadeTime="4" />
+            <animationNode node="airFilterCleaner2" rotSpeed="400" rotAxis="2" turnOnFadeTime="2" turnOffFadeTime="4" />
+        </animationNodes>
+
+        <brakeCompressor capacity="2000" fillSpeed="250" />
+        <motorStartDuration>3500</motorStartDuration>
+
+        <dashboards>
+            <dashboard displayType="ANIMATION" valueType="speedDir" animName="joystickMovement" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ANIMATION" valueType="speed" animName="loadingBarSpeed" minValueAnim="0" maxValueAnim="40" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="NUMBER" valueType="rpm"   numbers="numbersRpm1"   numberColor="0.01 0.01 0.01 1" precision="0" font="GENERIC_BOLD" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="NUMBER" valueType="speed" numbers="numbersSpeed1" numberColor="1 1 1 1" precision="1" font="GENERIC" groups="MOTOR_ACTIVE"/>
+        </dashboards>
+    </motorized>
+
+    <drivable>
+        <steeringWheel node="steeringWheel" indoorRotation="540" outdoorRotation="15" />
+
+        <dashboards>
+            <dashboard displayType="ROT"     valueType="decelerationAxis" node="brakePedal" minRot="0 0 0" maxRot="15 0 0" doInterpolation="true" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ANIMATION" valueType="cruiseControl" animName="cruiseControl" minValueAnim="0" maxValueAnim="40" groups="MOTOR_ACTIVE"/>
+        </dashboards>
+    </drivable>
+
+    <attacherJoints>
+        <attacherJoint jointType="cutter" node="attacherJointCutter" jointPositionOffset="0 0 -1.833" lowerTransLimit="0 0 0" lowerRotLimit="0 0 15" lockDownRotLimit="true" moveTime="2.5" comboTime="0">
+            <distanceToGround lower="0.92" upper="2.03" />
+            <rotationNode node="attacherJointRot" lowerRotation="20 0 0" upperRotation="-16 0 0" startRotation="0 0 0"/>
+            <bottomArm rotationNode="feeder" referenceNode="feederRef" startRotation="0 0 0"/>
+            <schema position="1 0" rotation="0" invertX="true" />
+            <attachSound template="HEADER_ATTACH_01" linkNode="attacherJointCutter"/>
+        </attacherJoint>
+        <attacherJoint node="trailerAttacherJointBack" jointType="trailer" lowerRotLimit="25 75 50" upperRotationOffset="0" allowsJointLimitMovement="false" canTurnOnImplement="false" comboTime="1">
+            <schema position="1 0" rotation="0" invertX="false"/>
+            <attachSound template="ATTACH_01" linkNode="trailerAttacherJointBack"/>
+        </attacherJoint>
+    </attacherJoints>
+
+    <powerTakeOffs>
+        <output attacherJointIndices="1" outputNode="ptoOutputLeft"  ptoName="LEFT_PTO"/>
+    </powerTakeOffs>
+
+    <connectionHoses>
+        <customHose node="feederConnector" type="claasMultiCoupler" attacherJointIndices="1"/>
+        <localHose>
+            <hose type="CABLE_BOUNDLE"  node="localHoseStart"  length="2.3" diameter="0.064" minCenterPointAngle="30" straighteningFactor="1" isWorldSpaceHose="false" isTwoPointHose="true"/>
+            <target type="CABLE_BOUNDLE" node="localHoseEnd" straighteningFactor="2"/>
+        </localHose>
+
+        <target attacherJointIndices="2" type="electric" node="electricIn01" socket="electric"/>
+    </connectionHoses>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration name="EU" vehicleIcon="$data/vehicles/claas/lexion8000/store_lexion8000.png" price="6800">
+                <fillUnits>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypeCategories="combine" capacity="18000" foldMinLimit="1" foldMaxLimit="1">
+                        <exactFillRootNode node="exactFillRootNode"/>
+                        <alarmTriggers>
+                            <alarmTrigger minFillLevel="1" maxFillLevel="1" turnOffInTrigger="true"/>
+                        </alarmTriggers>
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="fillLevelAnim" groups="MOTOR_ACTIVE"/>
+                        <dashboard displayType="NUMBER" valueType="fillLevelPct" numbers="numbersFuelPctGrainTank" numberColor="1 1 1 1" precision="0" font="GENERIC" groups="MOTOR_ACTIVE"/>
+                    </fillUnit>
+                    <fillUnit unitTextOverride="$l10n_unit_kw" showOnHud="false" showInShop="false" fillTypes="ELECTRICCHARGE" capacity="390"> 
+                        <dashboard displayType="NUMBER" valueType="fillLevelPct" numbers="numbersFuelPCT" numberColor="0.01 0.01 0.01 1" precision="0" font="GENERIC_BOLD" groups="MOTOR_ACTIVE"/>
+                    </fillUnit>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" showOnInfoHud="false" fillTypes="def" capacity="100"/>
+                </fillUnits>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration name="US" vehicleIcon="$data/vehicles/claas/lexion8000/store_lexion8000US.png">
+                <fillUnits>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypeCategories="combine" capacity="15000" foldMinLimit="1" foldMaxLimit="1">
+                        <exactFillRootNode node="exactFillRootNode"/>
+                        <alarmTriggers>
+                            <alarmTrigger minFillLevel="1" maxFillLevel="1" turnOffInTrigger="true"/>
+                        </alarmTriggers>
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="fillLevelAnim" groups="MOTOR_ACTIVE"/>
+                        <dashboard displayType="NUMBER" valueType="fillLevelPct" numbers="numbersFuelPctGrainTank" numberColor="1 1 1 1" precision="0" font="GENERIC" groups="MOTOR_ACTIVE"/>
+                    </fillUnit>
+                    <fillUnit unitTextOverride="$l10n_unit_kw" showOnHud="false" showInShop="false" fillTypes="ELECTRICCHARGE" capacity="390"> 
+                        <dashboard displayType="NUMBER" valueType="fillLevelPct" numbers="numbersFuelPCT" numberColor="0.01 0.01 0.01 1" precision="0" font="GENERIC_BOLD" groups="MOTOR_ACTIVE"/>
+                    </fillUnit>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" showOnInfoHud="false" fillTypes="def" capacity="100"/>
+                </fillUnits>
+                <objectChange node="grainTankPartHydraulic_us" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="grainTankPartHydraulic_us" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="grainTankPart_us" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="bar01_us" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="bar02_us" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="bar03_us" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="bar04_us" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="bar05_us" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="bar06_us" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="grainTankPart2_us" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="auger01BasePart" translationActive="0 0 -0.388" translationInactive="0 0 0"/>
+                <objectChange node="grainTankPart2_eu" visibilityActive="false" visibilityInactive="true"/>
+
+
+                <objectChange node="auger02BaseRot" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="auger02BaseHydraulic01" visibilityActive="false" visibilityInactive="true"/>
+
+
+                <objectChange node="grainTankBackPart" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="grainTankBackPartTopRot" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="grainTankBackPartTopRotOri" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="grainTankBackPartTopHydraulic" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="grainTankBackPartTopHydraulicPunch" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="grainTankRightPartTop" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="grainTankRightPartTopHydraulic" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="grainTankRightPartTopHydraulicPunch" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="grainTankLeftPartTop" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="grainTankLeftPartTopHydraulic" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="grainTankLeftPartTopHydraulicPunch" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="grainTankFrontPartTop" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="grainTankFrontPartTopRot" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="grainTankFrontPartTopRotOri" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="grainTankFrontPartTopHydraulic" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="grainTankFrontPartTopHydraulicPunch" visibilityActive="false" visibilityInactive="true"/>
+
+                <objectChange node="grainTankCover_eu" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="grainTankCover_us" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="hoses_eu" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="hoses_us" visibilityActive="true" visibilityInactive="false"/>
+
+
+                <objectChange node="grainTankFrontPart_us" visibilityActive="false" visibilityInactive="true"/>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <fillVolume>
+        <fillVolumeConfigurations>
+            <fillVolumeConfiguration>
+                <volumes>
+                    <volume node="fillVolume" maxDelta="0.15" maxAllowedHeapAngle="15" fillUnitIndex="1" />
+                </volumes>
+            </fillVolumeConfiguration>
+            <fillVolumeConfiguration>
+                <volumes>
+                    <volume node="fillVolumeUS" maxDelta="0.15" maxAllowedHeapAngle="15" fillUnitIndex="1" />
+                </volumes>
+            </fillVolumeConfiguration>
+        </fillVolumeConfigurations>
+
+        <unloadInfos>
+            <unloadInfo>
+                <node node="unloadInfo" width="0.4" length="0.4" />
+            </unloadInfo>
+        </unloadInfos>
+
+        <loadInfos>
+            <loadInfo>
+                <node node="loadInfo" width="0.4" length="0.4" />
+            </loadInfo>
+        </loadInfos>
+
+
+        <heightNodes>
+            <heightNode>
+                <refNode node="grainTankEffect02HeightNode" />
+                <node node="grainTankEffect02" baseScale="1 1 1" transAxis="0 1 0" scaleAxis="0 0 0" />
+            </heightNode>
+        </heightNodes>
+    </fillVolume>
+
+    <foldable>
+        <foldingConfigurations>
+            <foldingConfiguration>
+                <foldingParts startMoveDirection="0" turnOnFoldMinLimit="0.99" turnOnFoldMaxLimit="1" turnOnFoldDirection="1">
+                    <foldingPart animationName="folding" speedScale="1" />
+                </foldingParts>
+            </foldingConfiguration>
+            <foldingConfiguration>
+                <foldingParts startMoveDirection="0" turnOnFoldMinLimit="0.99" turnOnFoldMaxLimit="1" turnOnFoldDirection="1">
+                    <foldingPart animationName="foldingUS" speedScale="1" />
+                </foldingParts>
+            </foldingConfiguration>
+        </foldingConfigurations>
+    </foldable>
+
+    <animations>
+        <animation name="foldPipe">
+            <part node="pipe"      startTime="0" endTime="6" startRot="0 0 0" endRot="0 -105 0" />
+            <part node="pipeMount" startTime="0" endTime="0.18" startRot="0 0 0" endRot="0 0 -45" />
+
+            <sound template="hydraulicLayerTone" startTime="0.01"  endTime="5.99"  volumeScale="1.6" pitchScale="0.8" linkNode="pipe"/>
+            <sound template="cylinderPunch"      startTime="0.1"   direction="-1"   volumeScale="0.8" pitchScale="1.4" linkNode="pipe"/>
+            <sound template="metalClose"         startTime="0.12"  direction="-1"   volumeScale="0.7" pitchScale="2.5" linkNode="pipe"/>
+        </animation>
+
+        <animation name="joystickMovement">
+            <part node="joystick" startTime="0"     endTime="0.96" startRot="-19 2.2 5.5" endRot="0 2.2 5.5" />
+            <part node="joystick" startTime="0.96"  endTime="1.04" startRot="0 2.2 5.5"   endRot="0 2.2 -4.6" />
+            <part node="joystick" startTime="1.04"  endTime="2"    startRot="0 2.2 -4.6"  endRot="25 2.2 -4.6" />
+        </animation>
+
+        <animation name="toggleChopper" soundVolumeFactor="1.8">
+            <part node="chopperSwitchPlate"  startTime="0" endTime="2" startRot="46 0 0" endRot="0 0 0" />
+            <part node="chopper"             startTime="0" endTime="2" startRot="-45 0 0" endRot="0 0 0" />
+
+            <sound template="hydraulicLayerTone" startTime="0.01"  endTime="1.99"  volumeScale="0.5" pitchScale="0.8" linkNode="chopper"/>
+            <sound template="metalClose"         startTime="0.01"  direction="-1"  volumeScale="0.7" pitchScale="1.5" linkNode="chopper"/>
+            <sound template="metalClose"         startTime="1.99"  direction="1"   volumeScale="0.7" pitchScale="1.5" linkNode="chopper"/>
+        </animation>
+
+        <animation name="wiperFrontAnimation">
+            <part node="wiper" startTime="0.0" endTime="1.0"  startRot="0.0 0.0 0.0" endRot="0.0 0.0 180.0" />
+            <part node="wiper" startTime="1.0" endTime="2.0"  startRot="0.0 0.0 180.0" endRot="0.0 0.0 360.0" />
+            <part node="wiperPart" startTime="0.0" endTime="0.5"  startRot="0.0 0.0 0.0" endRot="6.568 0.0 0.0" />
+            <part node="wiperPart" startTime="0.5" endTime="1.0"  startRot="6.568 0.0 0.0" endRot="0.0 0.0 0.0" />
+            <part node="wiperPart" startTime="1.0" endTime="1.5"  startRot="0.0 0.0 0.0" endRot="5.346 0.0 0.0" />
+            <part node="wiperPart" startTime="1.5" endTime="2.0"  startRot="5.346 0.0 0.0" endRot="0.0 0.0 0.0" />
+
+            <sound template="wiper1" startTime="0" endTime="2" direction="1"   volumeScale="1" pitchScale="0.7" fadeOut="0.1" linkNode="wiper"/>
+            <sound template="wiper2" startTime="0" endTime="2" direction="-1"  volumeScale="1" pitchScale="0.7" fadeOut="0.1" linkNode="wiper"/>
+        </animation>
+
+        <animation name="folding" soundVolumeFactor="1.8">
+            <part node="graintankLightToggle"  startTime="7.98" endTime="7.97" visibility="false" />
+            <part node="graintankLightToggle"  startTime="7.99" endTime="8.0" visibility="true" />
+            <part node="grainTankLeftRotationPart" startTime="0" endTime="5" startRot="0 0 -102" endRot="0 0 0" />
+
+            <part node="pipePart" startTime="0" endTime="3.5" startRot="0 110 0" endRot="0 0 0" />
+
+            <part node="grainTankFrontPartTop"  startTime="6" endTime="8" startRot="-140 0 0" endRot="0 0 0" />
+            <part node="grainTankBackPartTop"   startTime="6" endTime="8" startRot="140 0 0" endRot="0 0 0" />
+            <part node="grainTankLeftPartTop"   startTime="6" endTime="8" startRot="0 0 127" endRot="0 0 0" />
+            <part node="grainTankRightPartTop"  startTime="6" endTime="8" startRot="0 0 -127" endRot="0 0 0" />
+            <part node="auger01Base"  startTime="4" endTime="7" startRot="43 0 0" endRot="0 0 0" />
+            <part node="auger02Base"  startTime="5" endTime="8" startRot="81 0 0" endRot="0 0 0" />
+            <part node="workLightGrainTankHigh" startTime="6.2" endTime="6.3" visibility="true" />
+            <part node="workLightGrainTankHigh" startTime="6.1" endTime="6.2" visibility="false" />
+
+            <sound template="defaultHydraulicSound"  startTime="0.01"  endTime="4.99"  volumeScale="1.1" pitchScale="0.5" linkNodeOffset="0 4 1"/>
+            <sound template="defaultHydraulicSound"  startTime="6.01"  endTime="7.99"  volumeScale="0.7" pitchScale="0.9" linkNodeOffset="0 4 1" />
+            <sound template="hydraulicLayerTone"     startTime="4.01"  endTime="7.99"  volumeScale="0.15" pitchScale="1.8" linkNodeOffset="0 4 1" />
+            <sound template="metalClose" startTime="0.01" direction="-1" volumeScale="1.5" pitchScale="0.9" linkNodeOffset="0 4 1"/>
+            <sound template="metalClose" startTime="4.99" direction="1"  volumeScale="1.5" pitchScale="1.3" linkNodeOffset="0 4 1"/>
+            <sound template="metalClose" startTime="7.99" direction="1"  volumeScale="1.3" pitchScale="2.5" linkNodeOffset="0 4 1"/>
+            <sound template="metalOpen"  startTime="0.01" direction="1"  volumeScale="1.8" pitchScale="0.9" linkNodeOffset="0 4 1"/>
+            <sound template="metalOpen"  startTime="4.99" direction="-1"  volumeScale="1.4" pitchScale="0.7"  linkNodeOffset="0 4 1"/>
+            <sound template="defaultHydraulicSound"  startTime="0.01"  endTime="3.499"  volumeScale="0.5" pitchScale="1.3" linkNode="pipePart"/>
+            <sound template="cylinderPunch"          startTime="3.49"  direction="1"    volumeScale="0.3" pitchScale="1.5" linkNode="pipePart"/>
+        </animation>
+
+        <animation name="foldingUS" soundVolumeFactor="1.8">
+            <part node="graintankLightToggle"  startTime="6.98" endTime="6.97" visibility="false" />
+            <part node="graintankLightToggle"  startTime="6.99" endTime="7.0" visibility="true" />
+            <part node="grainTankLeftRotationPart" startTime="0" endTime="5" startRot="0 0 -102" endRot="0 0 0" />
+
+            <part node="pipePart" startTime="0" endTime="3.5" startRot="0 110 0" endRot="0 0 0" />
+            <part node="auger01Base"  startTime="4" endTime="7" startRot="43 0 0" endRot="0 0 0" />
+            <part node="auger02Base"  startTime="5" endTime="7" startRot="81 0 0" endRot="0 0 0" />
+            <part node="workLightGrainTankHigh" startTime="6.2" endTime="6.3" visibility="true" />
+            <part node="workLightGrainTankHigh" startTime="6.1" endTime="6.2" visibility="false" />
+
+            <sound template="defaultHydraulicSound"  startTime="0.01"  endTime="4.99"  volumeScale="1.1" pitchScale="0.5" linkNodeOffset="0 4 1"/>
+            <sound template="defaultHydraulicSound"  startTime="6.01"  endTime="7.99"  volumeScale="0.7" pitchScale="0.9" linkNodeOffset="0 4 1"/>
+            <sound template="hydraulicLayerTone"     startTime="4.01"  endTime="7.99"  volumeScale="0.15" pitchScale="1.8" linkNodeOffset="0 4 1"/>
+            <sound template="metalClose" startTime="0.01" direction="-1" volumeScale="1.5" pitchScale="0.9" linkNodeOffset="0 4 1"/>
+            <sound template="metalClose" startTime="4.99" direction="1"  volumeScale="1.5" pitchScale="1.3" linkNodeOffset="0 4 1"/>
+            <sound template="metalClose" startTime="7.99" direction="1"  volumeScale="1.3" pitchScale="2.5" linkNodeOffset="0 4 1"/>
+            <sound template="metalOpen"  startTime="0.01" direction="1"  volumeScale="1.8" pitchScale="0.9" linkNodeOffset="0 4 1"/>
+            <sound template="metalOpen"  startTime="4.99" direction="-1"  volumeScale="1.4" pitchScale="0.7" linkNodeOffset="0 4 1"/>
+            <sound template="defaultHydraulicSound"  startTime="0.01"  endTime="3.499"  volumeScale="0.5" pitchScale="1.3" linkNode="pipePart"/>
+            <sound template="cylinderPunch"          startTime="3.49"  direction="1"    volumeScale="0.3" pitchScale="1.5" linkNode="pipePart"/>
+        </animation>
+
+        <animation name="ladderAnimation" soundVolumeFactor="1.8">
+            <part node="ladderLockArm01" startTime="2.4" endTime="2.5" startRot="0 -10.095 -52.992" endRot="0 0 -52.992" />
+            <part node="ladderLockArm01" startTime="1.9" endTime="2.1" startRot="0 0 -52.992" endRot="0 -10.095 -52.992" />
+            <part node="ladderPart01" startTime="1.5" endTime="2.4" startRot="0 0 115" endRot="0 0 0" />
+            <part node="ladderPart02" startTime="1.5" endTime="2.4" startRot="0 0 -115" endRot="0 0 0" />
+            <part node="ladderPart03" startTime="1.5" endTime="2.4" startRot="0 0 115" endRot="0 0 0" />
+
+            <part node="ladderPart04" startTime="1.5" endTime="2.4" startRot="0 0 115" endRot="0 0 0" />
+            <part node="ladderPart05" startTime="1.5" endTime="2.4" startRot="0 0 -115" endRot="0 0 0" />
+            <part node="ladderPart06" startTime="1.5" endTime="2.4" startRot="0 0 115" endRot="0 0 0" />
+
+            <part node="ladderUnlockArm" startTime="1.3" endTime="1.4" startRot="-10 0 0" endRot="0 0 0" />
+            <part node="ladderRot" startTime="0.0" endTime="1.3" startRot="0 -90 0" endRot="0 0 0" />
+            <part node="ladderRailing" startTime="0.0" endTime="1.3" startRot="0 -90 0" endRot="0 0 0" />
+            <part node="ladderRalingFront" startTime="0.0" endTime="0.5" startRot="0 -90 0" endRot="0 0 0" />
+            <part node="ladderUnlockArm" startTime="1.0" endTime="1.1" startRot="0 0 0" endRot="-10 0 0" />
+
+            <sound template="slideOpen"  startTime="1.5"  direction="1"  volumeScale="1.7" pitchScale="1.0" linkNodeOffset="1.6 2 2.6"/>
+            <sound template="slideClose" startTime="2.49"  direction="-1" volumeScale="1.7" pitchScale="1.4" linkNodeOffset="1.6 2 2.6"/>
+            <sound template="slideClose" startTime="0.01" direction="1"  volumeScale="1.7" pitchScale="1.0" linkNodeOffset="1.6 2 2.6"/>
+            <sound template="slideOpen"  startTime="1.3"  direction="-1" volumeScale="1.7" pitchScale="0.7" linkNodeOffset="1.6 2 2.6"/>
+            <sound template="metalClose" startTime="0.01" direction="-1" volumeScale="0.9" pitchScale="2.5" linkNodeOffset="1.6 2 2.6"/>
+            <sound template="metalOpen"  startTime="0.01" direction="1"  volumeScale="1.2" pitchScale="2.5" linkNodeOffset="1.6 2 2.6"/>
+        </animation>
+
+        <animation name="fillLevelAnim">
+            <part node="fillLevel" startTime="0.0" endTime="1.0" startScale="1 0 1" endScale="1 1 1"/>
+        </animation>
+
+        <animation name="chopperAnim" looping="true">
+            <part node="radialSpreaderLeft01" startTime="0" endTime="0.5"  startRot="0 0 -90"  endRot="0 0 0" />
+            <part node="radialSpreaderLeft01" startTime="0.5" endTime="1"  startRot="0 0 0" endRot="0 0 -90" />
+
+            <part node="radialSpreaderRight01" startTime="0" endTime="0.5"  startRot="0 0 0"  endRot="0 0 90" />
+            <part node="radialSpreaderRight01" startTime="0.5" endTime="1"  startRot="0 0 90" endRot="0 0 0" />
+        </animation>
+
+        <animation name="sieveAnimation" looping="true">
+            <part node="lowerSieveArm" startTime="0" endTime="0.5" startRot="0 0 0" endRot="-8 0 0" />
+            <part node="lowerSieveArm" startTime="0.5" endTime="1" startRot="-8 0 0" endRot="0 0 0" />
+
+            <part node="upperSieveArm" startTime="0" endTime="0.5" startRot="0 0 0" endRot="6 0 0" />
+            <part node="upperSieveArm" startTime="0.5" endTime="1" startRot="6 0 0" endRot="0 0 0" />
+        </animation>
+
+        <animation name="cruiseControl">
+            <part node="displayArrowDecal" startTime="0.0" endTime="1.0" startRot="0 0 0" endRot="-241 0 0"/>
+        </animation>
+
+        <animation name="loadingBarSpeed" >
+            <part node="terminalBar1" startTime="0.0" endTime="1.0" shaderParameter="sliderPos" shaderStartValues="0 0 0 0" shaderEndValues="1.0 0 0 0" />
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="feeder" playSound="false">
+                <dependentPart node="feederHydraulic" />
+                <connectionHoses customHoseIndices="1"/>
+            </movingTool>
+
+            <movingTool node="headerTilt">
+                <connectionHoses customHoseIndices="1"/>
+            </movingTool>
+
+            <movingTool node="ladderPart01">
+                <dependentPart node="ladderPart01Hydraulic" />
+                <dependentPart node="ladderPullArm" />
+            </movingTool>
+
+            <movingTool node="ladderLockArm01">
+                <dependentPart node="ladderLockArm02" />
+                <dependentPart node="ladderLockArm03" />
+            </movingTool>
+
+            <movingTool node="ladderRot">
+                <dependentPart node="ladderHydraulic" />
+                <dependentPart node="ladderRailingOrientation" />
+            </movingTool>
+
+            <movingTool node="pipe" playSound="true">
+                <dependentPart node="pipeHydraulic" />
+                <dependentPart node="pipeAngleSensor" />
+            </movingTool>
+
+            <movingTool node="pipePart" playSound="true">
+                <dependentPart node="pipePartArm01" />
+            </movingTool>
+
+            <movingTool node="chopper" playSound="true">
+                <dependentPart node="chopperHydraulic" />
+            </movingTool>
+
+            <movingTool node="grainTankLeftRotationPart" playSound="true">
+                <dependentPart node="grainTankRightPart" />
+                <dependentPart node="grainTankRightRotationPart" />
+                <dependentPart node="grainTankFrontPart" />
+                <dependentPart node="grainTankPartHydraulic_us" />
+            </movingTool>
+
+            <movingTool node="grainTankLeftPartTop" playSound="true">
+                <dependentPart node="grainTankLeftPartTopHydraulic" />
+            </movingTool>
+
+            <movingTool node="grainTankRightPartTop" playSound="true">
+                <dependentPart node="grainTankRightPartTopHydraulic" />
+            </movingTool>
+
+            <movingTool node="grainTankFrontPartTop" playSound="true">
+                <dependentPart node="grainTankFrontPartTopRot" />
+            </movingTool>
+
+            <movingTool node="grainTankBackPartTop" playSound="true">
+                <dependentPart node="grainTankBackPartTopRot" />
+            </movingTool>
+
+            <movingTool node="auger01Base" playSound="true">
+                <dependentPart node="auger01BaseHydraulic" />
+            </movingTool>
+
+            <movingTool node="auger02Base" playSound="true">
+                <dependentPart node="auger02BaseHydraulic01" />
+                <dependentPart node="auger02BaseHydraulic02" />
+            </movingTool>
+
+            <movingTool node="radialSpreaderLeft01" playSound="false">
+                <dependentPart node="radialSpreaderLeftArm02" />
+                <dependentPart node="radialSpreaderRightArm02" />
+            </movingTool>
+
+            <movingTool node="lowerSieveArm">
+                <dependentPart node="lowerSieve" />
+            </movingTool>
+
+            <movingTool node="upperSieveArm">
+                <dependentPart node="upperSieve" />
+            </movingTool>
+
+
+            <movingTool node="ladderPart04">
+                <dependentPart node="ladderPart04Hydraulic" />
+                <dependentPart node="ladderPullArm2" />
+            </movingTool>
+            <movingTool node="ladderLockArm04">
+                <dependentPart node="ladderLockArm05" />
+                <dependentPart node="ladderLockArm06" />
+            </movingTool>
+        </movingTools>
+
+        <movingParts>
+            <!-- radial chopper -->
+            <movingPart node="radialSpreaderLeftArm02" referencePoint="radialSpreaderLeftArm01Ref" localReferencePoint="radialSpreaderLeftArm01" referenceFrame="radialSpreaderLeftArm02RefFrame" limitedAxis="1">
+                <dependentPart node="radialSpreaderLeftArm01" />
+                <dependentPart node="radialSpreaderLeft02" />
+            </movingPart>
+            <movingPart node="radialSpreaderLeftArm01" referencePoint="radialSpreaderLeftArm01Ref" referenceFrame="radialSpreaderLeftArm01Ref" />
+
+            <movingPart node="radialSpreaderLeft02" referencePoint="radialSpreaderLeftArm03Ref" localReferencePoint="radialSpreaderLeftArm03" referenceFrame="radialSpreaderLeft02RefFrame" limitedAxis="1">
+                <dependentPart node="radialSpreaderLeftArm03" />
+            </movingPart>
+            <movingPart node="radialSpreaderLeftArm03" referencePoint="radialSpreaderLeftArm03Ref" referenceFrame="radialSpreaderLeftArm03Ref" />
+
+            <movingPart node="radialSpreaderRightArm02" referencePoint="radialSpreaderRightArm01Ref" localReferencePoint="radialSpreaderRightArm01" referenceFrame="radialSpreaderRightArm02RefFrame" limitedAxis="1">
+                <dependentPart node="radialSpreaderRightArm01" />
+                <dependentPart node="radialSpreaderRight02" />
+            </movingPart>
+            <movingPart node="radialSpreaderRightArm01" referencePoint="radialSpreaderRightArm01Ref" referenceFrame="radialSpreaderRightArm01Ref" />
+
+            <movingPart node="radialSpreaderRight02" referencePoint="radialSpreaderRightArm03Ref" localReferencePoint="radialSpreaderRightArm03" referenceFrame="radialSpreaderRight02RefFrame" limitedAxis="1">
+                <dependentPart node="radialSpreaderRightArm03" />
+            </movingPart>
+            <movingPart node="radialSpreaderRightArm03" referencePoint="radialSpreaderRightArm03Ref" referenceFrame="radialSpreaderRightArm03Ref" />
+
+            <movingPart node="feederHydraulic" referencePoint="feederHydraulicRef" referenceFrame="feederHydraulicRef" >
+                <translatingPart node="feederHydraulicPunch" />
+            </movingPart>
+
+            <!-- ladder -->
+            <movingPart node="ladderPart01Hydraulic" referencePoint="ladderPart01HydraulicRef" referenceFrame="ladderPart01HydraulicRef">
+                <translatingPart node="ladderPart01HydraulicPunch" />
+            </movingPart>
+            <movingPart node="ladderPart04Hydraulic" referencePoint="ladderPart04HydraulicRef" referenceFrame="ladderPart04HydraulicRef">
+                <translatingPart node="ladderPart04HydraulicPunch" />
+            </movingPart>
+            <movingPart node="ladderPullArm" referencePoint="ladderPullArmRef" referenceFrame="ladderPullArmRef"/>
+            <movingPart node="ladderPullArm2" referencePoint="ladderPullArm2Ref" referenceFrame="ladderPullArm2Ref"/>
+
+            <movingPart node="ladderLockArm02" referencePoint="ladderLockArm02Ref" referenceFrame="ladderLockArm02Ref"/>
+            <movingPart node="ladderLockArm03" referencePoint="ladderLockArm03Ref" referenceFrame="ladderLockArm03Ref"/>
+
+            <movingPart node="ladderLockArm05" referencePoint="ladderLockArm05Ref" referenceFrame="ladderLockArm05Ref"/>
+            <movingPart node="ladderLockArm06" referencePoint="ladderLockArm06Ref" referenceFrame="ladderLockArm06Ref"/>
+
+            <movingPart node="ladderHydraulic" referencePoint="ladderHydraulicRef" referenceFrame="ladderHydraulicRef">
+                <translatingPart node="ladderHydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="ladderRailingOrientation" referencePoint="ladderRailingOrientationRef" referenceFrame="ladderRailingOrientationRef"/>
+
+            <!-- pipe -->
+            <movingPart node="pipeHydraulic" referencePoint="pipeHydraulicRef" referenceFrame="pipeHydraulicRef" >
+                <translatingPart node="pipeHydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="pipePartArm01" referencePoint="pipePartArmRef" localReferencePoint="pipePartArm02" referenceFrame="pipePartArm01RefFrame" >
+                <dependentPart node="pipePartArm02" />
+                <dependentPart node="pipePartArmHydraulic" />
+            </movingPart>
+            <movingPart node="pipePartArm02" referencePoint="pipePartArmRef" referenceFrame="pipePartArmRef" />
+            <movingPart node="pipePartArmHydraulic" referencePoint="pipePartArmHydraulicRef" referenceFrame="pipePartArmHydraulicRef">
+                <translatingPart node="pipePartArmHydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="pipeAngleSensor" referencePoint="pipeAngleSensorRef" localReferencePoint="pipeAngleSensorArm" referenceFrame="pipeAngleSensorRefFrame" >
+                <dependentPart node="pipeAngleSensorArm" />
+            </movingPart>
+            <movingPart node="pipeAngleSensorArm" referencePoint="pipeAngleSensorRef" referenceFrame="pipeAngleSensorRef" />
+
+            <!-- chopper -->
+            <movingPart node="chopperHydraulic" referencePoint="chopperHydraulicRef" referenceFrame="chopperHydraulicRef">
+                <translatingPart node="chopperHydraulicPunch" />
+            </movingPart>
+
+            <!-- grain tank left -->
+            <movingPart node="grainTankLeftPart" referencePoint="grainTankLeftPartRef" localReferencePoint="grainTankLeftPartOrientation" referenceFrame="grainTankLeftPartRefFrame" limitedAxis="3">
+                <dependentPart node="grainTankLeftPartOrientation" />
+            </movingPart>
+            <movingPart node="grainTankLeftPartOrientation" referencePoint="grainTankLeftPartRef" referenceFrame="grainTankLeftPartRef" />
+
+            <movingPart node="grainTankRightRotationPart" referencePoint="grainTankRightRotationPartRef" localReferencePoint="grainTankRightRotationPartOri" referenceFrame="grainTankRightRotationPartRefFrame" limitedAxis="3">
+                <dependentPart node="grainTankRightRotationPartOri" />
+                <dependentPart node="grainTankLeftPart" />
+                <dependentPart node="grainTankBackPart" />
+            </movingPart>
+            <movingPart node="grainTankRightRotationPartOri" referencePoint="grainTankRightRotationPartRef" referenceFrame="grainTankRightRotationPartRef" />
+
+            <!-- grain tank right -->
+            <movingPart node="grainTankRightPart" referencePoint="grainTankRightPartRef" localReferencePoint="grainTankRightPartOrientation" referenceFrame="grainTankRightPartRefFrame" limitedAxis="3">
+                <dependentPart node="grainTankRightPartOrientation" />
+            </movingPart>
+            <movingPart node="grainTankRightPartOrientation" referencePoint="grainTankRightPartRef" referenceFrame="grainTankRightPartRef" />
+
+            <!-- grain tank front -->
+            <movingPart node="grainTankFrontPart" referencePoint="grainTankFrontPartRef" localReferencePoint="grainTankFrontPartOrientation" referenceFrame="grainTankFrontPartRefFrame" >
+                <dependentPart node="grainTankFrontPartOrientation" />
+                <dependentPart node="grainTankFrontPartStabilizePart" />
+            </movingPart>
+            <movingPart node="grainTankFrontPartOrientation" referencePoint="grainTankFrontPartRef" referenceFrame="grainTankFrontPartRef" />
+
+            <movingPart node="grainTankFrontPartStabilizePart" referencePoint="grainTankFrontPartStabilizePartOriRef" localReferencePoint="grainTankFrontPartStabilizePartOri" referenceFrame="grainTankFrontPartStabilizePartRefFrame" >
+                <dependentPart node="grainTankFrontPartStabilizePartOri" />
+            </movingPart>
+            <movingPart node="grainTankFrontPartStabilizePartOri" referencePoint="grainTankFrontPartStabilizePartOriRef" referenceFrame="grainTankFrontPartStabilizePartOriRef" />
+
+            <!-- grain tank back -->
+            <movingPart node="grainTankBackPart" referencePoint="grainTankBackPartRef" localReferencePoint="grainTankBackPartOrientation" referenceFrame="grainTankBackPartRefFrame" >
+                <dependentPart node="grainTankBackPartOrientation" />
+                <dependentPart node="grainTankBackPartStabilizePart" />
+            </movingPart>
+            <movingPart node="grainTankBackPartOrientation" referencePoint="grainTankBackPartRef" referenceFrame="grainTankBackPartRef" />
+
+            <movingPart node="grainTankBackPartStabilizePart" referencePoint="grainTankBackPartStabilizePartOriRef" localReferencePoint="grainTankBackPartStabilizePartOri" referenceFrame="grainTankBackPartStabilizePartRefFrame" >
+                <dependentPart node="grainTankBackPartStabilizePartOri" />
+            </movingPart>
+            <movingPart node="grainTankBackPartStabilizePartOri" referencePoint="grainTankBackPartStabilizePartOriRef" referenceFrame="grainTankBackPartStabilizePartOriRef" />
+
+            <!-- grain tank top parts -->
+            <movingPart node="grainTankLeftPartTopHydraulic" referencePoint="grainTankLeftPartTopHydraulicRef" referenceFrame="grainTankLeftPartTopHydraulicRef" >
+                <translatingPart node="grainTankLeftPartTopHydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="grainTankRightPartTopHydraulic" referencePoint="grainTankRightPartTopHydraulicRef" referenceFrame="grainTankRightPartTopHydraulicRef" >
+                <translatingPart node="grainTankRightPartTopHydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="grainTankFrontPartTopRot" referencePoint="grainTankFrontPartTopRotRef" localReferencePoint="grainTankFrontPartTopRotOri" referenceFrame="grainTankFrontPartTopRotRefFrame" >
+                <dependentPart node="grainTankFrontPartTopRotOri" />
+                <dependentPart node="grainTankFrontPartTopHydraulic" />
+            </movingPart>
+            <movingPart node="grainTankFrontPartTopRotOri" referencePoint="grainTankFrontPartTopRotRef" referenceFrame="grainTankFrontPartTopRotRef" />
+            <movingPart node="grainTankFrontPartTopHydraulic" referencePoint="grainTankFrontPartTopHydraulicRef" referenceFrame="grainTankFrontPartTopHydraulicRef">
+                <translatingPart node="grainTankFrontPartTopHydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="grainTankBackPartTopRot" referencePoint="grainTankBackPartTopRotRef" localReferencePoint="grainTankBackPartTopRotOri" referenceFrame="grainTankBackPartTopRotRefFrame" >
+                <dependentPart node="grainTankBackPartTopRotOri" />
+                <dependentPart node="grainTankBackPartTopHydraulic" />
+            </movingPart>
+            <movingPart node="grainTankBackPartTopRotOri" referencePoint="grainTankBackPartTopRotRef" referenceFrame="grainTankBackPartTopRotRef" />
+            <movingPart node="grainTankBackPartTopHydraulic" referencePoint="grainTankBackPartTopHydraulicRef" referenceFrame="grainTankBackPartTopHydraulicRef">
+                <translatingPart node="grainTankBackPartTopHydraulicPunch" />
+            </movingPart>
+
+            <!-- augers -->
+            <movingPart node="auger01BaseHydraulic" referencePoint="auger01BaseHydraulicRef" referenceFrame="auger01BaseHydraulicRef">
+                <translatingPart node="auger01BaseHydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="auger02BaseHydraulic01" referencePoint="auger02BaseHydraulic01Ref" referenceFrame="auger02BaseHydraulic01Ref">
+                <translatingPart node="auger02BaseHydraulic01Punch" />
+            </movingPart>
+
+            <movingPart node="auger02BaseHydraulic02" referencePoint="auger02BaseHydraulic02Ref" referenceFrame="auger02BaseHydraulic02Ref">
+                <translatingPart node="auger02BaseHydraulic02Punch" />
+            </movingPart>
+
+            <!-- wheels -->
+            <movingPart node="backAxleLeftArm" referencePoint="backAxleLeftArmRef" referenceFrame="backAxleLeftArmRef" isActiveDirty="true" maxUpdateDistance="300"/>
+            <movingPart node="backAxleRightArm" referencePoint="backAxleRightArmRef" referenceFrame="backAxleRightArmRef" isActiveDirty="true" maxUpdateDistance="300"/>
+
+            <movingPart node="steeringArmLeft" referencePoint="steeringArmLeftRef" referenceFrame="steeringArmLeftRef" isActiveDirty="true" maxUpdateDistance="300"/>
+            <movingPart node="steeringArmRight" referencePoint="steeringArmRightRef" referenceFrame="steeringArmRightRef" isActiveDirty="true" maxUpdateDistance="300"/>
+
+            <movingPart node="trackLeftLinkNode" referencePoint="trackLeftLinkNodeRef" referenceFrame="lexion8000_main_component1" isActiveDirty="true" maxUpdateDistance="300"/>
+            <movingPart node="trackRightLinkNode" referencePoint="trackRightLinkNodeRef" referenceFrame="lexion8000_main_component1" isActiveDirty="true" maxUpdateDistance="300"/>
+
+            <movingPart node="frontPtoLeft" referencePoint="frontPtoLeftRef" referenceFrame="frontPtoLeftRef" isActiveDirty="true" maxUpdateDistance="300"/>
+            <movingPart node="frontPtoRight" referencePoint="frontPtoRightRef" referenceFrame="frontPtoRightRef" isActiveDirty="true" maxUpdateDistance="300"/>
+
+            <!-- cleaning -->
+            <movingPart node="lowerSieve" referencePoint="lowerSieveRef" referenceFrame="lowerSieveRef"/>
+            <movingPart node="upperSieve" referencePoint="upperSieveRef" referenceFrame="upperSieveRef"/>
+
+            <movingPart node="grainTankPartHydraulic_us" referencePoint="grainTankPartHydraulicRef_us" referenceFrame="grainTankPartHydraulicRef_us">
+                <translatingPart node="grainTankPartHydraulicPunch_us" />
+            </movingPart>
+        </movingParts>
+    </cylindered>
+
+    <wipers>
+        <wiper animName="wiperFrontAnimation" >
+            <state animSpeed="1.0" animPause="2.0" />
+            <state animSpeed="1.0" animPause="0.0" />
+            <state animSpeed="1.5" animPause="0.0" />
+        </wiper>
+    </wipers>
+
+    <turnOnVehicle turnOffIfNotAllowed="true" >
+        <turnedOnAnimation name="chopperAnim" turnOffFadeTime="6" activeChopper="true" activeStrawDrop="false"/>
+        <turnedOnAnimation name="sieveAnimation" speedScale="5"/>
+    </turnOnVehicle>
+
+    <workAreas>
+        <workArea type="combineSwath" functionName="processCombineSwathArea" requiresGroundContact="false" disableBackwards="false">
+            <area startNode="workAreaStrawStart" widthNode="workAreaStrawWidth" heightNode="workAreaStrawHeight" />
+        </workArea>
+        <workArea type="combineChopper" functionName="processCombineChopperArea" requiresGroundContact="false" disableBackwards="false">
+            <area startNode="workAreaChopperStart" widthNode="workAreaChopperWidth" heightNode="workAreaChopperHeight" />
+        </workArea>
+    </workAreas>
+
+    <combine fillUnitIndex="1" allowThreshingDuringRain="false">
+        <swath available="true" workAreaIndex="1" isDefaultActive="false"/>
+        <chopper available="true" workAreaIndex="2" animName="toggleChopper" animSpeedScale="1"/>
+        <processing toggleTime="4.8" />
+        <ladder animName="ladderAnimation" animSpeedScale="1" foldDirection="1" foldMinLimit="0.0" foldMaxLimit="0.01"/>
+        <folding direction="-1"/>
+
+        <chopperEffect>
+            <effectNode effectClass="TypedMotionPathEffect" effectType="STRAW_CHOPPER" materialType="CHOPPER" linkNode="chopperCenterEffectNode">
+                <motionPathEffect textureFilename="$data/effects/chopper/chopperCenterArray.dds"
+                                  numRows="29" rowLength="31" minFade="0.04" speedReferenceAnimation="chopperAnim" speedReferenceAnimationOffset="0.3"
+                                  densityMaskFilename="$data/effects/mask03_diffuse.png" density="0.85"/>
+            </effectNode>
+            <effectNode effectClass="TypedMotionPathEffect" effectType="STRAW_CHOPPER" materialType="CHAFFER" linkNode="chopperSideEffectNode">
+                <motionPathEffect textureFilename="$data/vehicles/claas/lexion8000/lexion8000_chopperSideArray.dds"
+                                  numRows="16" rowLength="22" minFade="0.04"/>
+            </effectNode>
+            <effectNode effectClass="TypedMotionPathEffect" effectType="STRAW_CHOPPER" materialType="CHAFFER" linkNode="chafferSideEffectNode">
+                <motionPathEffect textureFilename="$data/vehicles/claas/lexion8000/lexion8000_chafferSideArray.dds"
+                                  numRows="16" rowLength="18" minFade="0.04"/>
+            </effectNode>
+            <effectNode effectClass="ParticleEffect" effectNode="chopperSmokeEmitter" particleType="smoke" materialType="smokeParticle" useFruitColor="true"/>
+        </chopperEffect>
+
+        <strawEffect>
+            <effectNode effectClass="TypedMotionPathEffect" effectType="STRAW_CHOPPER" materialType="DROP" linkNode="strawUnloadEffectNode">
+                <motionPathEffect textureFilename="$data/vehicles/claas/lexion8000/lexion8000_unloadCenterArray.dds"
+                                  numRows="16" rowLength="12" minFade="0.04"/>
+            </effectNode>
+            <effectNode effectClass="TypedMotionPathEffect" effectType="STRAW_CHOPPER" materialType="CHAFFER" linkNode="chopperSideEffectNode">
+                <motionPathEffect textureFilename="$data/vehicles/claas/lexion8000/lexion8000_chopperSideArray.dds"
+                                  numRows="16" rowLength="22" minFade="0.04"/>
+            </effectNode>
+            <effectNode effectClass="TypedMotionPathEffect" effectType="STRAW_CHOPPER" materialType="CHAFFER" linkNode="chafferSideEffectNode">
+                <motionPathEffect textureFilename="$data/vehicles/claas/lexion8000/lexion8000_chafferSideArray.dds"
+                                  numRows="16" rowLength="18" minFade="0.04"/>
+            </effectNode>
+            <effectNode effectClass="ParticleEffect" effectNode="strawEffectSmokeEmitter" particleType="smoke" materialType="smokeParticle" useFruitColor="true"/>
+        </strawEffect>
+
+        <fillEffect>
+            <effectNode effectNode="grainTankEffect01" materialType="unloading"      delay="0" />
+            <effectNode effectNode="grainTankSmoke"    materialType="unloadingSmoke" delay="0.1" />
+        </fillEffect>
+
+        <effect>
+            <effectNode effectClass="GrainTankEffect" effectNode="grainTankEffect02" materialType="unloading" delay="0" uvSpeed="0.6" fadeInTime="2" fadeOutTime="3" minVisHeight="0.3"/>
+        </effect>
+
+        <animationNodes>
+            <animationNode node="auger01" rotSpeed="500"   rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5" />
+            <animationNode node="auger02" rotSpeed="500"   rotAxis="2" turnOnFadeTime="2" turnOffFadeTime="5" />
+
+            <animationNode node="chafferLeftDrum" rotSpeed="-1200"  rotAxis="2" turnOnFadeTime="2" turnOffFadeTime="2" />
+            <animationNode node="chafferRightRum" rotSpeed="1200"   rotAxis="2" turnOnFadeTime="2" turnOffFadeTime="2" />
+
+            <animationNode node="rotorLeft"  rotSpeed="-300"  rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="2" />
+            <animationNode node="rotorRight" rotSpeed="300"   rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="2" />
+
+            <animationNode node="feederRotatingPart" rotSpeed="90"   rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="2" />
+            <animationNode node="belts"       rotSpeed="-100"  rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="2" shaderComponentScale="0 1 0 0" shaderParameterName="offsetUV" />
+            <animationNode node="feederChain" rotSpeed="20"  rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="2" shaderComponentScale="1 0 0 0" shaderParameterName="scrollPosition" />
+        </animationNodes>
+
+        <chopperAnimationNodes>
+            <animationNode node="chopperDrumLeft"  rotSpeed="-1200"  rotAxis="2" turnOnFadeTime="2" turnOffFadeTime="6" />
+            <animationNode node="chopperDrumRight" rotSpeed="1200"   rotAxis="2" turnOnFadeTime="2" turnOffFadeTime="6" />
+
+            <animationNode node="chopperRotatingPart" rotSpeed="1200" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="2" />
+        </chopperAnimationNodes>
+
+        <automaticTilt>
+            <automaticTiltNode node="headerTilt" minAngle="-5" maxAngle="5" maxSpeed="4" />
+            <automaticTiltNode node="headerTiltJoint" minAngle="-5" maxAngle="5" maxSpeed="4" updateAttacherJoint="true"/>
+        </automaticTilt>
+    </combine>
+
+    <pipe foldMinState="1" foldMaxState="1" foldMinLimit="1" dischargeNodeIndex="1">
+        <states num="2" unloading="2" />
+        <animation name="foldPipe" speedScale="1" />
+        <unloadingTriggers>
+            <unloadingTrigger node="trailerTrigger" />
+        </unloadingTriggers>
+    </pipe>
+
+    <dischargeable>
+        <dischargeNode node="dischargeNode" emptySpeed="530" fillUnitIndex="1" maxDistance="8">
+            <raycast yOffset="1"/>
+            <info width="0.4" length="0.4" useRaycastHitPosition="true"/>
+
+            <effects>
+                <effectNode effectClass="PipeEffect" effectNode="pipeEffect" materialType="pipe" delay="0" maxBending="0.8" positionUpdateNodes="pipeEffectSmoke" extraDistance="0.1"/>
+                <effectNode  effectNode="pipeEffectSmoke" materialType="unloadingSmoke" delay="0.1" alignToWorldY="true"/>
+            </effects>
+        </dischargeNode>
+    </dischargeable>
+
+    <suspensions>
+        <suspension node="seat"              weight="100" minTranslation="-0.05 -0.05 0.0" maxTranslation="0.05 0.05 0.0" suspensionParametersX="20 4" suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+        <suspension useCharacterTorso="true" weight="90" minRotation="0 -5 -5" maxRotation="0 5 5" suspensionParametersY="7 1" suspensionParametersZ="7 1" />
+    </suspensions>
+
+    <dashboard>
+        <groups>
+            <group name="MOTOR_STARTING" isMotorStarting="true"/>
+            <group name="MOTOR_ACTIVE"   isMotorStarting="true" isMotorRunning="true"/>
+        </groups>
+        <default>
+            <dashboard displayType="EMITTER" node="terminalDisplay" idleValue="-1" intensity="0.2" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="EMITTER" node="gpsDisplay" idleValue="-1" intensity="0.2" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="VISIBILITY" node="numbersTime" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="VISIBILITY" node="numbersSpeed1" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="VISIBILITY" node="numbersRpm1" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="VISIBILITY" node="numbersFuelPCT" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="VISIBILITY" node="terminalBar1" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="VISIBILITY" node="displayArrowDecal" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="VISIBILITY" node="numberDecal" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="VISIBILITY" node="numbersFuelPctGrainTank" groups="MOTOR_ACTIVE" />
+            <dashboard displayType="VISIBILITY" node="fillLevel" groups="MOTOR_ACTIVE" />
+        </default>
+    </dashboard>
+
+    <ai>
+        <agent width="4.15" length="11.1" height="4.1" lengthOffset="-2" frontOffset="-2.9" />
+        <collisionTrigger node="aiCollisionNode" width="4.0" height="4.0"/>
+    </ai>
+
+    <foliageBending>
+        <bendingNode minX="-1.98" maxX="1.98" minZ="0.65" maxZ="3.15" yOffset="0.55" />
+        <bendingNode minX="-1.98" maxX="1.98" minZ="-3.05" maxZ="0.65" yOffset="0.55" />
+        <bendingNode minX="-1" maxX="1" minZ="-5.2" maxZ="-3" yOffset="0.9" />
+        <bendingNode minX="-1.2" maxX="0.9" minZ="-1.2" maxZ="0.2" yOffset="-0.8" node="feederRef" />
+    </foliageBending>
+
+    <baseMaterial>
+        <material name="lexion8000Exterior2_mat" baseNode="lexion8000_vis01">
+            <shaderParameter name="colorMat0" value="CLAAS_DARKGREY2"/>
+            <shaderParameter name="colorMat1" value="CLAAS_GREEN1"/>
+            <shaderParameter name="colorMat2" value="CLAAS_WHITE1"/>
+        </material>
+        <material name="lexion8000Exterior1_mat" baseNode="lexion8000_vis02">
+          <shaderParameter name="colorMat0" value="CLAAS_DARKGREY2"/>
+          <shaderParameter name="colorMat1" value="CLAAS_WHITE1"/>
+          <shaderParameter name="colorMat2" value="CLAAS_GREEN1"/>
+        </material>
+        <material name="lexion8000Exterior3_vmask_mat" baseNode="config_us">
+          <shaderParameter name="colorMat0" value="CLAAS_DARKGREY2"/>
+        </material>
+    </baseMaterial>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" fieldMultiplier="2"/>
+
+    <i3dMappings>
+        <i3dMapping id="lexion8000_main_component1" node="0>" />
+        <i3dMapping id="lexion8000_vis01" node="0>0" />
+        <i3dMapping id="config_eu" node="0>0|0|0" />
+        <i3dMapping id="frontDrive" node="0>0|0|0|0" />
+        <i3dMapping id="frontPtoLeft" node="0>0|0|0|0|0" />
+        <i3dMapping id="frontPtoRight" node="0>0|0|0|0|1" />
+        <i3dMapping id="trackLeftFrontWheel" node="0>0|0|0|1" />
+        <i3dMapping id="trackLeftLinkNodeRef" node="0>0|0|0|1|0" />
+        <i3dMapping id="trackLeftBackWheel" node="0>0|0|0|2" />
+        <i3dMapping id="trackLeftBackWheelDriveNode" node="0>0|0|0|2|0" />
+        <i3dMapping id="trackLeftLinkNode" node="0>0|0|0|2|1" />
+        <i3dMapping id="leftTrackDrive" node="0>0|0|0|2|1|0" />
+        <i3dMapping id="frontPtoLeftRef" node="0>0|0|0|2|1|0|0" />
+        <i3dMapping id="trackRightFrontWheel" node="0>0|0|0|3" />
+        <i3dMapping id="trackRightLinkNodeRef" node="0>0|0|0|3|0" />
+        <i3dMapping id="trackRightBackWheel" node="0>0|0|0|4" />
+        <i3dMapping id="trackRightBackWheelDriveNode" node="0>0|0|0|4|0" />
+        <i3dMapping id="trackRightLinkNode" node="0>0|0|0|4|1" />
+        <i3dMapping id="rightTrackDrive" node="0>0|0|0|4|1|0" />
+        <i3dMapping id="frontPtoRightRef" node="0>0|0|0|4|1|0|0" />
+        <i3dMapping id="config_us" node="0>0|0|1" />
+        <i3dMapping id="wheelFrontLeft" node="0>0|0|1|0" />
+        <i3dMapping id="wheelFrontRight" node="0>0|0|1|1" />
+        <i3dMapping id="bigTriangle" node="0>0|0|1|3" />
+        <i3dMapping id="backAxleJoint" node="0>0|0|2" />
+        <i3dMapping id="outdoorCameraTarget" node="0>0|1|0" />
+        <i3dMapping id="outdoorCamera" node="0>0|1|0|0" />
+        <i3dMapping id="indoorCamera" node="0>0|1|1" />
+        <i3dMapping id="cameraRaycastNode1" node="0>0|1|2" />
+        <i3dMapping id="cameraRaycastNode2" node="0>0|1|3" />
+        <i3dMapping id="cameraRaycastNode3" node="0>0|1|4" />
+        <i3dMapping id="shadowFocusBox" node="0>0|1|5" />
+        <i3dMapping id="reflectorYellowRound01" node="0>0|2|0|0" />
+        <i3dMapping id="reflectorYellowRound02" node="0>0|2|0|1" />
+        <i3dMapping id="reflectorYellowRound03" node="0>0|2|0|2" />
+        <i3dMapping id="reflectorYellowRound04" node="0>0|2|0|3" />
+        <i3dMapping id="frontLightStatic01" node="0>0|2|1|0" />
+        <i3dMapping id="frontLightStatic02" node="0>0|2|1|1" />
+        <i3dMapping id="workLightFrontStatic01" node="0>0|2|1|2" />
+        <i3dMapping id="workLightFrontStatic02" node="0>0|2|1|3" />
+        <i3dMapping id="workLightBackStatic01" node="0>0|2|1|4" />
+        <i3dMapping id="workLightFrontStatic03" node="0>0|2|1|6" />
+        <i3dMapping id="workLightFrontStatic04" node="0>0|2|1|7" />
+        <i3dMapping id="workLightFrontStatic05" node="0>0|2|1|8" />
+        <i3dMapping id="workLightFrontStatic06" node="0>0|2|1|9" />
+        <i3dMapping id="licensePlateLightStatic01" node="0>0|2|1|10" />
+        <i3dMapping id="licensePlateLightStatic02" node="0>0|2|1|11" />
+        <i3dMapping id="backLightStatic01" node="0>0|2|1|12" />
+        <i3dMapping id="backLightStatic02" node="0>0|2|1|13" />
+        <i3dMapping id="grainTankLightStatic01" node="0>0|2|1|16" />
+        <i3dMapping id="grainTankLightStatic02" node="0>0|2|1|17" />
+        <i3dMapping id="backlightLeft" node="0>0|2|1|18|0" />
+        <i3dMapping id="backLightStatic03" node="0>0|2|1|18|0|0" />
+        <i3dMapping id="backLightStatic04" node="0>0|2|1|18|0|1" />
+        <i3dMapping id="rearLight54Left01" node="0>0|2|1|18|0|5" />
+        <i3dMapping id="backlightRight" node="0>0|2|1|19|0" />
+        <i3dMapping id="backLightStatic05" node="0>0|2|1|19|0|0" />
+        <i3dMapping id="backLightStatic06" node="0>0|2|1|19|0|1" />
+        <i3dMapping id="rearLight54Right01" node="0>0|2|1|19|0|5" />
+        <i3dMapping id="frontLightLow" node="0>0|2|2|0" />
+        <i3dMapping id="highBeamLow" node="0>0|2|2|1" />
+        <i3dMapping id="frontLightHigh" node="0>0|2|2|2" />
+        <i3dMapping id="frontLightHigh2" node="0>0|2|2|3" />
+        <i3dMapping id="highBeamHigh" node="0>0|2|2|4" />
+        <i3dMapping id="licensePlateLightHigh" node="0>0|2|2|5" />
+        <i3dMapping id="workLightFrontLow" node="0>0|2|3|0" />
+        <i3dMapping id="workLightBackLow" node="0>0|2|3|1" />
+        <i3dMapping id="workLightFrontHigh" node="0>0|2|3|2" />
+        <i3dMapping id="workLightBackHigh" node="0>0|2|3|3" />
+        <i3dMapping id="backLightsHigh" node="0>0|2|4|0" />
+        <i3dMapping id="turnLightLeftFront" node="0>0|2|5|0" />
+        <i3dMapping id="turnLightRightFront" node="0>0|2|5|1" />
+        <i3dMapping id="beaconLight01" node="0>0|2|6|0" />
+        <i3dMapping id="beaconLight02" node="0>0|2|6|1" />
+        <i3dMapping id="beaconLight03" node="0>0|2|6|2" />
+        <i3dMapping id="beaconLight04" node="0>0|2|6|3" />
+        <i3dMapping id="exitPoint" node="0>0|3" />
+        <i3dMapping id="licensePlateFront" node="0>0|4" />
+        <i3dMapping id="licensePlateBack" node="0>0|5" />
+        <i3dMapping id="steeringWheel" node="0>0|6|0|0|0" />
+        <i3dMapping id="playerLeftHandTarget" node="0>0|6|0|0|0|0" />
+        <i3dMapping id="seat" node="0>0|6|1" />
+        <i3dMapping id="playerSkin" node="0>0|6|1|0" />
+        <i3dMapping id="joystick" node="0>0|6|1|1" />
+        <i3dMapping id="playerRightHandTarget" node="0>0|6|1|1|0" />
+        <i3dMapping id="joystickDecalsLit" node="0>0|6|1|1|1" />
+        <i3dMapping id="numbersFuelPctGrainTank" node="0>0|6|1|2|0" />
+        <i3dMapping id="terminalDisplay" node="0>0|6|1|2|1" />
+        <i3dMapping id="interiorScreenLight" node="0>0|6|1|2|2" />
+        <i3dMapping id="fillLevel" node="0>0|6|1|2|3" />
+        <i3dMapping id="numberDecal" node="0>0|6|1|2|4" />
+        <i3dMapping id="displayArrowDecal" node="0>0|6|1|2|5|0" />
+        <i3dMapping id="terminalBar2" node="0>0|6|1|2|6" />
+        <i3dMapping id="terminalBar1" node="0>0|6|1|2|7" />
+        <i3dMapping id="terminalBar3" node="0>0|6|1|2|8" />
+        <i3dMapping id="numbersTime" node="0>0|6|1|2|9" />
+        <i3dMapping id="numbersSpeed1" node="0>0|6|1|2|10" />
+        <i3dMapping id="numbersRpm1" node="0>0|6|1|2|11" />
+        <i3dMapping id="numbersFuelPCT" node="0>0|6|1|2|12" />
+        <i3dMapping id="seatDecalsLit" node="0>0|6|1|5" />
+        <i3dMapping id="wiper" node="0>0|6|3|0|0" />
+        <i3dMapping id="wiperPart" node="0>0|6|3|0|0|0" />
+        <i3dMapping id="gpsDisplay" node="0>0|6|4|0" />
+        <i3dMapping id="workLightFrontDecal" node="0>0|6|4|1" />
+        <i3dMapping id="workLightBackDecal" node="0>0|6|4|2" />
+        <i3dMapping id="frontLightDecal" node="0>0|6|4|3" />
+        <i3dMapping id="beaconLightDecal" node="0>0|6|4|4" />
+        <i3dMapping id="interiorDecalLit" node="0>0|6|4|5" />
+        <i3dMapping id="brakePedal" node="0>0|6|5|0|0" />
+        <i3dMapping id="playerRightFootTargetBrake" node="0>0|6|5|0|0|0" />
+        <i3dMapping id="playerRightFootTarget" node="0>0|6|6|0" />
+        <i3dMapping id="playerLeftFootTarget" node="0>0|6|6|1" />
+        <i3dMapping id="attacherJointRot" node="0>0|7|0|0" />
+        <i3dMapping id="headerTiltJoint" node="0>0|7|0|0|0|0" />
+        <i3dMapping id="attacherJointCutter" node="0>0|7|0|0|0|0|0" />
+        <i3dMapping id="feederRef" node="0>0|7|0|0|1" />
+        <i3dMapping id="feeder" node="0>0|7|0|1" />
+        <i3dMapping id="headerTilt" node="0>0|7|0|1|0|0" />
+        <i3dMapping id="feederHydraulicRef" node="0>0|7|0|1|1" />
+        <i3dMapping id="ptoOutputLeft" node="0>0|7|0|1|2|0" />
+        <i3dMapping id="feederRotatingPart" node="0>0|7|0|1|3" />
+        <i3dMapping id="feederChain" node="0>0|7|0|1|4" />
+        <i3dMapping id="feederConnector" node="0>0|7|0|1|5" />
+        <i3dMapping id="localHoseEnd" node="0>0|7|0|1|5|1" />
+        <i3dMapping id="feederHydraulic" node="0>0|7|0|2" />
+        <i3dMapping id="feederHydraulicPunch" node="0>0|7|0|2|0" />
+        <i3dMapping id="trailerAttacherJointBack" node="0>0|7|1|0" />
+        <i3dMapping id="claasCutterHose" node="0>0|7|2|0" />
+        <i3dMapping id="electricIn01" node="0>0|7|2|1" />
+        <i3dMapping id="localHoseStart" node="0>0|7|2|2" />
+        <i3dMapping id="aiCollisionNode" node="0>0|8|0" />
+        <i3dMapping id="exhaustParticle" node="0>0|9|0" />
+        <i3dMapping id="chopperSmokeEmitter" node="0>0|9|1|0" />
+        <i3dMapping id="chopperEmitter" node="0>0|9|1|1" />
+        <i3dMapping id="chopperEffectCenterLeft" node="0>0|9|1|2" />
+        <i3dMapping id="chopperEffectCenterRight" node="0>0|9|1|3" />
+        <i3dMapping id="strawEffect" node="0>0|9|2|0" />
+        <i3dMapping id="strawEffectSmokeEmitter" node="0>0|9|2|1" />
+        <i3dMapping id="chopperEmitter3" node="0>0|9|2|2" />
+        <i3dMapping id="chopperEmitter4" node="0>0|9|3" />
+        <i3dMapping id="chopperEmitter5" node="0>0|9|4" />
+        <i3dMapping id="strawUnloadEffectNode" node="0>0|9|5" />
+        <i3dMapping id="chopperCenterEffectNode" node="0>0|9|6" />
+        <i3dMapping id="chopperSideEffectNode" node="0>0|9|7" />
+        <i3dMapping id="chafferSideEffectNode" node="0>0|9|8" />
+        <i3dMapping id="auger01Base" node="0>0|10|0|0" />
+        <i3dMapping id="auger01BaseHydraulic" node="0>0|10|0|0|0" />
+        <i3dMapping id="auger01BaseHydraulicPunch" node="0>0|10|0|0|0|0" />
+        <i3dMapping id="auger01BasePart" node="0>0|10|0|0|1|0" />
+        <i3dMapping id="grainTankEffect01" node="0>0|10|0|0|1|0|1|0" />
+        <i3dMapping id="grainTankSmoke" node="0>0|10|0|0|1|0|1|1" />
+        <i3dMapping id="auger01" node="0>0|10|0|0|1|0|2|0" />
+        <i3dMapping id="grainTankPart2_us" node="0>0|10|0|0|2" />
+        <i3dMapping id="grainTankPart2_eu" node="0>0|10|0|0|3" />
+        <i3dMapping id="auger02BaseRot" node="0>0|10|0|1" />
+        <i3dMapping id="auger02Base" node="0>0|10|0|1|0" />
+        <i3dMapping id="grainTankEffect02" node="0>0|10|0|1|0|0|0" />
+        <i3dMapping id="grainTankEffect02HeightNode" node="0>0|10|0|1|0|0|1" />
+        <i3dMapping id="auger02" node="0>0|10|0|1|0|1|0" />
+        <i3dMapping id="auger02BaseHydraulic02" node="0>0|10|0|1|0|2" />
+        <i3dMapping id="auger02BaseHydraulic02Punch" node="0>0|10|0|1|0|2|0" />
+        <i3dMapping id="auger02BaseHydraulic01Ref" node="0>0|10|0|1|0|3" />
+        <i3dMapping id="auger02BaseHydraulic01" node="0>0|10|0|2" />
+        <i3dMapping id="auger02BaseHydraulic01Punch" node="0>0|10|0|2|0" />
+        <i3dMapping id="grainTankLeftRotationPart" node="0>0|10|0|3" />
+        <i3dMapping id="grainTankRightPartRef" node="0>0|10|0|3|0" />
+        <i3dMapping id="grainTankRightRotationPartRef" node="0>0|10|0|3|1" />
+        <i3dMapping id="grainTankFrontPartRef" node="0>0|10|0|3|2" />
+        <i3dMapping id="bar02_us" node="0>0|10|0|3|4" />
+        <i3dMapping id="grainTankRightRotationPart" node="0>0|10|0|5" />
+        <i3dMapping id="grainTankRightRotationPartOri" node="0>0|10|0|5|0" />
+        <i3dMapping id="grainTankLeftPartRef" node="0>0|10|0|5|1" />
+        <i3dMapping id="grainTankBackPartRef" node="0>0|10|0|5|2" />
+        <i3dMapping id="grainTankPartHydraulic_us" node="0>0|10|0|5|4" />
+        <i3dMapping id="grainTankPartHydraulicPunch_us" node="0>0|10|0|5|4|0" />
+        <i3dMapping id="bar06_us" node="0>0|10|0|5|5" />
+        <i3dMapping id="grainTankFrontPart" node="0>0|10|0|6" />
+        <i3dMapping id="grainTankFrontPartOrientation" node="0>0|10|0|6|0" />
+        <i3dMapping id="grainTankFrontPartTop" node="0>0|10|0|6|1|0" />
+        <i3dMapping id="grainTankFrontPartTopRotRef" node="0>0|10|0|6|1|0|0" />
+        <i3dMapping id="grainTankLightStatic03" node="0>0|10|0|6|1|0|1|0" />
+        <i3dMapping id="grainTankLightStatic04" node="0>0|10|0|6|1|0|1|1" />
+        <i3dMapping id="graintankLightToggle" node="0>0|10|0|6|1|0|5" />
+        <i3dMapping id="grainTankFrontPartTopRot" node="0>0|10|0|6|1|1" />
+        <i3dMapping id="grainTankFrontPartTopRotOri" node="0>0|10|0|6|1|1|0" />
+        <i3dMapping id="grainTankFrontPartTopHydraulicRef" node="0>0|10|0|6|1|1|1" />
+        <i3dMapping id="grainTankFrontPartTopRotRefFrame" node="0>0|10|0|6|1|2" />
+        <i3dMapping id="workLightGrainTankHigh" node="0>0|10|0|6|1|3" />
+        <i3dMapping id="grainTankFrontPartTopHydraulic" node="0>0|10|0|6|2" />
+        <i3dMapping id="grainTankFrontPartTopHydraulicPunch" node="0>0|10|0|6|2|0" />
+        <i3dMapping id="grainTankFrontPartStabilizePart" node="0>0|10|0|6|3" />
+        <i3dMapping id="grainTankFrontPartStabilizePartOri" node="0>0|10|0|6|3|0" />
+        <i3dMapping id="grainTankFrontPartStabilizePartRefFrame" node="0>0|10|0|6|4" />
+        <i3dMapping id="grainTankLightStatic05" node="0>0|10|0|6|5|0" />
+        <i3dMapping id="grainTankLightStatic06" node="0>0|10|0|6|5|1" />
+        <i3dMapping id="grainTankFrontPart_us" node="0>0|10|0|6|9" />
+        <i3dMapping id="grainTankBackPart" node="0>0|10|0|7" />
+        <i3dMapping id="grainTankBackPartOrientation" node="0>0|10|0|7|0" />
+        <i3dMapping id="grainTankBackPartTop" node="0>0|10|0|7|1|0" />
+        <i3dMapping id="grainTankBackPartTopRotRef" node="0>0|10|0|7|1|0|0" />
+        <i3dMapping id="grainTankLightStatic07" node="0>0|10|0|7|1|0|1|0" />
+        <i3dMapping id="grainTankLightStatic08" node="0>0|10|0|7|1|0|1|1" />
+        <i3dMapping id="grainTankBackPartTopRot" node="0>0|10|0|7|1|1" />
+        <i3dMapping id="grainTankBackPartTopRotOri" node="0>0|10|0|7|1|1|0" />
+        <i3dMapping id="grainTankBackPartTopHydraulicRef" node="0>0|10|0|7|1|1|1" />
+        <i3dMapping id="grainTankBackPartTopRotRefFrame" node="0>0|10|0|7|1|2" />
+        <i3dMapping id="grainTankBackPartTopHydraulic" node="0>0|10|0|7|2" />
+        <i3dMapping id="grainTankBackPartTopHydraulicPunch" node="0>0|10|0|7|2|0" />
+        <i3dMapping id="grainTankBackPartStabilizePart" node="0>0|10|0|7|3" />
+        <i3dMapping id="grainTankBackPartStabilizePartOri" node="0>0|10|0|7|3|0" />
+        <i3dMapping id="grainTankBackPartStabilizePartRefFrame" node="0>0|10|0|7|4" />
+        <i3dMapping id="grainTankBackPart_us" node="0>0|10|0|7|8" />
+        <i3dMapping id="grainTankLeftPart" node="0>0|10|0|8" />
+        <i3dMapping id="grainTankLeftPartOrientation" node="0>0|10|0|8|0" />
+        <i3dMapping id="bar01_us" node="0>0|10|0|8|0|0" />
+        <i3dMapping id="grainTankLeftPartTopRot" node="0>0|10|0|8|1" />
+        <i3dMapping id="grainTankLeftPartTop" node="0>0|10|0|8|1|0" />
+        <i3dMapping id="grainTankLeftPartTopHydraulicRef" node="0>0|10|0|8|1|0|0" />
+        <i3dMapping id="grainTankLeftPartTopHydraulic" node="0>0|10|0|8|2" />
+        <i3dMapping id="grainTankLeftPartTopHydraulicPunch" node="0>0|10|0|8|2|0" />
+        <i3dMapping id="bar03_us" node="0>0|10|0|8|6" />
+        <i3dMapping id="grainTankRightPart" node="0>0|10|0|9" />
+        <i3dMapping id="grainTankRightPartOrientation" node="0>0|10|0|9|0" />
+        <i3dMapping id="bar05_us" node="0>0|10|0|9|0|0" />
+        <i3dMapping id="grainTankRightPartTop" node="0>0|10|0|9|1|0" />
+        <i3dMapping id="grainTankRightPartTopHydraulicRef" node="0>0|10|0|9|1|0|0" />
+        <i3dMapping id="grainTankRightPartTopHydraulic" node="0>0|10|0|9|2" />
+        <i3dMapping id="grainTankRightPartTopHydraulicPunch" node="0>0|10|0|9|2|0" />
+        <i3dMapping id="bar04_us" node="0>0|10|0|9|6" />
+        <i3dMapping id="grainTankRightRotationPartRefFrame" node="0>0|10|0|10" />
+        <i3dMapping id="grainTankFrontPartRefFrame" node="0>0|10|0|11" />
+        <i3dMapping id="grainTankBackPartRefFrame" node="0>0|10|0|12" />
+        <i3dMapping id="grainTankLeftPartRefFrame" node="0>0|10|0|13" />
+        <i3dMapping id="grainTankRightPartRefFrame" node="0>0|10|0|14" />
+        <i3dMapping id="grainTankFrontPartStabilizePartOriRef" node="0>0|10|0|15" />
+        <i3dMapping id="grainTankBackPartStabilizePartOriRef" node="0>0|10|0|16" />
+        <i3dMapping id="auger02BaseHydraulic02Ref" node="0>0|10|0|17" />
+        <i3dMapping id="auger01BaseHydraulicRef" node="0>0|10|0|18" />
+        <i3dMapping id="grainTankPartHydraulicRef_us" node="0>0|10|0|19" />
+        <i3dMapping id="grainTankPart_us" node="0>0|10|0|20" />
+        <i3dMapping id="pipe" node="0>0|10|1|0|0" />
+        <i3dMapping id="pipePart" node="0>0|10|1|0|0|0|0" />
+        <i3dMapping id="pipePartArmRef" node="0>0|10|1|0|0|0|0|0" />
+        <i3dMapping id="dischargeNode" node="0>0|10|1|0|0|0|0|1" />
+        <i3dMapping id="pipeEffect" node="0>0|10|1|0|0|0|0|2|0" />
+        <i3dMapping id="pipeEffectSmoke" node="0>0|10|1|0|0|0|0|2|1" />
+        <i3dMapping id="pipePartArm01" node="0>0|10|1|0|0|1" />
+        <i3dMapping id="pipePartArm02" node="0>0|10|1|0|0|1|0" />
+        <i3dMapping id="pipePartArmHydraulicRef" node="0>0|10|1|0|0|1|0|0" />
+        <i3dMapping id="pipePartArm01LocalRef" node="0>0|10|1|0|0|1|1" />
+        <i3dMapping id="pipePartArmHydraulic" node="0>0|10|1|0|0|2" />
+        <i3dMapping id="pipePartArmHydraulicPunch" node="0>0|10|1|0|0|2|0" />
+        <i3dMapping id="pipeHydraulicRef" node="0>0|10|1|0|0|3" />
+        <i3dMapping id="pipePartArm01RefFrame" node="0>0|10|1|0|0|4" />
+        <i3dMapping id="pipeAngleSensorRef" node="0>0|10|1|0|0|5" />
+        <i3dMapping id="pipeLightStatic01" node="0>0|10|1|0|0|6|0" />
+        <i3dMapping id="pipeLightStatic02" node="0>0|10|1|0|0|6|1" />
+        <i3dMapping id="workLightPipe" node="0>0|10|1|0|0|6|2" />
+        <i3dMapping id="pipeHydraulic" node="0>0|10|1|1" />
+        <i3dMapping id="pipeHydraulicPunch" node="0>0|10|1|1|0" />
+        <i3dMapping id="pipeAngleSensor" node="0>0|10|1|2" />
+        <i3dMapping id="pipeAngleSensorArm" node="0>0|10|1|2|0" />
+        <i3dMapping id="pipeAngleSensorRefFrame" node="0>0|10|1|3" />
+        <i3dMapping id="pipeMount" node="0>0|10|1|4" />
+        <i3dMapping id="lowerSieveArm" node="0>0|10|2|0" />
+        <i3dMapping id="lowerSieve" node="0>0|10|2|0|0" />
+        <i3dMapping id="upperSieveArm" node="0>0|10|2|1" />
+        <i3dMapping id="upperSieve" node="0>0|10|2|1|0" />
+        <i3dMapping id="lowerSieveRef" node="0>0|10|2|2" />
+        <i3dMapping id="upperSieveRef" node="0>0|10|2|3" />
+        <i3dMapping id="chopper" node="0>0|10|3|0" />
+        <i3dMapping id="chopperDrumLeft" node="0>0|10|3|0|0|0" />
+        <i3dMapping id="chopperDrumRight" node="0>0|10|3|0|1|0" />
+        <i3dMapping id="chopperHydraulicRef" node="0>0|10|3|0|4" />
+        <i3dMapping id="radialSpreaderLeft01" node="0>0|10|3|0|6|0" />
+        <i3dMapping id="radialSpreaderLeftArm01Ref" node="0>0|10|3|0|6|0|1" />
+        <i3dMapping id="radialSpreaderLeftArm02RefFrame" node="0>0|10|3|0|6|0|2" />
+        <i3dMapping id="radialSpreaderLeft02RefFrame" node="0>0|10|3|0|6|0|3" />
+        <i3dMapping id="chopperEmitter1" node="0>0|10|3|0|6|0|4|0" />
+        <i3dMapping id="radialSpreaderLeft02" node="0>0|10|3|0|6|1|0" />
+        <i3dMapping id="radialSpreaderLeftArm03" node="0>0|10|3|0|6|1|0|0" />
+        <i3dMapping id="radialSpreaderLeftArm02" node="0>0|10|3|0|7|0" />
+        <i3dMapping id="radialSpreaderLeftArm01" node="0>0|10|3|0|7|0|0" />
+        <i3dMapping id="radialSpreaderLeftArm03Ref" node="0>0|10|3|0|7|0|1" />
+        <i3dMapping id="radialSpreaderRight01" node="0>0|10|3|0|8|0" />
+        <i3dMapping id="radialSpreaderRightArm02RefFrame" node="0>0|10|3|0|8|0|1" />
+        <i3dMapping id="radialSpreaderRightArm01Ref" node="0>0|10|3|0|8|0|2" />
+        <i3dMapping id="radialSpreaderRight02RefFrame" node="0>0|10|3|0|8|0|3" />
+        <i3dMapping id="chopperEmitter2" node="0>0|10|3|0|8|0|4|0" />
+        <i3dMapping id="radialSpreaderRight02" node="0>0|10|3|0|8|1|0" />
+        <i3dMapping id="radialSpreaderRightArm03" node="0>0|10|3|0|8|1|0|0" />
+        <i3dMapping id="radialSpreaderRightArm02" node="0>0|10|3|0|9|0" />
+        <i3dMapping id="radialSpreaderRightArm01" node="0>0|10|3|0|9|0|0" />
+        <i3dMapping id="radialSpreaderRightArm03Ref" node="0>0|10|3|0|9|0|1" />
+        <i3dMapping id="chopperHydraulic" node="0>0|10|3|1" />
+        <i3dMapping id="chopperHydraulicPunch" node="0>0|10|3|1|0" />
+        <i3dMapping id="chopperSwitchPlate" node="0>0|10|3|2" />
+        <i3dMapping id="chopperRotatingPart" node="0>0|10|3|3" />
+        <i3dMapping id="chafferLeft" node="0>0|10|4|0|0" />
+        <i3dMapping id="chafferLeftDrum" node="0>0|10|4|0|0|0" />
+        <i3dMapping id="chafferRight" node="0>0|10|4|1|0" />
+        <i3dMapping id="chafferRightRum" node="0>0|10|4|1|0|0" />
+        <i3dMapping id="rotorLeft" node="0>0|10|5|0|0" />
+        <i3dMapping id="rotorRight" node="0>0|10|5|1|0" />
+        <i3dMapping id="ladder" node="0>0|10|6" />
+        <i3dMapping id="ladderRailing" node="0>0|10|6|0|0" />
+        <i3dMapping id="ladderRailingOrientation" node="0>0|10|6|0|0|0" />
+        <i3dMapping id="ladderRalingFrontRot" node="0>0|10|6|0|1" />
+        <i3dMapping id="ladderRalingFront" node="0>0|10|6|0|1|0" />
+        <i3dMapping id="ladderRot" node="0>0|10|6|1|0" />
+        <i3dMapping id="ladderHydraulic" node="0>0|10|6|1|0|0" />
+        <i3dMapping id="ladderHydraulicPunch" node="0>0|10|6|1|0|0|0" />
+        <i3dMapping id="ladder_eu" node="0>0|10|6|1|0|1" />
+        <i3dMapping id="ladderTrans" node="0>0|10|6|1|0|1|3" />
+        <i3dMapping id="ladderPart01" node="0>0|10|6|1|0|1|3|0" />
+        <i3dMapping id="ladderPart02" node="0>0|10|6|1|0|1|3|0|0" />
+        <i3dMapping id="ladderPart01Hydraulic" node="0>0|10|6|1|0|1|3|0|1" />
+        <i3dMapping id="ladderPart01HydraulicPunch" node="0>0|10|6|1|0|1|3|0|1|0" />
+        <i3dMapping id="ladderPullArm" node="0>0|10|6|1|0|1|3|0|2" />
+        <i3dMapping id="ladderPart03" node="0>0|10|6|1|0|1|3|1" />
+        <i3dMapping id="ladderLockArm01" node="0>0|10|6|1|0|1|3|2" />
+        <i3dMapping id="ladderLockArm02" node="0>0|10|6|1|0|1|3|2|0" />
+        <i3dMapping id="ladderLockArm03" node="0>0|10|6|1|0|1|3|2|1" />
+        <i3dMapping id="ladderLockArm02Ref" node="0>0|10|6|1|0|1|3|3" />
+        <i3dMapping id="ladderLockArm03Ref" node="0>0|10|6|1|0|1|3|4" />
+        <i3dMapping id="ladderPullArmRef" node="0>0|10|6|1|0|1|3|5" />
+        <i3dMapping id="ladderPart01HydraulicRef" node="0>0|10|6|1|0|1|3|6" />
+        <i3dMapping id="ladderRailingOrientationRef" node="0>0|10|6|1|0|1|3|7" />
+        <i3dMapping id="ladderUnlockArm" node="0>0|10|6|2" />
+        <i3dMapping id="ladderHydraulicRef" node="0>0|10|6|3" />
+        <i3dMapping id="ladder_us" node="0>0|10|6|4" />
+        <i3dMapping id="ladderPart04" node="0>0|10|6|4|2|0" />
+        <i3dMapping id="ladderPart05" node="0>0|10|6|4|2|0|0" />
+        <i3dMapping id="ladderPart04Hydraulic" node="0>0|10|6|4|2|0|1" />
+        <i3dMapping id="ladderPart04HydraulicPunch" node="0>0|10|6|4|2|0|1|0" />
+        <i3dMapping id="ladderPullArm2" node="0>0|10|6|4|2|0|2" />
+        <i3dMapping id="ladderPart06" node="0>0|10|6|4|2|1" />
+        <i3dMapping id="ladderLockArm04" node="0>0|10|6|4|2|2" />
+        <i3dMapping id="ladderLockArm05" node="0>0|10|6|4|2|2|0" />
+        <i3dMapping id="ladderLockArm06" node="0>0|10|6|4|2|2|1" />
+        <i3dMapping id="ladderLockArm05Ref" node="0>0|10|6|4|2|3" />
+        <i3dMapping id="ladderLockArm06Ref" node="0>0|10|6|4|2|4" />
+        <i3dMapping id="ladderPullArm2Ref" node="0>0|10|6|4|2|5" />
+        <i3dMapping id="ladderPart04HydraulicRef" node="0>0|10|6|4|2|6" />
+        <i3dMapping id="airFilterCleaner" node="0>0|10|7|0" />
+        <i3dMapping id="airFilterCleaner2" node="0>0|10|7|0|0" />
+        <i3dMapping id="backAxleLeftArmRef" node="0>0|10|8" />
+        <i3dMapping id="backAxleRightArmRef" node="0>0|10|9" />
+        <i3dMapping id="topLeftMirror" node="0>0|11|0" />
+        <i3dMapping id="middleLeftMirror" node="0>0|11|1" />
+        <i3dMapping id="bottomLeftMirror" node="0>0|11|2" />
+        <i3dMapping id="topRightMirror" node="0>0|11|3" />
+        <i3dMapping id="middleRightMirror" node="0>0|11|4" />
+        <i3dMapping id="bottomRightMirror" node="0>0|11|5" />
+        <i3dMapping id="trailerTrigger" node="0>0|12|0" />
+        <i3dMapping id="fillVolume" node="0>0|13|0" />
+        <i3dMapping id="exactFillRootNode" node="0>0|13|1" />
+        <i3dMapping id="unloadInfo" node="0>0|13|2" />
+        <i3dMapping id="loadInfo" node="0>0|13|3" />
+        <i3dMapping id="fillVolumeUS" node="0>0|13|4" />
+        <i3dMapping id="workAreaStrawStart" node="0>0|14|0|0" />
+        <i3dMapping id="workAreaStrawWidth" node="0>0|14|0|1" />
+        <i3dMapping id="workAreaStrawHeight" node="0>0|14|0|2" />
+        <i3dMapping id="workAreaChopperStart" node="0>0|14|1|0" />
+        <i3dMapping id="workAreaChopperWidth" node="0>0|14|1|1" />
+        <i3dMapping id="workAreaChopperHeight" node="0>0|14|1|2" />
+        <i3dMapping id="lights_us" node="0>0|15" />
+        <i3dMapping id="turnLightLeftStatic02_us" node="0>0|15|0|0" />
+        <i3dMapping id="turnLightRightStatic02_us" node="0>0|15|0|1" />
+        <i3dMapping id="turnLightRightStatic01_us" node="0>0|15|0|2" />
+        <i3dMapping id="turnLightLeftStatic01_us" node="0>0|15|0|3" />
+        <i3dMapping id="lights_eu" node="0>0|16" />
+        <i3dMapping id="turnLightLeftStatic01" node="0>0|16|0|0" />
+        <i3dMapping id="turnLightLeftStatic02" node="0>0|16|0|1" />
+        <i3dMapping id="turnLightRightStatic01" node="0>0|16|0|2" />
+        <i3dMapping id="turnLightRightStatic02" node="0>0|16|0|3" />
+        <i3dMapping id="warningSigns_eu" node="0>0|17" />
+        <i3dMapping id="lexion8000_vis02" node="0>0|18|0" />
+        <i3dMapping id="chains" node="0>0|18|2" />
+        <i3dMapping id="decalTerraTrac" node="0>0|18|12" />
+        <i3dMapping id="grainTankCover_eu" node="0>1|2" />
+        <i3dMapping id="hoses_eu" node="0>1|3" />
+        <i3dMapping id="belts" node="0>1|4" />
+        <i3dMapping id="grainTankCover_us" node="0>1|6" />
+        <i3dMapping id="hoses_us" node="0>1|7" />
+        <i3dMapping id="backAxleLeft" node="1>0|0|0" />
+        <i3dMapping id="backWheelLeft" node="1>0|0|0|0|0" />
+        <i3dMapping id="steeringArmLeftRef" node="1>0|0|0|1" />
+        <i3dMapping id="backAxleRight" node="1>0|1|0" />
+        <i3dMapping id="backWheelRight" node="1>0|1|0|0|0" />
+        <i3dMapping id="steeringArmRightRef" node="1>0|1|0|1" />
+        <i3dMapping id="steeringHydraulic" node="1>0|2" />
+        <i3dMapping id="steeringArmLeft" node="1>0|2|0" />
+        <i3dMapping id="steeringArmRight" node="1>0|2|1" />
+        <i3dMapping id="backAxleLeftArm" node="1>0|3" />
+        <i3dMapping id="backAxleRightArm" node="1>0|4" />
+        <i3dMapping id="redRound01" node="1>0|5|0" />
+        <i3dMapping id="redRound02" node="1>0|5|1" />
+    </i3dMappings>
+</vehicle>

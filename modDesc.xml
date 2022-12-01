@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="65">
+    <author>Tecknokitty</author>
+    <version>1.0.0</version>
+    <title>
+        <en>Electro-Pack</en>
+    </title>
+    <description>
+        <en><![CDATA[
+            Made (almost) every vehicle electric 
+
+all fuel consumption changed to roughly match HP to KW conversion
+
+battery size set to consumption * 5 should be a good balance between realistic and usable
+
+all prices given ~5% price boost to compensate for lack of fuel costs
+
+removed all exaust particles
+
+changed all engine sounds to electric version
+removed all backup beeps as well as I personally dislike them
+
+I havent tested all of the vehicles as there are 116 of them so fixes will come out once I realize theres a problem...
+
+
+]]></en>
+    </description>
+    <iconFilename>eco_mod.dds</iconFilename>
+	<multiplayer supported="true" />
+    <storeItems>
+        <storeItem xmlFilename="vehicles/series9000.xml"/>
+        <storeItem xmlFilename="vehicles/series6105.xml"/>
+        <storeItem xmlFilename="vehicles/a8800MR.xml"/>
+        <storeItem xmlFilename="vehicles/axialFlow150.xml"/>
+        <storeItem xmlFilename="vehicles/axialFlow250.xml"/>
+        <storeItem xmlFilename="vehicles/magnumT4B.xml"/>
+        <storeItem xmlFilename="vehicles/maxxum145CVX.xml"/>
+        <storeItem xmlFilename="vehicles/moduleExpress635.xml"/>
+        <storeItem xmlFilename="vehicles/steiger4WD.xml"/>
+        <storeItem xmlFilename="vehicles/steigerQuadtrac.xml"/>
+        <storeItem xmlFilename="vehicles/steigerRowtrac.xml"/>
+        <storeItem xmlFilename="vehicles/anthem.xml"/>
+        <storeItem xmlFilename="vehicles/arion600.xml"/>
+        <storeItem xmlFilename="vehicles/aSeries.xml"/>
+        <storeItem xmlFilename="vehicles/axion800.xml"/>
+        <storeItem xmlFilename="vehicles/axion900.xml"/>
+        <storeItem xmlFilename="vehicles/axion900TT.xml"/>
+        <storeItem xmlFilename="vehicles/bigM450.xml"/>
+        <storeItem xmlFilename="vehicles/bigX1180.xml"/>
+        <storeItem xmlFilename="vehicles/braud9070L.xml"/>
+        <storeItem xmlFilename="vehicles/braud9090X.xml"/>
+        <storeItem xmlFilename="vehicles/c232.xml"/>
+        <storeItem xmlFilename="vehicles/chSeries.xml"/>
+        <storeItem xmlFilename="vehicles/cp690.xml"/>
+        <storeItem xmlFilename="vehicles/crystal.xml"/>
+        <storeItem xmlFilename="vehicles/fastrac4220.xml"/>
+        <storeItem xmlFilename="vehicles/fastrac8330.xml"/>
+        <storeItem xmlFilename="vehicles/favorit500.xml"/>
+        <storeItem xmlFilename="vehicles/forterraHSX140.xml"/>
+        <storeItem xmlFilename="vehicles/fr780.xml"/>
+        <storeItem xmlFilename="vehicles/gSeries.xml"/>
+        <storeItem xmlFilename="vehicles/ideal.xml"/>
+        <storeItem xmlFilename="vehicles/jaguar960TT.xml"/>
+        <storeItem xmlFilename="vehicles/katana650.xml"/>
+        <storeItem xmlFilename="vehicles/l218.xml"/>
+        <storeItem xmlFilename="vehicles/leitwolf.xml"/>
+        <storeItem xmlFilename="vehicles/lexion8000.xml"/>
+        <storeItem xmlFilename="vehicles/lintrac130.xml"/>
+        <storeItem xmlFilename="vehicles/loader2630.xml"/>
+        <storeItem xmlFilename="vehicles/loader4670T.xml"/>
+        <storeItem xmlFilename="vehicles/loader9660T.xml"/>
+        <storeItem xmlFilename="vehicles/majorCL80.xml"/>
+        <storeItem xmlFilename="vehicles/maus5.xml"/>
+        <storeItem xmlFilename="vehicles/mc18.xml"/>
+        <storeItem xmlFilename="vehicles/mlt625.xml"/>
+        <storeItem xmlFilename="vehicles/mlt737.xml"/>
+        <storeItem xmlFilename="vehicles/mlt840.xml"/>
+        <storeItem xmlFilename="vehicles/mt900.xml"/>
+        <storeItem xmlFilename="vehicles/mt1100.xml"/>
+        <storeItem xmlFilename="vehicles/nSeries.xml"/>
+        <storeItem xmlFilename="vehicles/panther2.xml"/>
+        <storeItem xmlFilename="vehicles/pickup1986.xml"/>
+        <storeItem xmlFilename="vehicles/pickup2017.xml"/>
+        <storeItem xmlFilename="vehicles/pinnacle.xml"/>
+        <storeItem xmlFilename="vehicles/proximaHS120.xml"/>
+        <storeItem xmlFilename="vehicles/qSeries.xml"/>
+        <storeItem xmlFilename="vehicles/retriever.xml"/>
+        <storeItem xmlFilename="vehicles/rexor6300.xml"/>
+        <storeItem xmlFilename="vehicles/rsm2375.xml"/>
+        <storeItem xmlFilename="vehicles/scorpion1033.xml"/>
+        <storeItem xmlFilename="vehicles/serie7RoboSix.xml"/>
+        <storeItem xmlFilename="vehicles/series5S.xml"/>
+        <storeItem xmlFilename="vehicles/series6M.xml"/>
+        <storeItem xmlFilename="vehicles/series6R.xml"/>
+        <storeItem xmlFilename="vehicles/series7.xml"/>
+        <storeItem xmlFilename="vehicles/series7R.xml"/>
+        <storeItem xmlFilename="vehicles/series8.xml"/>
+        <storeItem xmlFilename="vehicles/series8R.xml"/>
+        <storeItem xmlFilename="vehicles/series8RT.xml"/>
+        <storeItem xmlFilename="vehicles/series8RX.xml"/>
+        <storeItem xmlFilename="vehicles/series8S.xml"/>
+        <storeItem xmlFilename="vehicles/series9R.xml"/>
+        <storeItem xmlFilename="vehicles/series9RT.xml"/>
+        <storeItem xmlFilename="vehicles/series9RX.xml"/>
+        <storeItem xmlFilename="vehicles/series547.xml"/>
+        <storeItem xmlFilename="vehicles/series3670.xml"/>
+        <storeItem xmlFilename="vehicles/series3700AL.xml"/>
+        <storeItem xmlFilename="vehicles/series4700M.xml"/>
+        <storeItem xmlFilename="vehicles/series4755.xml"/>
+        <storeItem xmlFilename="vehicles/series6105.xml"/>
+        <storeItem xmlFilename="vehicles/series6700S.xml"/>
+        <storeItem xmlFilename="vehicles/series7710S.xml"/>
+        <storeItem xmlFilename="vehicles/series7720S.xml"/>
+        <storeItem xmlFilename="vehicles/series7810.xml"/>
+        <storeItem xmlFilename="vehicles/series8150.xml"/>
+        <storeItem xmlFilename="vehicles/series8750.xml"/>
+        <storeItem xmlFilename="vehicles/series9000.xml"/>
+        <storeItem xmlFilename="vehicles/seriesREX4.xml"/>
+        <storeItem xmlFilename="vehicles/superliner1979.xml"/>
+        <storeItem xmlFilename="vehicles/t6.xml"/>
+        <storeItem xmlFilename="vehicles/t7.xml"/>
+        <storeItem xmlFilename="vehicles/t8.xml"/>
+        <storeItem xmlFilename="vehicles/t9.xml"/>
+        <storeItem xmlFilename="vehicles/t560.xml"/>
+        <storeItem xmlFilename="vehicles/th742.xml"/>
+        <storeItem xmlFilename="vehicles/tiger6S.xml"/>
+        <storeItem xmlFilename="vehicles/tjv.xml"/>
+        <storeItem xmlFilename="vehicles/topLiner4090.xml"/>
+        <storeItem xmlFilename="vehicles/torion639.xml"/>
+        <storeItem xmlFilename="vehicles/torion956Sinus.xml"/>
+        <storeItem xmlFilename="vehicles/torion1511.xml"/>
+        <storeItem xmlFilename="vehicles/torion1914.xml"/>
+        <storeItem xmlFilename="vehicles/trion750.xml"/>
+        <storeItem xmlFilename="vehicles/tSeries.xml"/>
+        <storeItem xmlFilename="vehicles/vario200.xml"/>
+        <storeItem xmlFilename="vehicles/vario300.xml"/>
+        <storeItem xmlFilename="vehicles/vario700.xml"/>
+        <storeItem xmlFilename="vehicles/vario900.xml"/>
+        <storeItem xmlFilename="vehicles/vario1000.xml"/>
+        <storeItem xmlFilename="vehicles/ventor4150.xml"/>
+        <storeItem xmlFilename="vehicles/wd4.xml"/>
+        <storeItem xmlFilename="vehicles/x7VTDrive.xml"/>
+        <storeItem xmlFilename="vehicles/x8VTDrive.xml"/>
+        <storeItem xmlFilename="vehicles/x9_1100.xml"/>
+        <storeItem xmlFilename="vehicles/xerion5000.xml"/>
+        <storeItem xmlFilename="vehicles/xuv865M.xml"/>
+        <storeItem xmlFilename="vehicles/z25k.xml"/>
+    </storeItems>
+
+    <l10n>
+        <text name="config_batteries">
+            <fr>Batterie</fr>
+            <en>Batteries</en>
+            <es>Baterías</es>
+            <de>Batterien</de>
+        </text>
+        <text name="config_pbatterie">
+            <fr>Petite</fr>
+            <en>Small</en>
+            <es>Pequeña</es>
+            <de>Kleine</de>
+        </text>
+        <text name="config_mbatterie">
+            <fr>Moyenne</fr>
+            <en>Medium</en>
+            <es>Media</es>
+            <de>Durchschnitt</de>
+        </text>
+        <text name="config_gbatterie">
+            <fr>Grande</fr>
+            <en>Big</en>
+            <es>Gran</es>
+            <de>Große</de>
+        </text>
+        <text name="config_nmotor">
+            <fr>Normal</fr>
+            <en>Normal </en>
+            <es> Normal </es>
+            <de>  Normal </de>
+        </text>
+        <text name="config_pmotor">
+            <fr>Performant</fr>
+            <en>Powerful</en>
+            <es>Eficiente</es>
+            <de>Leistungsstarken</de>
+        </text>
+        <text name="config_emotor">
+            <fr>Economique</fr>
+            <en>Economy</en>
+            <es>Económico</es>
+            <de>Wirtschaftlich</de>
+        </text>
+    </l10n>
+</modDesc>
