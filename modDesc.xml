@@ -30,7 +30,7 @@ for the git inclined you can find it here https://github.com/tecknokitty/FS22-El
 
 ]]></en>
     </description>
-    <iconFilename>eco_mod.dds</iconFilename>
+    <iconFilename>electro_pack.dds</iconFilename>
 	<multiplayer supported="true" />
     <storeItems>
         <storeItem xmlFilename="vehicles/series9000.xml"/>
@@ -49,7 +49,7 @@ for the git inclined you can find it here https://github.com/tecknokitty/FS22-El
         <storeItem xmlFilename="vehicles/aSeries.xml"/>
         <storeItem xmlFilename="vehicles/axion800.xml"/>
         <storeItem xmlFilename="vehicles/axion900.xml"/>
-        <storeItem xmlFilename="vehicles/axion900TT.xml"/>
+        <storeItem xmlFilename="vehicles/axion960TT.xml"/>
         <storeItem xmlFilename="vehicles/bigM450.xml"/>
         <storeItem xmlFilename="vehicles/bigX1180.xml"/>
         <storeItem xmlFilename="vehicles/braud9070L.xml"/>
