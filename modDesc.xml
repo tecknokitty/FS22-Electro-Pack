@@ -150,6 +150,7 @@ for the git inclined you can find it here https://github.com/tecknokitty/FS22-El
         <storeItem xmlFilename="vehicles/xerion5000.xml"/>
         <storeItem xmlFilename="vehicles/xuv865M.xml"/>
         <storeItem xmlFilename="vehicles/z25k.xml"/>
+        <storeItem xmlFilename="vehicles/nova330.xml"/>
     </storeItems>
 
     <l10n>

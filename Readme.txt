@@ -26,3 +26,13 @@ V1.0.1
 made all motor start times 200ms
 
 no need to wait when you don't use explosives in your vehicle ;)
+
+1.0.2
+
+removed all exhaust particles
+
+1.0.3
+
+changed thumbnail image
+
+added missed tractor to mod desc
