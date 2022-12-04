@@ -1608,28 +1608,23 @@
         <consumerConfigurations>
             <consumerConfiguration>
                 <consumer fillUnitIndex="1" usage="20" fillType="electricCharge"/><!-- usage is per hour at max load and max rpm -->
-                <consumer fillUnitIndex="2" usage="5" fillType="def" /> <!-- usage is per hour at max load and max rpm -->
-                <consumer fillUnitIndex="3" usage="225" fillType="air" permanentConsumption="false" refillLitersPerSecond="300" refillCapacityPercentage="0.5" /> <!-- usage per second at full brake power -->
+                
             </consumerConfiguration>
             <consumerConfiguration>
                 <consumer fillUnitIndex="1" usage="21" fillType="electricCharge"/>
-                <consumer fillUnitIndex="2" usage="5" fillType="def" />
-                <consumer fillUnitIndex="3" usage="225" fillType="air" permanentConsumption="false" refillLitersPerSecond="300" refillCapacityPercentage="0.5" />
+                
             </consumerConfiguration>
             <consumerConfiguration>
                 <consumer fillUnitIndex="1" usage="23" fillType="electricCharge"/>
-                <consumer fillUnitIndex="2" usage="6" fillType="def" />
-                <consumer fillUnitIndex="3" usage="225" fillType="air" permanentConsumption="false" refillLitersPerSecond="300" refillCapacityPercentage="0.5" />
+                
             </consumerConfiguration>
             <consumerConfiguration>
                 <consumer fillUnitIndex="1" usage="26" fillType="electricCharge"/>
-                <consumer fillUnitIndex="2" usage="7" fillType="def" />
-                <consumer fillUnitIndex="3" usage="225" fillType="air" permanentConsumption="false" refillLitersPerSecond="300" refillCapacityPercentage="0.5" />
+                
             </consumerConfiguration>
             <consumerConfiguration>
                 <consumer fillUnitIndex="1" usage="29" fillType="electricCharge"/>
-                <consumer fillUnitIndex="2" usage="8" fillType="def" />
-                <consumer fillUnitIndex="3" usage="225" fillType="air" permanentConsumption="false" refillLitersPerSecond="300" refillCapacityPercentage="0.5" />
+                
             </consumerConfiguration>
         </consumerConfigurations>
 

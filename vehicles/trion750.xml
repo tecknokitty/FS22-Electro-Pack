@@ -342,15 +342,12 @@
         <consumerConfigurations>
             <consumerConfiguration>
                 <consumer fillUnitIndex="2" usage="37" fillType="electricCharge"/>
-                <consumer fillUnitIndex="3" usage="18"  fillType="def" />     <!-- usage is per hour at max load and max rpm -->
             </consumerConfiguration>
             <consumerConfiguration>
                 <consumer fillUnitIndex="2" usage="41" fillType="electricCharge"/>
-                <consumer fillUnitIndex="3" usage="20"  fillType="def" />
             </consumerConfiguration>
             <consumerConfiguration>
                 <consumer fillUnitIndex="2" usage="43" fillType="electricCharge"/>
-                <consumer fillUnitIndex="3" usage="21"  fillType="def" />
             </consumerConfiguration>
         </consumerConfigurations>
 

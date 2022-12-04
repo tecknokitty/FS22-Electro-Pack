@@ -1838,8 +1838,6 @@
         <consumerConfigurations>
             <consumerConfiguration>
                 <consumer fillUnitIndex="1" usage="25" fillType="electricCharge"/>
-                <consumer fillUnitIndex="2" usage="5.3" fillType="def"/>
-                <consumer fillUnitIndex="3" usage="250" fillType="air" permanentConsumption="false" refillLitersPerSecond="350" refillCapacityPercentage="0.5"/>
             </consumerConfiguration>
         </consumerConfigurations>
 

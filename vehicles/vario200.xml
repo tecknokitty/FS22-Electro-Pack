@@ -321,8 +321,6 @@
         <consumerConfigurations>
             <consumerConfiguration>
                 <consumer fillUnitIndex="1" usage="8" fillType="electricCharge"/>
-                <consumer fillUnitIndex="2" usage="6" fillType="def" />  <!-- usage is per hour at max load and max rpm -->
-                <consumer fillUnitIndex="3" usage="200" fillType="air" permanentConsumption="false" refillLitersPerSecond="250" refillCapacityPercentage="0.5" /> <!-- usage per second at full brake power -->
             </consumerConfiguration>
         </consumerConfigurations>
 
@@ -549,11 +547,7 @@
         <fillUnitConfigurations>
             <fillUnitConfiguration>
                 <fillUnits>
-                    <fillUnit unitTextOverride="$l10n_unit_kw" showOnHud="false" showInShop="false" fillTypes="ELECTRICCHARGE" capacity="40"> 
-                        <dashboard displayType="SLIDER"    valueType="fillLevel" node="loadBarFuel" groups="MOTOR_ACTIVE"/>
-                    </fillUnit>
-                    <fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" showOnInfoHud="false" fillTypes="def" capacity="16"/>
-                    <fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" showOnInfoHud="false" fillTypes="air" capacity="2000"/>
+                    <fillUnit unitTextOverride="$l10n_unit_kw" showOnHud="false" showInShop="false" fillTypes="ELECTRICCHARGE" capacity="40"/>
                 </fillUnits>
             </fillUnitConfiguration>
         </fillUnitConfigurations>

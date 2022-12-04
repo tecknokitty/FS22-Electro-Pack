@@ -331,23 +331,15 @@
         <consumerConfigurations>
             <consumerConfiguration>
                 <consumer fillUnitIndex="1" usage="51" fillType="electricCharge"/>
-                <consumer fillUnitIndex="2" usage="15"  fillType="def" />     <!-- usage is per hour at max load and max rpm -->
-                <consumer fillUnitIndex="3" usage="250" fillType="air" permanentConsumption="false" refillLitersPerSecond="350" refillCapacityPercentage="0.5" /> <!-- usage per second at full brake power -->
             </consumerConfiguration>
             <consumerConfiguration>
                 <consumer fillUnitIndex="1" usage="56" fillType="electricCharge"/>
-                <consumer fillUnitIndex="2" usage="17"  fillType="def" />     <!-- usage is per hour at max load and max rpm -->
-                <consumer fillUnitIndex="3" usage="250" fillType="air" permanentConsumption="false" refillLitersPerSecond="350" refillCapacityPercentage="0.5" /> <!-- usage per second at full brake power -->
             </consumerConfiguration>
             <consumerConfiguration>
                 <consumer fillUnitIndex="1" usage="61" fillType="electricCharge"/>
-                <consumer fillUnitIndex="2" usage="18.5" fillType="def" />     <!-- usage is per hour at max load and max rpm -->
-                <consumer fillUnitIndex="3" usage="250"  fillType="air" permanentConsumption="false" refillLitersPerSecond="350" refillCapacityPercentage="0.5" /> <!-- usage per second at full brake power -->
             </consumerConfiguration>
             <consumerConfiguration>
                 <consumer fillUnitIndex="1" usage="67" fillType="electricCharge"/>
-                <consumer fillUnitIndex="2" usage="20"  fillType="def" />     <!-- usage is per hour at max load and max rpm -->
-                <consumer fillUnitIndex="3" usage="250" fillType="air" permanentConsumption="false" refillLitersPerSecond="350" refillCapacityPercentage="0.5" /> <!-- usage per second at full brake power -->
             </consumerConfiguration>
         </consumerConfigurations>
 

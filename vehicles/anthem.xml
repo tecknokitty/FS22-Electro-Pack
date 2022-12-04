@@ -237,15 +237,15 @@
         <consumerConfigurations>
             <consumerConfiguration>
                 <consumer fillUnitIndex="1" usage="42" fillType="electricCharge"/>
-                <consumer fillUnitIndex="2" usage="300" fillType="air" permanentConsumption="false" refillLitersPerSecond="350" refillCapacityPercentage="0.5" /> <!-- usage per second at full brake power -->
+                
             </consumerConfiguration>
             <consumerConfiguration>
                 <consumer fillUnitIndex="1" usage="45" fillType="electricCharge"/>
-                <consumer fillUnitIndex="2" usage="300" fillType="air" permanentConsumption="false" refillLitersPerSecond="350" refillCapacityPercentage="0.5" /> <!-- usage per second at full brake power -->
+                
             </consumerConfiguration>
             <consumerConfiguration>
                 <consumer fillUnitIndex="1" usage="50" fillType="electricCharge"/>
-                <consumer fillUnitIndex="2" usage="300" fillType="air" permanentConsumption="false" refillLitersPerSecond="350" refillCapacityPercentage="0.5" /> <!-- usage per second at full brake power -->
+                
             </consumerConfiguration>
         </consumerConfigurations>
 

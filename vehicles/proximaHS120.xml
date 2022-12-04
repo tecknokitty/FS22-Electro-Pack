@@ -476,8 +476,6 @@
       <consumerConfigurations>
           <consumerConfiguration>
               <consumer fillUnitIndex="1" usage="8" fillType="electricCharge"/>
-              <consumer fillUnitIndex="2" usage="5" fillType="def" />  <!-- usage is per hour at max load and max rpm -->
-              <consumer fillUnitIndex="3" usage="250" fillType="air" permanentConsumption="false" refillLitersPerSecond="350" refillCapacityPercentage="0.5" /> <!-- usage per second at full brake power -->
           </consumerConfiguration>
       </consumerConfigurations>
 

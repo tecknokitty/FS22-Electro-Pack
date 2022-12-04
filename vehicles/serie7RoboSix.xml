@@ -1198,18 +1198,12 @@
         <consumerConfigurations>
             <consumerConfiguration>
                 <consumer fillUnitIndex="1" usage="19" fillType="electricCharge"/>
-                <consumer fillUnitIndex="2" usage="4.6" fillType="def"/>
-                <consumer fillUnitIndex="3" usage="250" fillType="air" permanentConsumption="false" refillLitersPerSecond="350" refillCapacityPercentage="0.5"/>
             </consumerConfiguration>
             <consumerConfiguration>
                 <consumer fillUnitIndex="1" usage="21" fillType="electricCharge"/>
-                <consumer fillUnitIndex="2" usage="5.1" fillType="def"/>
-                <consumer fillUnitIndex="3" usage="250" fillType="air" permanentConsumption="false" refillLitersPerSecond="350" refillCapacityPercentage="0.5"/>
             </consumerConfiguration>
             <consumerConfiguration>
                 <consumer fillUnitIndex="1" usage="23" fillType="electricCharge"/>
-                <consumer fillUnitIndex="2" usage="5.4" fillType="def"/>
-                <consumer fillUnitIndex="3" usage="250" fillType="air" permanentConsumption="false" refillLitersPerSecond="350" refillCapacityPercentage="0.5"/>
             </consumerConfiguration>
         </consumerConfigurations>
 

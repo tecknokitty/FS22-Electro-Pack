@@ -36,3 +36,6 @@ removed all exhaust particles
 changed thumbnail image
 
 added missed tractor to mod desc
+
+1.0.4
+fixed refuel vehicle bug (hopefully) note: exiting to menu and reloading fixes the bug for a bit
