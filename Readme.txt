@@ -1,4 +1,4 @@
-to turn loose files into mod add mod_desc.xml, eco_mod.dds, vehicles folder, move the .zip into your mod folder and sounds folder to a .zip file and there you go!
+to turn loose files into mod add mod_desc.xml, eco_mod.dds, vehicles folder, and sounds folder to a .zip file, move the .zip into your mod folderand there you go!
 
 V1.0.0
 
